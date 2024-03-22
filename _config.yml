@@ -28,8 +28,8 @@ twitter_username: janpiatkowski
 github_username:  janpiatkowski
 
 # Build settings
-theme: minima
-# remote_theme: never-land-de/forty-jekyll-theme
+# theme: minima
+remote_theme: never-land-de/forty-jekyll-theme
 plugins:
   - jekyll-feed
 
