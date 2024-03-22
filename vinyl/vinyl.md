@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Elements
+title: Vinyl
 image: assets/images/banner.jpg
 nav-menu: true
+permalink: /vinyl
 ---
 <h1>in html</h1>
 <p>some text</p>
