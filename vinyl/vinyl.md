@@ -5,6 +5,17 @@ image: assets/images/banner.jpg
 nav-menu: true
 permalink: /vinyl
 ---
+
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>Elements</h1>
+		</header>
+
 <h1>in html</h1>
 <p>some text</p>
 <h4>Default</h4>
@@ -25,3 +36,7 @@ permalink: /vinyl
 			</tr>
             </tbody>
             </table>
+    
+</div>
+</section>
+</div>
