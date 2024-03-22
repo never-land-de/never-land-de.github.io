@@ -31,7 +31,7 @@ github_username:  jekyll
 
 # Build settings
 # theme: minima
-remote_theme: forty-jekyll-theme
+remote_theme: forty
 plugins:
   - jekyll-feed
 
