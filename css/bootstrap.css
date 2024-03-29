@@ -2871,7 +2871,7 @@ input[type="submit"].btn.btn-mini {
   text-decoration: none;
 }
 .navbar .brand {
-  float: left;
+  float: none;
   display: block;
   padding: 8px 20px 12px;
   margin-left: -20px;
@@ -2977,6 +2977,7 @@ input[type="submit"].btn.btn-mini {
   left: 0;
   z-index: 1030;
   margin-bottom: 0;
+  text-align: center;
 }
 .navbar-fixed-top .navbar-inner,
 .navbar-fixed-bottom .navbar-inner {
