@@ -143,6 +143,12 @@ body {
   color: #EAE1CB;
   background-color: #171717;
 }
+
+.hero-img {
+  width: 100%;
+  margin-bottom: 4em;
+}
+
 a {
   color: #0088cc;
   text-decoration: none;
@@ -330,6 +336,7 @@ p {
   font-family:  "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  margin-bottom: 6px:
 }
 p small {
   font-size: 11px;
@@ -347,7 +354,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: 0 0 10px 0;
   font-family: "IM Fell DW Pica", serif;
   font-weight: bold;
   color: inherit;
