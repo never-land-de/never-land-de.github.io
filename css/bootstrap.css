@@ -8,7 +8,8 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
  
- @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap')
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap')
+ @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap')
  
 article,
 aside,
@@ -135,7 +136,7 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Rajdhani", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -326,7 +327,7 @@ a:hover {
 }
 p {
   margin: 0 0 9px;
-  font-family:  "Rajdhani", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -347,7 +348,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: inherit;
+  font-family: "IM Fell DW Pica", serif;
   font-weight: bold;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -610,7 +611,7 @@ input,
 button,
 select,
 textarea {
-  font-family:  "Rajdhani", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 label {
   display: block;
