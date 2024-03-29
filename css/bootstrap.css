@@ -150,11 +150,11 @@ body {
 }
 
 a {
-  color: #0088cc;
+  color: #D3A222;
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
+  color: #EAE1CB;
   text-decoration: underline;
 }
 .row {
