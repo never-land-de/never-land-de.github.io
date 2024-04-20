@@ -145,7 +145,7 @@ body {
 }
 
 .hero-img {
-  width: 100%;
+  /* width: 100%; */
   margin-bottom: 4em;
   background-image: url('../img/1987_thesistersofmercy_vinyl_floodland_side2_detail_small.jpg');
 }
