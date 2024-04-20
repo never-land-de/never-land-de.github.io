@@ -140,14 +140,14 @@ body {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
-  color: #EAE1CB;
-  background-color: #171717;
+  color: #171717;
+  background-color: #EAE1CB;
 }
 
 .hero-img {
   /* width: 100%; */
   margin-bottom: 4em;
-  background-image: url('../img/1987_thesistersofmercy_vinyl_floodland_side2_detail_small.jpg');
+  background-image: url('../img/thesistersofmercy_2020_waitingforanotherwar_trevor_ristow_02_web.jpg');
 }
 
 .hero-img:before {
@@ -161,27 +161,10 @@ body {
     background-position: right top;
 }
 
-.hero-img-gigs {
-  /* width: 100%; */
-  margin-bottom: 4em;
-  background-image: url('../img/sisters_amsterdam_2014_ben2.jpg');
-}
-
-.hero-img-gigs:before {
-    content: "";
-    position: fixed;
-    width : 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
-    filter: blur(10px);
-    background-position: center bottom;
-}
-
 .spacemaker { margin-bottom: 4em; }
 
 a {
-  color: #D3A222;
+  color: #44092e;
   text-decoration: none;
 }
 a:hover {
