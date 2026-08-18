@@ -1,0 +1,444 @@
+/* ========================================================================== 
+   NEVER LAND PORTAL — responsive refresh of the 2003 homepage
+   Custom CSS loads AFTER Bootstrap 5.3.x.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Self-hosted fonts
+
+   Expected directory relative to this file:
+   ../assets/fonts/
+
+   Rename the files below or adjust the URLs to match the files you host.
+   Font binaries are intentionally not included in this prototype.
+   -------------------------------------------------------------------------- */
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/InterVariable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Silkscreen";
+    src: url("../assets/fonts/Silkscreen-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Silkscreen";
+    src: url("../assets/fonts/Silkscreen-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Geist Mono";
+    src: url("../assets/fonts/GeistMono-Variable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+:root {
+    --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-pixel: "Silkscreen", ui-monospace, monospace;
+    --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    --portal-max-width: 1100px;
+    --portal-breakpoint: 850px; /* documentary token; media queries use the numeric value */
+    --portal-gap: clamp(10px, 1.3vw, 16px);
+    --panel-radius: 18px;
+
+    --white: #fff;
+    --black: #000;
+    --dark-green: #505e0c;
+    --subnote: #5c5406;
+}
+
+/* Bootstrap already applies border-box globally; keeping this explicit makes
+   the custom layout self-explanatory and resilient if Bootstrap is removed. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    background: #000;
+    font-family: var(--font-body);
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    padding: clamp(12px, 2vw, 24px);
+
+    display: flex;
+
+    color: var(--white);
+    background-color: #000;
+    background-image: url("../essentials/clouds.gif");
+    background-repeat: repeat;
+
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    line-height: 1.35;
+}
+
+h1, h2, h3, h4, h5, h6,
+p,
+a,
+ul, ol, li,
+dl, dt, dd,
+table, thead, tbody, tfoot, tr, th, td, caption,
+label, input, select, textarea, button {
+    font-family: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Site shell
+   - never wider than 1100px
+   - centred horizontally
+   - also centred vertically when the viewport has enough room
+   -------------------------------------------------------------------------- */
+
+.site-shell {
+    width: min(100%, var(--portal-max-width));
+    margin: auto;
+}
+
+/* Every major box uses the same asymmetric 2003-inspired corner treatment:
+   rounded top-right + bottom-left only. */
+.site-panel {
+    border-radius: 0 var(--panel-radius) 0 var(--panel-radius);
+    overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Header + footer
+   -------------------------------------------------------------------------- */
+
+.site-header,
+.site-footer {
+    min-height: 34px;
+    padding: 7px 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    color: var(--white);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    font-size: 0.67rem;
+    line-height: 1.45;
+}
+
+.site-header,
+.site-header *,
+.site-footer,
+.site-footer * {
+    font-family: var(--font-pixel);
+}
+
+.site-header {
+    justify-content: space-between;
+    /*
+       The 2003 head.gif is retained temporarily as a texture.
+       For the final version, use a text-free replacement so the HTML brand
+       remains the only rendered "www.never-land.de" label.
+    */
+    background-image: url("../essentials/portal/head.gif");
+}
+
+.site-brand {
+    flex: 0 0 auto;
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.site-brand:hover,
+.site-brand:focus-visible {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.site-nav {
+    margin-left: auto;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.site-footer {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-image: url("../essentials/portal/foot.gif");
+}
+
+.site-footer__options {
+    margin-left: auto;
+    text-align: right;
+}
+
+.site-header a:not(.site-brand),
+.site-footer a,
+a.whitesub {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+}
+
+.site-header a:not(.site-brand):hover,
+.site-footer a:hover,
+a.whitesub:hover {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Portal tile grid
+
+   This is deliberately native CSS Grid instead of forcing Bootstrap's preset
+   breakpoints. Bootstrap remains available as the site's general toolkit,
+   while the portal uses its own exact 850px design breakpoint.
+   -------------------------------------------------------------------------- */
+
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--portal-gap);
+    margin-block: var(--portal-gap);
+}
+
+.portal-tile {
+    position: relative;
+    isolation: isolate;
+
+    /* 325 × 225 was the original 2003 tile proportion. */
+    aspect-ratio: 325 / 225;
+    min-height: 225px;
+
+    padding: clamp(8px, 1vw, 12px);
+
+    background-color: #111;
+    background-image: var(--tile-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.portal-tile__content {
+    width: min(48%, 290px);
+    margin-left: auto;
+    text-align: right;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 45%);
+}
+
+.portal-section {
+    margin-top: 1.45rem;
+}
+
+.portal-rule {
+    width: 100%;
+    margin: 0.22rem 0 0.28rem auto;
+    border: 0;
+    border-top: 1px solid rgb(255 255 255 / 90%);
+    opacity: 1;
+}
+
+.portal-rule--dark {
+    border-top-color: rgb(0 0 0 / 75%);
+}
+
+/* Optional utility for a future tile that should span the full desktop grid. */
+.portal-tile--wide {
+    grid-column: 1 / -1;
+    aspect-ratio: auto;
+    min-height: 225px;
+}
+
+/* --------------------------------------------------------------------------
+   Legacy-compatible text/link classes
+   -------------------------------------------------------------------------- */
+
+.white {
+    color: var(--white);
+}
+
+.black {
+    color: var(--black);
+}
+
+.darkgreen {
+    color: var(--dark-green);
+}
+
+.subnote {
+    color: var(--subnote);
+}
+
+.white,
+.black,
+.darkgreen,
+.subnote,
+a.link,
+a.whiteportal,
+a.blackportal {
+    font-size: inherit;
+}
+
+a.link {
+    color: var(--subnote);
+    text-decoration: underline;
+}
+
+a.link:hover {
+    color: var(--dark-green);
+    text-decoration: none;
+}
+
+a.whiteportal,
+a.blackportal {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a.whiteportal {
+    color: var(--white);
+}
+
+a.blackportal {
+    color: var(--black);
+}
+
+a.whiteportal:hover,
+a.blackportal:hover {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+/* Geist Mono is the quotation voice; .font-mono remains available as a utility. */
+blockquote,
+blockquote *,
+.blockquote,
+.blockquote * {
+    font-family: var(--font-mono);
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive behaviour
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 849.98px) {
+    .site-header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-block: 10px;
+    }
+
+    .site-brand {
+        width: 100%;
+        text-align: center;
+    }
+
+    .site-nav {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .portal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portal-tile--wide {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 560px) {
+    :root {
+        --panel-radius: 14px;
+    }
+
+    body {
+        font-size: 0.75rem;
+    }
+
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-footer__options {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .portal-tile__content {
+        width: min(62%, 290px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Inter Font Variants
+   These settings inherit through the document together with the Inter baseline.
+   -------------------------------------------------------------------------- */
+
+html,
+body {
+    font-feature-settings:
+        "calt" 1,
+        "dlig" 1,
+        "zero" 1,
+        "ss01" 1,
+        "ss03" 1,
+        "ss07" 1,
+        "ss08" 1,
+        "cv01" 1,
+        "cv02" 1,
+        "cv03" 1,
+        "cv04" 1,
+        "cv09" 1;
+
+    font-variation-settings:
+        "opsz" 14;
+}

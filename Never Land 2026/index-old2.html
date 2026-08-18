@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>www.never-land.de</title>
+    <meta name="author" content="Jan Piatkowski">
+    <meta name="copyright" content="© 2000 - 2003 Jan Piatkowski - except otherwise stated">
+    <meta name="description" content="www.never-land.de - Jan's playground and showcase. His life, the Sisters, and much more.">
+    <meta name="keywords" content="Neverland Never Land Sisters Of Mercy Jan Piatkowski Merry Thoughts M'era Luna Hildesheim Neuss Düsseldorf Köln Palladium Hamburg Grosse Freiheit">
+
+    <!--
+      Bootstrap 5.3.x: local compiled CSS, loaded BEFORE the Never Land stylesheet.
+      Put bootstrap.min.css in ./css/ (see setup notes in README.md).
+      No Bootstrap JavaScript is needed for this portal layout.
+    -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="site-shell">
+        <header class="site-panel site-header" aria-label="Hauptnavigation">
+            <nav class="site-nav">
+                <strong>:: navigate ::</strong>
+                <a href="./index.html">Portal</a>&nbsp;::
+                <a href="./egoshow/">EgoShow</a>&nbsp;::
+                <a href="./sisters/">Sisters</a>&nbsp;::
+                <a href="./galerie/">Galerie</a>&nbsp;::
+            </nav>
+        </header>
+
+        <!--
+          Portal grid:
+          - 2 columns from 850px viewport width upwards
+          - 1 column below 850px
+          - add more tiles by copying one <article class="portal-tile"> block;
+            CSS Grid places them automatically.
+        -->
+        <main class="portal-grid">
+            <!-- WILLKOMMEN -->
+            <article
+                class="site-panel portal-tile portal-tile--empty"
+                style="--tile-image: url('./essentials/portal/willkommen.gif');"
+                aria-label="Willkommen"
+            >
+                <div class="portal-tile__content" aria-hidden="true"></div>
+            </article>
+
+            <!-- EGOSHOW -->
+            <article
+                class="site-panel portal-tile"
+                style="--tile-image: url('./essentials/portal/egoshow.gif');"
+            >
+                <div class="portal-tile__content white">
+                    <strong>:: navigate ::</strong>
+                    <hr class="portal-rule">
+                    <a class="whiteportal" href="./egoshow/daten.htm">Meine Daten</a><br>
+                    <a class="whiteportal" href="./egoshow/anja.htm">Meine Anja</a><br>
+                    <a class="whiteportal" href="./egoshow/fotos.htm">Mein Fotoalbum</a><br>
+                    <a class="whiteportal" href="./egoshow/musik.htm">Gib mir Musik!</a><br>
+                    <a class="whiteportal" href="./egoshow/links.htm">Einige Links</a><br>
+
+                    <div class="portal-section">
+                        <strong>:: updates ::</strong>
+                        <hr class="portal-rule">
+                        &quot;Einige Links&quot; sind noch<br>
+                        Under Construction.<br>
+                        Der Rest ist online.
+                    </div>
+                </div>
+            </article>
+
+            <!-- SISTERS -->
+            <article
+                class="site-panel portal-tile"
+                style="--tile-image: url('./essentials/portal/sisters.gif');"
+            >
+                <div class="portal-tile__content white">
+                    <strong>:: navigate ::</strong>
+                    <hr class="portal-rule">
+                    <a
+                        class="whiteportal"
+                        href="http://www16.brinkster.com/romeodown/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >My Trading Site</a><br>
+                    Pictures<br>
+                    Personnel<br>
+                    Links<br>
+                    Other Music Links<br>
+
+                    <div class="portal-section">
+                        <strong>:: updates ::</strong>
+                        <hr class="portal-rule">
+                        Bislang ist nur<br>
+                        die Trading-Site online.<br>
+                        Der Rest folgt.
+                    </div>
+                </div>
+            </article>
+
+            <!-- GALERIE -->
+            <article
+                class="site-panel portal-tile"
+                style="--tile-image: url('./essentials/portal/galerie.gif');"
+            >
+                <div class="portal-tile__content white">
+                    <strong>:: navigate ::</strong>
+                    <hr class="portal-rule">
+                    Leeds (2003)<br>
+                    Berlin (2002)<br>
+                    Lübeck / Celle (2002)<br>
+                    Tenerife (2002)<br>
+                    Sisters / RockTernat (2001)<br>
+                    Sisters / Hamburg (2001)<br>
+                    Sisters / Hildesheim (2000)<br>
+                    Tenerife (2000)
+
+                    <div class="portal-section">
+                        <strong>:: updates ::</strong>
+                        <hr class="portal-rule portal-rule--dark">
+                        Hier ist noch nix online.<br>
+                        Brauche Webspace.
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="site-panel site-footer">
+            <div class="site-footer__url">
+                <u>URL:</u> http://www.never-land.de/index.html
+            </div>
+
+            <div class="site-footer__options">
+                <strong>:: options ::</strong>
+                <a href="mailto:jan@never-land.de">eMail</a>&nbsp;::
+                <a href="./options/technik.htm">Technik</a>&nbsp;::
+                <a href="./options/impressum.htm">Impressum</a>&nbsp;::
+                &copy; 2000-2003 ::
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
