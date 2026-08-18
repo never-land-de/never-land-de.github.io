@@ -252,6 +252,23 @@ a.whitesub:hover {
     background-size: cover;
 }
 
+.portal-tile__title {
+    margin-bottom: 0.45rem;
+
+    font-family: var(--font-pixel);
+    font-size: clamp(1rem, 1.7vw, 1.45rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+
+    color: var(--white);
+    text-align: right;
+
+    text-shadow:
+        0 1px 2px rgb(0 0 0 / 70%),
+        0 0 6px rgb(0 0 0 / 45%);
+}
+
 .portal-tile__content {
     width: min(48%, 290px);
     margin-left: auto;
