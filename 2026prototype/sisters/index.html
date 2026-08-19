@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Sisters Of Mercy | www.never-land.de</title>
+    <meta name="author" content="Jan Piatkowski">
+    <meta name="copyright" content="© 2000 - 2003 / 2026 Jan Piatkowski - except otherwise stated">
+    <meta name="description" content="The Sisters Of Mercy at never-land.de: collection, gigs and a personal archive.">
+
+    <!-- Bootstrap first; shared Never Land design system second; Doorpage layer last. -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/home.css" rel="stylesheet">
+    <link href="../css/doorpage.css" rel="stylesheet">
+</head>
+
+<body class="doorpage doorpage--sisters">
+    <div class="site-shell">
+        <header class="site-panel site-header" aria-label="Main navigation">
+            <a class="site-brand" href="../index.html" aria-label="Never Land home">
+                www.never-land.de
+            </a>
+
+            <nav class="site-nav" aria-label="Portal navigation">
+                <strong>:: navigate ::</strong>
+                <a href="../sisters/index.html" aria-current="page">SISTERS</a>&nbsp;::
+                <a href="../music/index.html">MUSIC</a>&nbsp;::
+                <a href="../tech/index.html">TECH</a>&nbsp;::
+                <a href="../gaming/index.html">GAMING</a>&nbsp;::
+            </nav>
+        </header>
+
+        <main class="doorpage-main">
+            <!--
+                HERO IMAGE
+                Current fallback uses the existing Sisters portal artwork so this page renders
+                immediately. Replace the src with a dedicated wide hero later.
+
+                Recommended final assets:
+                ../essentials/sisters/hero.jpg
+                ../essentials/sisters/hero-mobile.jpg (optional via <picture>)
+            -->
+            <section class="site-panel doorpage-hero" aria-labelledby="doorpage-title">
+                <img
+                    class="doorpage-hero__image"
+                    src="./sisters_ae_utrecht_2019.gif"
+                    alt=""
+                    width="1100"
+                    height="470"
+                >
+                <div class="doorpage-hero__shade" aria-hidden="true"></div>
+                <h1 class="doorpage-hero__title" id="doorpage-title">SISTERS</h1>
+            </section>
+
+            <section class="doorpage-intro" aria-labelledby="sisters-intro-label">
+                <div class="doorpage-kicker" id="sisters-intro-label">:: the sisters of mercy ::</div>
+                <p>
+                    This is my corner of Never Land dedicated to The Sisters Of Mercy: records and
+                    collectibles, gigs I have seen since M'era Luna 2000, and fragments collected
+                    along the way. It is not intended as a definitive band archive. It is a personal
+                    one — shaped by the releases I found, the concerts I attended and the things that
+                    somehow stayed with me over the years.
+                </p>
+            </section>
+
+            <!--
+                VISUAL GRID
+                Desktop: one large image left, two stacked images right.
+                Mobile: all three images become a single-column sequence.
+
+                The three slots deliberately keep their geometry even before the final artwork is
+                supplied. Replace the placeholder paths below with real images.
+            -->
+            <section class="doorpage-gallery" aria-label="Sisters visual archive">
+                <figure class="site-panel doorpage-gallery__item doorpage-gallery__item--lead">
+                    <div
+                        class="doorpage-gallery__placeholder"
+                        role="img"
+                        aria-label="Ben Christo on stage for The Sisters Of Mercy in Amsterdam, Paradiso, 2023"
+                        style="--door-image: url('../sisters/sisters_amsterdam_2023_09_ben_christ-2048x1155.jpg');"
+                    >
+                        <span aria-hidden="true">BEN CHRISTO | AMSTERDAM 2023</span>
+                    </div>
+                </figure>
+
+                <figure class="site-panel doorpage-gallery__item">
+                    <div
+                        class="doorpage-gallery__placeholder"
+                        role="img"
+                        aria-label="Chris Catalyst on stage for The Sisters Of Mercy in Tilburg, 013, 2005"
+                        style="--door-image: url('../sisters/sisters_chris_catalyst_tilburg_2005.jpg');"
+                    >
+                        <span aria-hidden="true">CHRIS CATALYST | TILBURG 2005</span>
+                    </div>
+                </figure>
+
+                <figure class="site-panel doorpage-gallery__item">
+                    <div
+                        class="doorpage-gallery__placeholder"
+                        role="img"
+                        aria-label="Adam Peason on stage for The Sisters Of Mercy in Ternat, RockTernat, 2001"
+                        style="--door-image: url('../sisters/thesistersofmercy_2001_rockternat_janpiatkowski_74_sisters_adam.jpg');"
+                    >
+                        <span aria-hidden="true">ADAM PEARSON | TERNAT 2001</span>
+                    </div>
+                </figure>
+            </section>
+
+            <nav class="doorpage-explore" aria-label="Explore Sisters pages">
+                <div class="doorpage-kicker">:: explore ::</div>
+
+                <div class="doorpage-links">
+                    <a class="doorpage-link" href="./collection.html">
+                        <span>COLLECTION</span>
+                    </a>
+                    <a class="doorpage-link" href="./gigs.html">
+                        <span>GIGS I'VE SEEN</span>
+                    </a>
+                </div>
+            </nav>
+        </main>
+
+        <footer class="site-panel site-footer">
+            <div class="site-footer__url">
+                <u>URL:</u> http://www.never-land.de/sisters/index.html
+            </div>
+
+            <div class="site-footer__options">
+                <strong>:: options ::</strong>
+                <a href="../options/email.html">eMail</a>&nbsp;::
+                <a href="../options/technik.html">Technik</a>&nbsp;::
+                <a href="../options/impressum.html">Impressum</a>&nbsp;::<br>
+                ::&nbsp;&copy; 2000-2003 / 2026&nbsp;::
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
