@@ -134,6 +134,92 @@ a:focus-visible {
 }
 
 /* --------------------------------------------------------------------------
+   Reusable image link tiles
+
+   Site-wide navigation component for cross-links, section links and "explore"
+   areas. An image is optional. Without --site-link-image the tile falls back
+   to a translucent black surface and lets the page background show through.
+
+   Example:
+   <div class="site-link-grid">
+       <a class="site-link-tile"
+          href="./collection.html"
+          style="--site-link-image: url('../essentials/sisters/nav-collection.jpg');">
+           <span>COLLECTION</span>
+       </a>
+       <a class="site-link-tile" href="./gigs.html">
+           <span>GIGS I'VE SEEN</span>
+       </a>
+   </div>
+
+   Optional per-tile controls:
+   --site-link-image: url(...)
+   --site-link-position: center 35%
+   --site-link-shade-top: 24%
+   --site-link-shade-bottom: 64%
+   -------------------------------------------------------------------------- */
+
+.site-link-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--site-link-columns, 2), minmax(0, 1fr));
+    gap: var(--portal-gap);
+}
+
+.site-link-tile {
+    --site-link-shade-top: 24%;
+    --site-link-shade-bottom: 64%;
+
+    min-height: var(--site-link-min-height, clamp(76px, 10vw, 104px));
+    padding: var(--site-link-padding, 11px 13px);
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    overflow: hidden;
+    border: 1px solid var(--panel-border);
+    border-radius: 0 var(--panel-radius) 0 var(--panel-radius);
+
+    color: var(--white);
+    background-color: transparent;
+    background-image:
+        linear-gradient(
+            180deg,
+            rgb(0 0 0 / var(--site-link-shade-top)),
+            rgb(0 0 0 / var(--site-link-shade-bottom))
+        ),
+        var(--site-link-image, linear-gradient(transparent, transparent));
+    background-repeat: no-repeat;
+    background-position: center, var(--site-link-position, center);
+    background-size: cover, cover;
+
+    font-family: var(--font-pixel);
+    font-size: var(--site-link-font-size, clamp(0.62rem, 1.15vw, 0.78rem));
+    font-weight: 400;
+    line-height: 1.15;
+    text-align: right;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 82%);
+
+    transition:
+        border-color 140ms ease,
+        box-shadow 140ms ease,
+        transform 140ms ease;
+}
+
+.site-link-tile:hover,
+.site-link-tile:focus-visible {
+    color: var(--white);
+    border-color: rgb(255 255 255 / 90%);
+    box-shadow: inset 0 0 0 999px rgb(255 255 255 / 5%);
+    text-decoration: none;
+}
+
+.site-link-tile:hover {
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
    Header + footer
    -------------------------------------------------------------------------- */
 
