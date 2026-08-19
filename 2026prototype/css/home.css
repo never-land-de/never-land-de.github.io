@@ -163,6 +163,9 @@ a:focus-visible {
 }
 
 .site-header {
+    position: sticky;
+    top: clamp(12px, 2vw, 24px);
+    z-index: 1000;
     justify-content: space-between;
     /*
        The 2003 head.gif is retained temporarily as a texture.
@@ -281,7 +284,7 @@ a.whitesub:hover {
 }
 
 .portal-rule {
-    width: 100%;
+    width: 10%;
     margin: 0.22rem 0 0.28rem auto;
     border: 0;
     border-top: 1px solid rgb(255 255 255 / 90%);

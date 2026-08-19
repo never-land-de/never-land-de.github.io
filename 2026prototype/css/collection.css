@@ -1,0 +1,377 @@
+/* ========================================================================== 
+   NEVER LAND — Sisters Collection
+   Page-specific layer; loaded AFTER bootstrap.min.css and home.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Long-form content panel
+   -------------------------------------------------------------------------- */
+
+body {
+    background-image: url("../essentials/portal/sisters-ae-2001.gif");
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.collection-main {
+    margin-block: var(--portal-gap);
+    padding: clamp(20px, 4vw, 48px);
+
+    color: var(--white);
+    background: rgb(0 0 0 / 82%);
+}
+
+.collection-main a {
+    color: var(--white);
+    text-underline-offset: 0.16em;
+}
+
+.collection-main a:hover {
+    text-decoration: none;
+}
+
+.collection-intro {
+    max-width: 760px;
+}
+
+.collection-intro h1 {
+    margin: 0 0 0.65rem;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 650;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.collection-intro p {
+    max-width: 62ch;
+    margin-bottom: 0;
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    line-height: 1.55;
+}
+
+.anchor-target,
+.collection-section {
+    scroll-margin-top: 120px;
+}
+
+/* --------------------------------------------------------------------------
+   Section jump tiles
+   - 4 × 1 on larger screens
+   - 2 × 2 below 700px
+   - same asymmetric corner language as the portal panels
+   -------------------------------------------------------------------------- */
+
+.collection-jumps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--portal-gap);
+    margin-top: clamp(24px, 4vw, 44px);
+}
+
+.collection-jump {
+    min-height: clamp(72px, 9vw, 96px);
+    padding: 10px 12px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 0 var(--panel-radius) 0 var(--panel-radius);
+
+    color: var(--white);
+    background: rgb(255 255 255 / 4%);
+
+    font-family: var(--font-pixel);
+    font-size: clamp(0.58rem, 1.1vw, 0.72rem);
+    font-weight: 400;
+    line-height: 1;
+    text-align: right;
+    text-decoration: none;
+
+    transition:
+        background-color 140ms ease,
+        transform 140ms ease;
+}
+
+.collection-jump:hover,
+.collection-jump:focus-visible {
+    color: var(--white);
+    background: rgb(255 255 255 / 11%);
+    text-decoration: none;
+}
+
+.collection-jump:hover {
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+
+.collection-section {
+    margin-top: clamp(38px, 7vw, 76px);
+    padding-top: clamp(28px, 4vw, 44px);
+    border-top: 1px solid rgb(246 241 236 / 28%);
+}
+
+.collection-section h2 {
+    margin: 0 0 0.8rem;
+    font-size: clamp(1.45rem, 3vw, 2.25rem);
+    font-weight: 650;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+}
+
+.collection-section > p:not(.back-to-top) {
+    max-width: 78ch;
+    margin-bottom: 1.35rem;
+    line-height: 1.55;
+}
+
+.back-to-top {
+    margin: 1.25rem 0 0;
+    text-align: right;
+}
+
+.back-to-top,
+.back-to-top * {
+    font-family: var(--font-pixel);
+    font-size: 0.61rem;
+}
+
+/* --------------------------------------------------------------------------
+   Collection tables — desktop
+   -------------------------------------------------------------------------- */
+
+.collection-table-wrap {
+    width: 100%;
+}
+
+.collection-table {
+    --bs-table-color: var(--white);
+    --bs-table-bg: transparent;
+    --bs-table-border-color: rgb(246 241 236 / 20%);
+    --bs-table-striped-color: var(--white);
+    --bs-table-striped-bg: rgb(255 255 255 / 4%);
+
+    width: 100%;
+    margin: 0;
+    table-layout: fixed;
+    color: var(--white);
+    border-color: var(--bs-table-border-color);
+    font-size: 0.78rem;
+}
+
+.collection-col-year {
+    width: 10%;
+}
+
+.collection-col-cat {
+    width: 17%;
+}
+
+.collection-col-name {
+    width: 39%;
+}
+
+.collection-col-notes {
+    width: 34%;
+}
+
+.collection-table > :not(caption) > * > * {
+    padding: 0.7rem 0.65rem;
+    color: inherit;
+    background-color: transparent;
+    border-bottom-color: var(--bs-table-border-color);
+    box-shadow: none;
+    overflow-wrap: anywhere;
+}
+
+.collection-table > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--bs-table-striped-bg);
+}
+
+.collection-table thead th {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+
+    color: rgb(255 255 255 / 72%);
+    border-bottom-color: rgb(246 241 236 / 45%);
+
+    font-family: var(--font-pixel);
+    font-size: 0.58rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.collection-table tbody td:first-child,
+.collection-table tbody td:nth-child(2) {
+    white-space: nowrap;
+}
+
+.collection-table a {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Circle lists
+   -------------------------------------------------------------------------- */
+
+.collection-list {
+    max-width: 82ch;
+    margin: 0;
+    padding-left: 1.45rem;
+    list-style-type: circle;
+}
+
+.collection-list li {
+    margin-bottom: 0.42rem;
+    padding-left: 0.15rem;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive records
+   Under 700px the semantic <table> remains in the DOM, but every <tr> becomes
+   a vertically stacked collection record. data-label supplies the field name.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 699.98px) {
+    .collection-jumps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .collection-table,
+    .collection-table tbody,
+    .collection-table tr,
+    .collection-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .collection-table colgroup,
+    .collection-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .collection-table tbody {
+        display: grid;
+        gap: 12px;
+    }
+
+    .collection-table tbody tr {
+        padding: 11px 12px 12px;
+        border: 1px solid rgb(246 241 236 / 20%);
+        border-radius: 0 12px 0 12px;
+        background: rgb(255 255 255 / 3%);
+    }
+
+    .collection-table > tbody > tr:nth-of-type(odd) > * {
+        background-color: transparent;
+    }
+
+    .collection-table tbody td {
+        padding: 0.2rem 0;
+        border: 0;
+        white-space: normal;
+
+        display: grid;
+        grid-template-columns: 5.4rem minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: baseline;
+    }
+
+    .collection-table tbody td::before {
+        content: attr(data-label);
+        color: rgb(255 255 255 / 58%);
+
+        font-family: var(--font-pixel);
+        font-size: 0.54rem;
+        font-weight: 400;
+        line-height: 1.3;
+        text-transform: uppercase;
+    }
+
+    .collection-table tbody td[data-label="Name"] {
+        order: -1;
+        display: block;
+        padding-bottom: 0.55rem;
+
+        font-size: 0.9rem;
+        font-weight: 650;
+        line-height: 1.35;
+    }
+
+    .collection-table tbody td[data-label="Name"]::before {
+        display: block;
+        margin-bottom: 0.22rem;
+    }
+
+    .collection-table tbody td[data-label="Notes"] {
+        margin-top: 0.12rem;
+    }
+
+    .collection-table tbody td[data-label="Bands"] {
+    display: block;
+    padding-top: 0.35rem;
+    }
+
+    .collection-table tbody td[data-label="Bands"]::before {
+    display: block;
+    margin-bottom: 0.22rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .collection-main {
+        padding: 18px 16px 22px;
+    }
+
+    .collection-jump {
+        min-height: 66px;
+        padding: 9px 10px;
+    }
+
+    .collection-table tbody tr {
+        border-radius: 0 10px 0 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .collection-jump {
+        transition: none;
+    }
+
+    .collection-jump:hover {
+        transform: none;
+    }
+}
+
+/* Preserve the compact year grouping on desktop while each mobile record
+   remains self-contained. */
+.year-mobile {
+    display: none;
+}
+
+@media (max-width: 699.98px) {
+    .year-desktop {
+        display: none;
+    }
+
+    .year-mobile {
+        display: inline;
+    }
+}
