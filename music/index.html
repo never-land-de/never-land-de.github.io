@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Music | www.never-land.de</title>
+    <meta name="author" content="Jan Piatkowski">
+    <meta name="copyright" content="© 2000 - 2003 / 2026 Jan Piatkowski - except otherwise stated">
+    <meta name="description" content="Music at never-land.de: a personal vinyl collection and gigs seen over the years.">
+
+    <!-- Bootstrap first; shared Never Land design system second; Doorpage layer last. -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/home.css" rel="stylesheet">
+    <link href="../css/doorpage.css" rel="stylesheet">
+</head>
+
+<body class="doorpage doorpage--music">
+    <div class="site-shell">
+        <header class="site-panel site-header" aria-label="Main navigation">
+            <a class="site-brand" href="../index.html" aria-label="Never Land home">
+                www.never-land.de
+            </a>
+
+            <nav class="site-nav" aria-label="Portal navigation">
+                <strong>:: navigate ::</strong>
+                <a href="../sisters/index.html">SISTERS</a>&nbsp;::
+                <a href="../music/index.html" aria-current="page">MUSIC</a>&nbsp;::
+                <a href="../tech/index.html">TECH</a>&nbsp;::
+                <a href="../gaming/index.html">GAMING</a>&nbsp;::
+            </nav>
+        </header>
+
+        <main class="doorpage-main">
+            <!--
+                HERO IMAGE
+                Uses the existing MUSIC portal artwork as an immediate fallback.
+                Replace it later with a dedicated wide hero if desired.
+
+                Suggested final asset:
+                ../essentials/music/hero.jpg
+            -->
+            <section class="site-panel doorpage-hero" aria-labelledby="doorpage-title">
+                <img
+                    class="doorpage-hero__image"
+                    src="../essentials/portal/music-holygram.gif"
+                    alt=""
+                    width="1100"
+                    height="470"
+                >
+                <div class="doorpage-hero__shade" aria-hidden="true"></div>
+                <h1 class="doorpage-hero__title" id="doorpage-title">MUSIC</h1>
+            </section>
+
+            <section class="doorpage-intro" aria-labelledby="music-intro-label">
+                <div class="doorpage-kicker" id="music-intro-label">:: records &amp; stages ::</div>
+                <p>
+                    Music has always been less about completeness than about the records, songs and
+                    nights that stay with me. This section brings together two parts of that history:
+                    the vinyl I have collected from artists I keep coming back to, and the concerts I
+                    have seen beyond The Sisters Of Mercy. It is deliberately personal rather than
+                    encyclopaedic — a trail through post-punk, alternative rock, electronic pop and
+                    whatever else found its way onto the turntable or a stage in front of me.
+                </p>
+            </section>
+
+            <!--
+                VISUAL GRID
+                Desktop: one large image left, two stacked images right.
+                Mobile: all three images become a single-column sequence.
+
+                The lead slot already uses the MUSIC portal artwork. The two right-hand images are
+                authoring placeholders: add the named files or replace the paths with your own shots.
+            -->
+            <section class="doorpage-gallery" aria-label="Music visual archive">
+                <figure class="site-panel doorpage-gallery__item doorpage-gallery__item--lead">
+                    <div
+                        class="doorpage-gallery__placeholder"
+                        role="img"
+                        aria-label="Music archive artwork"
+                        style="--door-image: url('../music/aerzte-dunkel.jpg');"
+                    >
+                        <span aria-hidden="true">DIE ÄRZTE | DUNKEL</span>
+                    </div>
+                </figure>
+
+                <figure class="site-panel doorpage-gallery__item">
+                    <div
+                        class="doorpage-gallery__placeholder"
+                        role="img"
+                        aria-label="Vinyl collection image placeholder"
+                        style="--door-image: url('../music/nickcave-oberhausen-2024-1.jpg');"
+                    >
+                        <span aria-hidden="true">NICK CAVE AND THE BAD SEEDS | OBERHAUSEN</span>
+                    </div>
+                </figure>
+
+                <figure class="site-panel doorpage-gallery__item">
+                    <div
+                        class="doorpage-gallery__placeholder"
+                        role="img"
+                        aria-label="Live music image placeholder"
+                        style="--door-image: url('../music/holygram-bochum-2019.jpg');"
+                    >
+                        <span aria-hidden="true">HOLYGRAM | BOCHUM</span>
+                    </div>
+                </figure>
+            </section>
+
+            <nav class="doorpage-explore" aria-label="Explore Music pages">
+                <div class="doorpage-kicker">:: explore ::</div>
+
+                <div class="doorpage-links">
+                    <a
+                    class="site-link-tile"
+                    href="./vinylcollection.html"
+                    style="--site-link-image: url('../music/chriscatalyst_madinenglad.jpg');"
+                    >
+                        <span>VINYL COLLECTION</span>
+                    </a>
+                    <a
+                    class="site-link-tile"
+                    href="./gigs.html"
+                    style="--site-link-image: url('../music/nickcave-oberhausen-2024-2.jpg');"
+                    >
+                        <span>GIGS I'VE SEEN</span>
+                    </a>
+                </div>
+            </nav>
+        </main>
+
+        <footer class="site-panel site-footer">
+            <div class="site-footer__url">
+                <u>URL:</u> http://www.never-land.de/music/index.html
+            </div>
+
+            <div class="site-footer__options">
+                <strong>:: options ::</strong>
+                <a href="../options/email.html">eMail</a>&nbsp;::
+                <a href="../options/technik.html">Technik</a>&nbsp;::
+                <a href="../options/impressum.html">Impressum</a>&nbsp;::<br>
+                ::&nbsp;&copy; 2000-2003 / 2026&nbsp;::
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
