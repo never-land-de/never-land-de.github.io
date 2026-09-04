@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>eMail | www.never-land.de</title>
+    <meta name="author" content="Jan Piatkowski">
+    <meta name="copyright" content="© 2000-2003 / 2026 Jan Piatkowski - except otherwise stated">
+    <meta name="description" content="Kontakt zu www.never-land.de – über ein kleines textbasiertes Communication Terminal.">
+    <meta name="robots" content="index,follow">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/home.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="site-shell">
+        <header class="site-panel site-header" aria-label="Hauptnavigation">
+            <a class="site-brand" href="../index.html" aria-label="Never Land Startseite">
+                www.never-land.de
+            </a>
+
+            <nav class="site-nav" aria-label="Portal-Navigation">
+                <strong>:: navigate ::</strong>
+                <a href="../sisters/">SISTERS</a>&nbsp;::
+                <a href="../music/">MUSIC</a>&nbsp;::
+                <a href="../tech/">TECH</a>&nbsp;::
+                <a href="../gaming/">GAMING</a>&nbsp;::
+            </nav>
+        </header>
+
+        <main class="site-panel bg-black p-3 p-md-4 my-3" id="main-content">
+            <header class="mb-3">
+                <p class="font-mono mb-2">:: communication is possible ::</p>
+                <h1 class="h3 mb-2">eMail</h1>
+                <p class="mb-0">
+                    Eine Maus wird nicht benötigt. Vermutlich hat sie hier ohnehin nichts zu suchen.
+                </p>
+            </header>
+
+            <section class="nl-terminal site-panel" aria-labelledby="terminal-title">
+                <div class="nl-terminal__bar">
+                    <span id="terminal-title">NEVER LAND COMMUNICATION TERMINAL</span>
+                    <span aria-hidden="true">REV. 2026.09</span>
+                </div>
+
+                <div
+                    class="nl-terminal__screen"
+                    id="terminal-screen"
+                    role="log"
+                    aria-live="polite"
+                    aria-relevant="additions"
+                    tabindex="0"
+                >
+                    <div class="nl-terminal__output" id="terminal-output">
+                        <p>NEVER LAND COMMUNICATION TERMINAL</p>
+                        <p>INFOTERM / BARELY INTERACTIVE COMMUNICATION</p>
+                        <p>38911 BASIC BYTES FREE. PROBABLY.</p>
+                        <p>&nbsp;</p>
+                        <p>You find yourself in front of an ancient communication terminal.</p>
+                        <p>A cursor is blinking patiently. There is no mouse.</p>
+                        <p>&nbsp;</p>
+                        <p>Type <strong>HELP</strong> if you are lost. Type <strong>404</strong> if you are suspicious.</p>
+                    </div>
+
+                    <form class="nl-terminal__form" id="terminal-form" autocomplete="off">
+                        <label class="visually-hidden" for="terminal-command">Terminal command</label>
+                        <span class="nl-terminal__prompt" aria-hidden="true">&gt;</span>
+                        <input
+                            class="nl-terminal__input"
+                            id="terminal-command"
+                            name="command"
+                            type="text"
+                            inputmode="text"
+                            autocomplete="off"
+                            autocapitalize="none"
+                            spellcheck="false"
+                            aria-describedby="terminal-help"
+                        >
+                        <span class="nl-terminal__cursor" aria-hidden="true"></span>
+                    </form>
+                </div>
+            </section>
+
+            <p class="font-mono small mt-3 mb-1" id="terminal-help">
+                :: enter = execute / ↑↓ = command history / clear = wipe screen ::
+            </p>
+            <p class="small mb-0 opacity-75">
+                :: terminal malfunction?
+                <a class="whitesub" href="mailto:jan@never-land.de">use conventional eMail</a> ::
+            </p>
+
+            <noscript>
+                <p class="mt-3 mb-0">
+                    JavaScript ist hier ausnahmsweise Teil des Spiels. Ohne JavaScript bleibt
+                    <a class="whitesub" href="mailto:jan@never-land.de">jan@never-land.de</a>.
+                </p>
+            </noscript>
+        </main>
+
+        <footer class="site-panel site-footer">
+            <div class="site-footer__url">
+                <u>URL:</u> https://www.never-land.de/options/email.html
+            </div>
+
+            <div class="site-footer__options">
+                <strong>:: options ::</strong>
+                <a href="./email.html" aria-current="page">eMail</a>&nbsp;::
+                <a href="./technik.html">Technik</a>&nbsp;::
+                <a href="./impressum.html">Impressum</a>&nbsp;::
+                &copy; 2000-2003 / 2026::
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/email.js" defer></script>
+</body>
+</html>
