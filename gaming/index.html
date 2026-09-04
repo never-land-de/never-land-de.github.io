@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gaming | www.never-land.de</title>
+    <meta name="author" content="Jan Piatkowski">
+    <meta name="copyright" content="© 2000 - 2003 / 2026 Jan Piatkowski - except otherwise stated">
+    <meta name="description" content="Gaming at never-land.de: Cyberpunk 2077, Red Dead Redemption 2, Pokémon GO and retro gaming.">
+
+    <!-- Bootstrap first; shared Never Land design system second; Doorpage layer last. -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/home.css" rel="stylesheet">
+    <link href="../css/doorpage.css" rel="stylesheet">
+</head>
+
+<body class="doorpage doorpage--gaming">
+    <div class="site-shell">
+        <header class="site-panel site-header" aria-label="Main navigation">
+            <a class="site-brand" href="../index.html" aria-label="Never Land home">
+                www.never-land.de
+            </a>
+
+            <nav class="site-nav" aria-label="Portal navigation">
+                <strong>:: navigate ::</strong>
+                <a href="../sisters/index.html">SISTERS</a>&nbsp;::
+                <a href="../music/index.html">MUSIC</a>&nbsp;::
+                <a href="../tech/index.html">TECH</a>&nbsp;::
+                <a href="../gaming/index.html" aria-current="page">GAMING</a>&nbsp;::
+            </nav>
+        </header>
+
+        <main class="doorpage-main">
+            <!--
+                HERO IMAGE
+                Uses the existing GAMING portal artwork as an immediate fallback.
+                Replace it later with a dedicated wide hero if desired.
+
+                Suggested final asset:
+                ../essentials/gaming/hero.jpg
+            -->
+            <section class="site-panel doorpage-hero" aria-labelledby="doorpage-title">
+                <img
+                    class="doorpage-hero__image"
+                    src="../essentials/portal/cyberpunk2077somi.gif"
+                    alt=""
+                    width="1100"
+                    height="470"
+                >
+                <div class="doorpage-hero__shade" aria-hidden="true"></div>
+                <h1 class="doorpage-hero__title" id="doorpage-title">GAMING</h1>
+            </section>
+
+            <section class="doorpage-intro" aria-labelledby="gaming-intro-label">
+                <div class="doorpage-kicker" id="gaming-intro-label">:: worlds worth returning to ::</div>
+                <p>
+                    Some games are finished and forgotten. Others become places you keep returning to.
+                    GAMING is about the latter: Night City, the frontier of Red Dead Redemption 2,
+                    years of Pokémon GO, and the older PC and console worlds that shaped how I think
+                    about games in the first place. Screenshots, observations, hardware, nostalgia and
+                    whatever else is worth preserving — less a review section than a personal save file.
+                </p>
+            </section>
+
+            <!--
+                VISUAL GRID
+                Desktop: one large image left, two stacked images right.
+                Mobile: all three images become a single-column sequence.
+
+                The lead slot uses the current GAMING portal artwork. Replace the two authoring
+                placeholders below with your own screenshots when the assets are ready.
+            -->
+            <section class="doorpage-gallery" aria-label="Gaming visual archive">
+                <figure class="site-panel doorpage-gallery__item doorpage-gallery__item--lead">
+                    <div
+                        class="doorpage-gallery__placeholder"
+                        role="img"
+                        aria-label="Cyberpunk 2077 artwork"
+                        style="--door-image: url('../essentials/portal/cyberpunk2077somi.gif');"
+                    >
+                        <span aria-hidden="true">CYBERPUNK 2077 | NIGHT CITY</span>
+                    </div>
+                </figure>
+
+                <figure class="site-panel doorpage-gallery__item">
+                    <div
+                        class="doorpage-gallery__placeholder"
+                        role="img"
+                        aria-label="Red Dead Redemption 2 screenshot placeholder"
+                        style="--door-image: url('../essentials/gaming/reddeadredemption2.jpg');"
+                    >
+                        <span aria-hidden="true">RED DEAD REDEMPTION 2</span>
+                    </div>
+                </figure>
+
+                <figure class="site-panel doorpage-gallery__item">
+                    <div
+                        class="doorpage-gallery__placeholder"
+                        role="img"
+                        aria-label="Retro gaming image placeholder"
+                        style="--door-image: url('../essentials/gaming/retrogaming.jpg');"
+                    >
+                        <span aria-hidden="true">RETRO GAMING</span>
+                    </div>
+                </figure>
+            </section>
+
+            <nav class="doorpage-explore" aria-label="Explore Gaming pages">
+                <div class="doorpage-kicker">:: more coming soon ::</div>
+            </nav>
+
+            <nav class="doorpage-explore" aria-label="Explore Gaming pages">
+                <div class="doorpage-kicker">Unofficial fan content. This site is not affiliated with or endorsed by CD PROJEKT RED, Rockstar Games or Take-Two Interactive. Game names, characters, artwork and other game content remain property of their respective rights holders.</div>
+            </nav>
+
+            <!-- <nav class="doorpage-explore" aria-label="Explore Gaming pages">
+                <div class="doorpage-kicker">:: explore ::</div>
+
+                <div class="doorpage-links">
+                    <a class="site-link-tile" href="./cyberpunk2077.html">
+                        <span>CYBERPUNK 2077</span>
+                    </a>
+                    <a class="site-link-tile" href="./rdr2.html">
+                        <span>RED DEAD REDEMPTION 2</span>
+                    </a>
+                    <a class="site-link-tile" href="./pokemongo.html">
+                        <span>POKÉMON GO</span>
+                    </a>
+                    <a class="site-link-tile" href="./retrogaming.html">
+                        <span>RETRO GAMING</span>
+                    </a>
+                </div>
+            </nav> -->
+        </main>
+
+        <footer class="site-panel site-footer">
+            <div class="site-footer__url">
+                <u>URL:</u> http://www.never-land.de/gaming/index.html
+            </div>
+
+            <div class="site-footer__options">
+                <strong>:: options ::</strong>
+                <a href="../options/email.html">eMail</a>&nbsp;::
+                <a href="../options/technik.html">Technik</a>&nbsp;::
+                <a href="../options/impressum.html">Impressum</a>&nbsp;::<br>
+                ::&nbsp;&copy; 2000-2003 / 2026&nbsp;::
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
