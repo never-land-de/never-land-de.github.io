@@ -218,6 +218,22 @@ body {
     text-decoration: underline;
 }
 
+.collection-table .gig-review-link {
+    display: inline-block;
+    margin-top: 0.35rem;
+    color: rgb(255 255 255 / 72%);
+    font-family: var(--font-mono);
+    font-size: 0.61rem;
+    line-height: 1.35;
+    text-decoration: none;
+}
+
+.collection-table .gig-review-link:hover,
+.collection-table .gig-review-link:focus-visible {
+    color: var(--white);
+    text-decoration: underline;
+}
+
 /* --------------------------------------------------------------------------
    Circle lists
    -------------------------------------------------------------------------- */

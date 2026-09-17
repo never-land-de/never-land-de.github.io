@@ -363,6 +363,65 @@ a.blackportal:hover {
     text-underline-offset: 0.15em;
 }
 
+/* --------------------------------------------------------------------------
+   Shared image-backed link tiles
+
+   Used by the Explore sections on category doorpages. Each tile may provide
+   --site-link-image inline. Without an image it falls back to a dark panel.
+   -------------------------------------------------------------------------- */
+
+.site-link-tile {
+    position: relative;
+    isolation: isolate;
+    min-height: clamp(112px, 17vw, 168px);
+    padding: 12px 14px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 0 var(--panel-radius) 0 var(--panel-radius);
+
+    color: var(--white);
+    background-color: rgb(0 0 0 / 72%);
+    background-image:
+        linear-gradient(180deg, rgb(0 0 0 / 8%) 28%, rgb(0 0 0 / 74%) 100%),
+        var(--site-link-image, linear-gradient(rgb(0 0 0 / 72%), rgb(0 0 0 / 72%)));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    font-family: var(--font-pixel);
+    font-size: clamp(0.62rem, 1.2vw, 0.78rem);
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: right;
+    text-decoration: none;
+    text-shadow: 0 1px 4px rgb(0 0 0 / 85%);
+
+    transition:
+        filter 150ms ease,
+        transform 150ms ease;
+}
+
+.site-link-tile span {
+    padding: 0.38rem 0.48rem;
+    background: rgb(0 0 0 / 62%);
+}
+
+.site-link-tile:hover,
+.site-link-tile:focus-visible {
+    color: var(--white);
+    filter: brightness(1.12);
+    text-decoration: none;
+}
+
+.site-link-tile:hover {
+    transform: translateY(-2px);
+}
+
 /* Geist Mono is the quotation voice; .font-mono remains available as a utility. */
 blockquote,
 blockquote *,
@@ -430,6 +489,10 @@ blockquote *,
     .portal-tile__content {
         width: min(62%, 290px);
     }
+
+    .site-link-tile {
+        min-height: 118px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -437,6 +500,14 @@ blockquote *,
     *::before,
     *::after {
         scroll-behavior: auto !important;
+    }
+
+    .site-link-tile {
+        transition: none;
+    }
+
+    .site-link-tile:hover {
+        transform: none;
     }
 }
 
