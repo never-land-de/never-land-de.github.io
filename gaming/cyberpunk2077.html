@@ -21,17 +21,62 @@
 
     <div class="site-shell cp-shell">
         <header class="site-panel site-header" aria-label="Main navigation">
-            <a class="site-brand" href="../index.html" aria-label="Never Land home page">
-                www.never-land.de
+            <a class="site-brand" href="../index.html" aria-label="Never Land home">
+                <span class="site-brand__desktop">www.never-land.de</span>
+                <span class="site-brand__mobile" aria-hidden="true">NVR::<br>::LND</span>
             </a>
 
             <nav class="site-nav" aria-label="Portal navigation">
                 <strong>:: navigate ::</strong>
-                <a href="../sisters/">SISTERS</a>&nbsp;::
-                <a href="../music/">MUSIC</a>&nbsp;::
-                <a href="../tech/">TECH</a>&nbsp;::
-                <a href="./">GAMING</a>&nbsp;::
+                <a href="../sisters/index.html">SISTERS</a>&nbsp;::
+                <a href="../music/index.html">MUSIC</a>&nbsp;::
+                <a href="../tech/index.html">TECH</a>&nbsp;::
+                <a href="../gaming/index.html" data-current-section="true">GAMING</a>&nbsp;::
             </nav>
+
+            <details class="mobile-menu">
+                <summary class="mobile-menu__toggle" aria-label="Open or close navigation">
+                    <span class="mobile-menu__icon" aria-hidden="true"></span>
+                </summary>
+
+                <nav class="mobile-menu__panel" aria-label="Mobile navigation">
+                    <div class="mobile-menu__inner">
+                        <a class="mobile-menu__home" href="../index.html">www.never-land.de</a>
+                        <div class="mobile-menu__kicker">:: NAVIGATE ::</div>
+
+                        <div class="mobile-menu__groups">
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../sisters/index.html">SISTERS</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../sisters/collection.html">Collection</a>
+                                    <a href="../sisters/gigs.html">Gigs I've seen</a>
+                                    <a href="../sisters/features/waiting-for-another-war.html">Book Review</a>
+                                    <a href="../sisters/about.html">About this archive</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../music/index.html">MUSIC</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../music/vinylcollection.html">Vinyl Collection</a>
+                                    <a href="../music/gigs.html">Other gigs I've seen</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../gaming/index.html" data-current-section="true">GAMING</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../gaming/cyberpunk2077.html" aria-current="page">Cyberpunk 2077</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../tech/index.html">TECH</a>
+                            </section>
+                        </div>
+                    </div>
+                </nav>
+            </details>
         </header>
 
         <main id="main-content">
@@ -434,7 +479,7 @@
 
             <div class="site-footer__options">
                 <strong>:: options ::</strong>
-                <a href="mailto:jan@never-land.de">eMail</a>&nbsp;::
+                <a href="../options/email.html">eMail</a>&nbsp;::
                 <a href="../options/technik.html">Technik</a>&nbsp;::
                 <a href="../options/impressum.html">Impressum &amp; Privacy</a>&nbsp;::
                 &copy; 2000–2003 / 2026 ::

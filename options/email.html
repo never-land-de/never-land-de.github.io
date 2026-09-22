@@ -16,18 +16,63 @@
 
 <body>
     <div class="site-shell">
-        <header class="site-panel site-header" aria-label="Hauptnavigation">
-            <a class="site-brand" href="../index.html" aria-label="Never Land Startseite">
-                www.never-land.de
+        <header class="site-panel site-header" aria-label="Main navigation">
+            <a class="site-brand" href="../index.html" aria-label="Never Land home">
+                <span class="site-brand__desktop">www.never-land.de</span>
+                <span class="site-brand__mobile" aria-hidden="true">NVR::<br>::LND</span>
             </a>
 
-            <nav class="site-nav" aria-label="Portal-Navigation">
+            <nav class="site-nav" aria-label="Portal navigation">
                 <strong>:: navigate ::</strong>
-                <a href="../sisters/">SISTERS</a>&nbsp;::
-                <a href="../music/">MUSIC</a>&nbsp;::
-                <a href="../tech/">TECH</a>&nbsp;::
-                <a href="../gaming/">GAMING</a>&nbsp;::
+                <a href="../sisters/index.html">SISTERS</a>&nbsp;::
+                <a href="../music/index.html">MUSIC</a>&nbsp;::
+                <a href="../tech/index.html">TECH</a>&nbsp;::
+                <a href="../gaming/index.html">GAMING</a>&nbsp;::
             </nav>
+
+            <details class="mobile-menu">
+                <summary class="mobile-menu__toggle" aria-label="Open or close navigation">
+                    <span class="mobile-menu__icon" aria-hidden="true"></span>
+                </summary>
+
+                <nav class="mobile-menu__panel" aria-label="Mobile navigation">
+                    <div class="mobile-menu__inner">
+                        <a class="mobile-menu__home" href="../index.html">www.never-land.de</a>
+                        <div class="mobile-menu__kicker">:: NAVIGATE ::</div>
+
+                        <div class="mobile-menu__groups">
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../sisters/index.html">SISTERS</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../sisters/collection.html">Collection</a>
+                                    <a href="../sisters/gigs.html">Gigs I've seen</a>
+                                    <a href="../sisters/features/waiting-for-another-war.html">Book Review</a>
+                                    <a href="../sisters/about.html">About this archive</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../music/index.html">MUSIC</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../music/vinylcollection.html">Vinyl Collection</a>
+                                    <a href="../music/gigs.html">Other gigs I've seen</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../gaming/index.html">GAMING</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../gaming/cyberpunk2077.html">Cyberpunk 2077</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../tech/index.html">TECH</a>
+                            </section>
+                        </div>
+                    </div>
+                </nav>
+            </details>
         </header>
 
         <main class="site-panel bg-black p-3 p-md-4 my-3" id="main-content">
@@ -35,7 +80,7 @@
                 <p class="font-mono mb-2">:: communication is possible ::</p>
                 <h1 class="h3 mb-2">eMail</h1>
                 <p class="mb-0">
-                    Eine Maus wird nicht benötigt. Vermutlich hat sie hier ohnehin nichts zu suchen.
+                    You won't need a mouse. Probably it has no business being here anyway.
                 </p>
             </header>
 

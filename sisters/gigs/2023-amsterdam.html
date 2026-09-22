@@ -16,14 +16,62 @@
 <body class="editorial-page editorial-page--gig">
     <div class="site-shell">
         <header class="site-panel site-header" aria-label="Main navigation">
-            <a class="site-brand" href="../../index.html" aria-label="Never Land home">www.never-land.de</a>
+            <a class="site-brand" href="../../index.html" aria-label="Never Land home">
+                <span class="site-brand__desktop">www.never-land.de</span>
+                <span class="site-brand__mobile" aria-hidden="true">NVR::<br>::LND</span>
+            </a>
+
             <nav class="site-nav" aria-label="Portal navigation">
                 <strong>:: navigate ::</strong>
-                <a href="../index.html" aria-current="page">SISTERS</a>&nbsp;::
+                <a href="../../sisters/index.html" data-current-section="true">SISTERS</a>&nbsp;::
                 <a href="../../music/index.html">MUSIC</a>&nbsp;::
                 <a href="../../tech/index.html">TECH</a>&nbsp;::
                 <a href="../../gaming/index.html">GAMING</a>&nbsp;::
             </nav>
+
+            <details class="mobile-menu">
+                <summary class="mobile-menu__toggle" aria-label="Open or close navigation">
+                    <span class="mobile-menu__icon" aria-hidden="true"></span>
+                </summary>
+
+                <nav class="mobile-menu__panel" aria-label="Mobile navigation">
+                    <div class="mobile-menu__inner">
+                        <a class="mobile-menu__home" href="../../index.html">www.never-land.de</a>
+                        <div class="mobile-menu__kicker">:: NAVIGATE ::</div>
+
+                        <div class="mobile-menu__groups">
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../../sisters/index.html" data-current-section="true">SISTERS</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../../sisters/collection.html">Collection</a>
+                                    <a href="../../sisters/gigs.html" aria-current="page">Gigs I've seen</a>
+                                    <a href="../../sisters/features/waiting-for-another-war.html">Book Review</a>
+                                    <a href="../../sisters/about.html">About this archive</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../../music/index.html">MUSIC</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../../music/vinylcollection.html">Vinyl Collection</a>
+                                    <a href="../../music/gigs.html">Other gigs I've seen</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../../gaming/index.html">GAMING</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../../gaming/cyberpunk2077.html">Cyberpunk 2077</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../../tech/index.html">TECH</a>
+                            </section>
+                        </div>
+                    </div>
+                </nav>
+            </details>
         </header>
 
         <main class="editorial-main">

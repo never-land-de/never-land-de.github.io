@@ -60,6 +60,7 @@
     --dark-green: #505e0c;
     --subnote: #5c5406;
     --panel-border: #F6F1EC;
+    --nav-active: #f6d65b;
 }
 
 /* Bootstrap already applies border-box globally; keeping this explicit makes
@@ -164,9 +165,10 @@ a:focus-visible {
 
 .site-header {
     position: sticky;
-    top: clamp(12px, 2vw, 24px);
-    z-index: 1000;
+    top: 0;
+    z-index: 1200;
     justify-content: space-between;
+    overflow: visible;
     /*
        The 2003 head.gif is retained temporarily as a texture.
        For the final version, use a text-free replacement so the HTML brand
@@ -189,6 +191,11 @@ a:focus-visible {
 .site-brand:focus-visible {
     color: var(--white);
     text-decoration: none;
+}
+
+.site-brand__mobile,
+.mobile-menu {
+    display: none;
 }
 
 .site-nav {
@@ -221,6 +228,11 @@ a.whitesub {
 a.whitesub:hover {
     color: var(--white);
     text-decoration: none;
+}
+
+.site-header .site-nav a[aria-current="page"],
+.site-header .site-nav a[data-current-section="true"] {
+    color: var(--nav-active);
 }
 
 /* --------------------------------------------------------------------------
@@ -440,22 +452,208 @@ blockquote *,
 
 @media (max-width: 849.98px) {
     .site-header {
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.5rem;
-        padding-block: 10px;
+        min-height: 72px;
+        padding: 8px 12px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
     }
 
     .site-brand {
-        width: 100%;
-        text-align: center;
+        width: auto;
+        text-align: left;
     }
 
+    .site-brand__desktop,
     .site-nav {
-        width: 100%;
-        margin-left: 0;
-        text-align: center;
-        white-space: normal;
+        display: none;
+    }
+
+    .site-brand__mobile {
+        display: block;
+        font-size: 1.05rem;
+        line-height: 0.92;
+        letter-spacing: 0.04em;
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .mobile-menu__toggle {
+        position: relative;
+        z-index: 2;
+        width: 48px;
+        height: 48px;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        place-items: center;
+        color: var(--white);
+        cursor: pointer;
+        list-style: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-menu__toggle::-webkit-details-marker {
+        display: none;
+    }
+
+    .mobile-menu__toggle:focus-visible {
+        outline: 2px solid var(--white);
+        outline-offset: 2px;
+    }
+
+    .mobile-menu__icon,
+    .mobile-menu__icon::before,
+    .mobile-menu__icon::after {
+        width: 30px;
+        height: 2px;
+        display: block;
+        background: currentColor;
+        transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .mobile-menu__icon {
+        position: relative;
+        background: transparent;
+    }
+
+    .mobile-menu__icon::before,
+    .mobile-menu__icon::after {
+        position: absolute;
+        left: 0;
+        content: "";
+    }
+
+    .mobile-menu__icon::before {
+        transform: translateY(-5px);
+    }
+
+    .mobile-menu__icon::after {
+        transform: translateY(5px);
+    }
+
+    .mobile-menu[open] .mobile-menu__toggle {
+        position: fixed;
+        top: max(12px, env(safe-area-inset-top));
+        right: max(12px, env(safe-area-inset-right));
+        z-index: 2201;
+    }
+
+    .mobile-menu[open] .mobile-menu__icon::before {
+        transform: rotate(45deg);
+    }
+
+    .mobile-menu[open] .mobile-menu__icon::after {
+        transform: rotate(-45deg);
+    }
+
+    .mobile-menu__panel {
+        position: fixed;
+        inset: 0;
+        z-index: 2200;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        color: var(--white);
+        background-color: #031813;
+        background-image:
+            radial-gradient(circle at 18% 0%, rgb(10 116 86 / 34%), transparent 42%),
+            linear-gradient(90deg, rgb(255 255 255 / 2%) 1px, transparent 1px),
+            linear-gradient(rgb(255 255 255 / 2%) 1px, transparent 1px);
+        background-size: auto, 16px 16px, 16px 16px;
+    }
+
+    .mobile-menu__inner {
+        width: min(100%, 680px);
+        min-height: 100%;
+        margin: 0 auto;
+        padding:
+            max(28px, env(safe-area-inset-top))
+            max(28px, env(safe-area-inset-right))
+            max(48px, env(safe-area-inset-bottom))
+            max(28px, env(safe-area-inset-left));
+    }
+
+    .site-header .mobile-menu__home {
+        min-height: 44px;
+        padding-right: 58px;
+        display: inline-flex;
+        align-items: center;
+        color: rgb(255 255 255 / 72%);
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+        line-height: 1;
+        text-decoration: none;
+    }
+
+    .site-header .mobile-menu__home:hover,
+    .site-header .mobile-menu__home:focus-visible {
+        color: var(--white);
+    }
+
+    .mobile-menu__kicker {
+        margin: clamp(2rem, 6vh, 4rem) 0 clamp(1.5rem, 4vh, 2.5rem);
+        color: #77d9b7;
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        letter-spacing: 0.08em;
+    }
+
+    .mobile-menu__groups {
+        display: grid;
+        gap: clamp(1.6rem, 4vh, 2.6rem);
+    }
+
+    .mobile-menu__group {
+        margin: 0;
+    }
+
+    .site-header .mobile-menu__category {
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        color: var(--white);
+        font-size: clamp(1.65rem, 7vw, 2.5rem);
+        line-height: 1;
+        letter-spacing: 0.035em;
+        text-decoration: none;
+    }
+
+    .mobile-menu__subpages {
+        margin-top: 0.25rem;
+        display: grid;
+        gap: 0.08rem;
+    }
+
+    .site-header .mobile-menu__subpages a {
+        min-height: 42px;
+        padding: 0.45rem 0;
+        display: flex;
+        align-items: center;
+        color: rgb(255 255 255 / 76%);
+        font-size: clamp(0.78rem, 2.8vw, 1rem);
+        line-height: 1.25;
+        text-decoration: none;
+    }
+
+    .site-header .mobile-menu__subpages a:hover,
+    .site-header .mobile-menu__subpages a:focus-visible {
+        color: var(--white);
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+    }
+
+    .site-header .mobile-menu__category[aria-current="page"],
+    .site-header .mobile-menu__category[data-current-section="true"],
+    .site-header .mobile-menu__subpages a[aria-current="page"],
+    .site-header .mobile-menu__category[aria-current="page"]:hover,
+    .site-header .mobile-menu__category[data-current-section="true"]:hover,
+    .site-header .mobile-menu__subpages a[aria-current="page"]:hover {
+        color: var(--nav-active);
+    }
+
+    body:has(.mobile-menu[open]) {
+        overflow: hidden;
     }
 
     .portal-grid {
@@ -508,6 +706,12 @@ blockquote *,
 
     .site-link-tile:hover {
         transform: none;
+    }
+
+    .mobile-menu__icon,
+    .mobile-menu__icon::before,
+    .mobile-menu__icon::after {
+        transition: none;
     }
 }
 
