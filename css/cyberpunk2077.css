@@ -709,7 +709,11 @@ body.cp-page {
     }
 
     .cp-hero h1 {
-        font-size: clamp(2.85rem, 16vw, 4.8rem);
+        max-width: 100%;
+        font-size: clamp(2rem, 9vw, 2.5rem);
+        letter-spacing: -0.035em;
+        line-height: 0.9;
+        text-shadow: 3px 3px 0 rgb(255 0 60 / 48%);
     }
 
     .cp-hero__stamp {
