@@ -48,11 +48,6 @@ body.cp-page {
         url("../essentials/portal/head.gif");
 }
 
-.cp-page .site-nav a[href="./"] {
-    color: var(--cp-yellow);
-    text-decoration: none;
-}
-
 .cp-skip-link {
     position: fixed;
     z-index: 2000;

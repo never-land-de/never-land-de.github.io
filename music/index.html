@@ -11,7 +11,7 @@
 
     <!-- Bootstrap first; shared Never Land design system second; Doorpage layer last. -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/home.css?v=20260922-nav2" rel="stylesheet">
+    <link href="../css/home.css?v=20260923-nav3" rel="stylesheet">
     <link href="../css/doorpage.css" rel="stylesheet">
 </head>
 
@@ -24,56 +24,35 @@
             </a>
 
             <nav class="site-nav" aria-label="Portal navigation">
-                <strong>:: navigate ::</strong>
-                <a href="../sisters/index.html">SISTERS</a>&nbsp;::
-                <a href="../music/index.html" aria-current="page">MUSIC</a>&nbsp;::
-                <a href="../tech/index.html">TECH</a>&nbsp;::
-                <a href="../gaming/index.html">GAMING</a>&nbsp;::
+                <a href="../sisters/index.html">SISTERS</a>
+                <a href="../music/index.html" aria-current="page">MUSIC</a>
+                <a href="../gaming/index.html">GAMING</a>
+                <a href="../tech/index.html">TECH</a>
             </nav>
 
-            <details class="mobile-menu">
-                <summary class="mobile-menu__toggle" aria-label="Open or close navigation">
+            <div class="mobile-menu">
+                <button class="mobile-menu__toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-navigation">
                     <span class="mobile-menu__icon" aria-hidden="true"></span>
-                </summary>
-
-                <nav class="mobile-menu__panel" aria-label="Mobile navigation">
+                </button>
+                <nav class="mobile-menu__panel" id="mobile-navigation" aria-label="Mobile navigation" hidden>
                     <div class="mobile-menu__inner">
                         <a class="mobile-menu__home" href="../index.html">www.never-land.de</a>
                         <div class="mobile-menu__kicker">:: NAVIGATE ::</div>
-
                         <div class="mobile-menu__groups">
-                            <section class="mobile-menu__group">
-                                <a class="mobile-menu__category" href="../sisters/index.html">SISTERS</a>
-                                <div class="mobile-menu__subpages">
-                                    <a href="../sisters/collection.html">Collection</a>
-                                    <a href="../sisters/gigs.html">Gigs I've seen</a>
-                                    <a href="../sisters/features/waiting-for-another-war.html">Book Review</a>
-                                    <a href="../sisters/about.html">About this archive</a>
-                                </div>
-                            </section>
-
-                            <section class="mobile-menu__group">
-                                <a class="mobile-menu__category" href="../music/index.html" aria-current="page">MUSIC</a>
-                                <div class="mobile-menu__subpages">
-                                    <a href="../music/vinylcollection.html">Vinyl Collection</a>
-                                    <a href="../music/gigs.html">Other gigs I've seen</a>
-                                </div>
-                            </section>
-
-                            <section class="mobile-menu__group">
-                                <a class="mobile-menu__category" href="../gaming/index.html">GAMING</a>
-                                <div class="mobile-menu__subpages">
-                                    <a href="../gaming/cyberpunk2077.html">Cyberpunk 2077</a>
-                                </div>
-                            </section>
-
-                            <section class="mobile-menu__group">
-                                <a class="mobile-menu__category" href="../tech/index.html">TECH</a>
-                            </section>
+                            <a class="mobile-menu__category" href="../sisters/index.html">SISTERS</a>
+                        <a class="mobile-menu__category" href="../music/index.html" aria-current="page">MUSIC</a>
+                            <a class="mobile-menu__category" href="../gaming/index.html">GAMING</a>
+                            <a class="mobile-menu__category" href="../tech/index.html">TECH</a>
+                        </div>
+                        <div class="mobile-menu__kicker mobile-menu__kicker--options">:: OPTIONS ::</div>
+                        <div class="mobile-menu__options">
+                            <a href="../options/email.html">eMail</a>
+                            <a href="../options/technik.html">Technik</a>
+                            <a href="../options/impressum.html">Impressum</a>
                         </div>
                     </div>
                 </nav>
-            </details>
+            </div>
         </header>
 
         <main class="doorpage-main">
@@ -188,5 +167,6 @@
             </div>
         </footer>
     </div>
+    <script src="../js/navigation.js" defer></script>
 </body>
 </html>
