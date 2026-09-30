@@ -720,6 +720,14 @@ blockquote *,
     }
 }
 
+/* At the 320px minimum viewport, the tile ratio plus its 225px minimum height
+   would otherwise force the portal grid wider than the page. */
+@media (max-width: 348px) {
+    .portal-tile {
+        aspect-ratio: auto;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

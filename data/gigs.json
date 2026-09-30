@@ -1,0 +1,455 @@
+{
+  "version": 1,
+  "sources": [
+    "./sisters/gigs.html",
+    "./music/gigs.html"
+  ],
+  "gigs": [
+    {
+      "id": "gig-2000-08-12-sisters-hildesheim",
+      "date": "2000-08-12",
+      "artist": "SISTERS",
+      "city": "Hildesheim, Germany",
+      "venue": "M'era Luna Festival",
+      "link": ""
+    },
+    {
+      "id": "gig-2001-02-26-sisters-hamburg",
+      "date": "2001-02-26",
+      "artist": "SISTERS",
+      "city": "Hamburg, Germany",
+      "venue": "Große Freiheit 36",
+      "link": ""
+    },
+    {
+      "id": "gig-2001-03-06-sisters-koeln",
+      "date": "2001-03-06",
+      "artist": "SISTERS",
+      "city": "Köln, Germany",
+      "venue": "Palladium",
+      "link": ""
+    },
+    {
+      "id": "gig-2001-06-23-sisters-bonn",
+      "date": "2001-06-23",
+      "artist": "SISTERS",
+      "city": "Bonn, Germany",
+      "venue": "Museumsplatz",
+      "link": ""
+    },
+    {
+      "id": "gig-2001-08-24-sisters-hasselt",
+      "date": "2001-08-24",
+      "artist": "SISTERS",
+      "city": "Hasselt, België",
+      "venue": "Pukkelpop Festival",
+      "link": ""
+    },
+    {
+      "id": "gig-2001-10-13-sisters-ternat",
+      "date": "2001-10-13",
+      "artist": "SISTERS",
+      "city": "Ternat, België",
+      "venue": "RockTernat Festival",
+      "link": "./sisters/gigs/2001-rockternat.html"
+    },
+    {
+      "id": "gig-2002-07-28-sisters-st-vith",
+      "date": "2002-07-28",
+      "artist": "SISTERS, DIE TOTEN HOSEN",
+      "city": "St. Vith, België",
+      "venue": "Alive Festival",
+      "link": ""
+    },
+    {
+      "id": "gig-2003-04-01-sisters-frankfurt",
+      "date": "2003-04-01",
+      "artist": "SISTERS",
+      "city": "Frankfurt, Germany",
+      "venue": "Jahrhunderthalle",
+      "link": ""
+    },
+    {
+      "id": "gig-2003-04-15-sisters-duesseldorf",
+      "date": "2003-04-15",
+      "artist": "SISTERS",
+      "city": "Düsseldorf, Germany",
+      "venue": "Philipshalle",
+      "link": ""
+    },
+    {
+      "id": "gig-2003-04-26-sisters-leeds",
+      "date": "2003-04-26",
+      "artist": "SISTERS",
+      "city": "Leeds, England",
+      "venue": "Blank Canvas",
+      "link": ""
+    },
+    {
+      "id": "gig-2003-04-27-sisters-leeds",
+      "date": "2003-04-27",
+      "artist": "SISTERS",
+      "city": "Leeds, England",
+      "venue": "Blank Canvas",
+      "link": ""
+    },
+    {
+      "id": "gig-2005-08-06-sisters-tilburg",
+      "date": "2005-08-06",
+      "artist": "SISTERS",
+      "city": "Tilburg, Nederland",
+      "venue": "013",
+      "link": ""
+    },
+    {
+      "id": "gig-2006-04-25-sisters-koeln",
+      "date": "2006-04-25",
+      "artist": "SISTERS",
+      "city": "Köln, Germany",
+      "venue": "E-Werk",
+      "link": ""
+    },
+    {
+      "id": "gig-2009-03-06-sisters-koeln",
+      "date": "2009-03-06",
+      "artist": "SISTERS",
+      "city": "Köln, Germany",
+      "venue": "E-Werk",
+      "link": ""
+    },
+    {
+      "id": "gig-2011-02-23-sisters-tilburg",
+      "date": "2011-02-23",
+      "artist": "SISTERS",
+      "city": "Tilburg, Nederland",
+      "venue": "013",
+      "link": ""
+    },
+    {
+      "id": "gig-2012-07-21-sisters-koeln",
+      "date": "2012-07-21",
+      "artist": "SISTERS",
+      "city": "Köln, Germany",
+      "venue": "Amphi Festival",
+      "link": ""
+    },
+    {
+      "id": "gig-2014-05-25-sisters-amsterdam",
+      "date": "2014-05-25",
+      "artist": "SISTERS",
+      "city": "Amsterdam, Nederland",
+      "venue": "Melkweg",
+      "link": ""
+    },
+    {
+      "id": "gig-2016-04-08-sisters-koeln",
+      "date": "2016-04-08",
+      "artist": "SISTERS",
+      "city": "Köln, Germany",
+      "venue": "Palladium",
+      "link": ""
+    },
+    {
+      "id": "gig-2017-09-24-sisters-dortmund",
+      "date": "2017-09-24",
+      "artist": "SISTERS",
+      "city": "Dortmund, Germany",
+      "venue": "LZW",
+      "link": ""
+    },
+    {
+      "id": "gig-2019-10-14-sisters-koeln",
+      "date": "2019-10-14",
+      "artist": "SISTERS",
+      "city": "Köln, Germany",
+      "venue": "E-Werk",
+      "link": "./sisters/gigs/2019-koeln.html"
+    },
+    {
+      "id": "gig-2019-10-20-sisters-utrecht",
+      "date": "2019-10-20",
+      "artist": "SISTERS",
+      "city": "Utrecht, Nederland",
+      "venue": "TivoliVredenburg",
+      "link": "./sisters/gigs/2019-utrecht.html"
+    },
+    {
+      "id": "gig-2022-04-05-sisters-nijmegen",
+      "date": "2022-04-05",
+      "artist": "SISTERS",
+      "city": "Nijmegen, Nederland",
+      "venue": "Doornrosje",
+      "link": ""
+    },
+    {
+      "id": "gig-2023-09-26-sisters-amsterdam",
+      "date": "2023-09-26",
+      "artist": "SISTERS",
+      "city": "Amsterdam, Nederland",
+      "venue": "Paradiso",
+      "link": "./sisters/gigs/2023-amsterdam.html"
+    },
+    {
+      "id": "gig-2024-01-21-sisters-koeln",
+      "date": "2024-01-21",
+      "artist": "SISTERS",
+      "city": "Köln, Germany",
+      "venue": "Carlswerk Viktoria",
+      "link": ""
+    },
+    {
+      "id": "gig-2024-06-06-sisters-eindhoven",
+      "date": "2024-06-06",
+      "artist": "SISTERS",
+      "city": "Eindhoven, Nederland",
+      "venue": "Effenaar",
+      "link": ""
+    },
+    {
+      "id": "gig-2026-10-05-sisters-koeln",
+      "date": "2026-10-05",
+      "artist": "SISTERS",
+      "city": "Köln, Germany",
+      "venue": "E-Werk",
+      "link": ""
+    },
+    {
+      "id": "gig-2026-10-11-sisters-bruxelles",
+      "date": "2026-10-11",
+      "artist": "SISTERS",
+      "city": "Bruxelles, België",
+      "venue": "Ancienne Belgique",
+      "link": ""
+    },
+    {
+      "id": "gig-2026-10-12-sisters-bruxelles",
+      "date": "2026-10-12",
+      "artist": "SISTERS",
+      "city": "Bruxelles, België",
+      "venue": "Ancienne Belgique",
+      "link": ""
+    },
+    {
+      "id": "gig-2002-02-03-the-mission-bochum",
+      "date": "2002-02-03",
+      "artist": "The Mission",
+      "city": "Bochum, Germany",
+      "venue": "Zeche",
+      "link": ""
+    },
+    {
+      "id": "gig-2002-02-16-pet-shop-boys-duesseldorf",
+      "date": "2002-02-16",
+      "artist": "Pet Shop Boys",
+      "city": "Düsseldorf, Germany",
+      "venue": "Philipshalle",
+      "link": ""
+    },
+    {
+      "id": "gig-2003-abba-revival-band-neuss",
+      "date": "",
+      "year": 2003,
+      "month": "",
+      "day": "",
+      "artist": "ABBA Revival Band",
+      "city": "Neuss, Germany",
+      "venue": "Münsterplatz",
+      "link": ""
+    },
+    {
+      "id": "gig-2003-09-01-matchbox-twenty-koeln",
+      "date": "2003-09-01",
+      "artist": "Matchbox Twenty",
+      "city": "Köln, Germany",
+      "venue": "E-Werk",
+      "link": ""
+    },
+    {
+      "id": "gig-2004-queen-revival-band-neuss",
+      "date": "",
+      "year": 2004,
+      "month": "",
+      "day": "",
+      "artist": "QUEEN Revival Band",
+      "city": "Neuss, Germany",
+      "venue": "Münsterplatz",
+      "link": ""
+    },
+    {
+      "id": "gig-2005-06-23-rob-thomas-koeln",
+      "date": "2005-06-23",
+      "artist": "Rob Thomas",
+      "city": "Köln, Germany",
+      "venue": "Gloria-Theater",
+      "link": ""
+    },
+    {
+      "id": "gig-2005-09-01-die-toten-hosen-duesseldorf",
+      "date": "2005-09-01",
+      "artist": "DIE TOTEN HOSEN",
+      "city": "Düsseldorf, Germany",
+      "venue": "Esprit-Arena",
+      "link": ""
+    },
+    {
+      "id": "gig-2006-03-27-3-doors-down-koeln",
+      "date": "2006-03-27",
+      "artist": "3 Doors Down",
+      "city": "Köln, Germany",
+      "venue": "Palladium",
+      "link": ""
+    },
+    {
+      "id": "gig-2007-03-27-hinder-koeln",
+      "date": "2007-03-27",
+      "artist": "Hinder",
+      "city": "Köln, Germany",
+      "venue": "Prime Club",
+      "link": ""
+    },
+    {
+      "id": "gig-2007-11-30-juli-duesseldorf",
+      "date": "2007-11-30",
+      "artist": "Juli",
+      "city": "Düsseldorf, Germany",
+      "venue": "Stahlwerk",
+      "link": ""
+    },
+    {
+      "id": "gig-2007-12-16-die-aerzte-duesseldorf",
+      "date": "2007-12-16",
+      "artist": "Die Ärzte",
+      "city": "Düsseldorf, Germany",
+      "venue": "ISS Dome",
+      "link": ""
+    },
+    {
+      "id": "gig-2008-12-11-thomas-godoj-koeln",
+      "date": "2008-12-11",
+      "artist": "Thomas Godoj",
+      "city": "Köln, Germany",
+      "venue": "Live Music Hall",
+      "link": ""
+    },
+    {
+      "id": "gig-2010-12-16-waschkraft-duesseldorf",
+      "date": "2010-12-16",
+      "artist": "Waschkraft",
+      "city": "Düsseldorf, Germany",
+      "venue": "zakk",
+      "link": ""
+    },
+    {
+      "id": "gig-2012-04-20-thomas-godoj-koeln",
+      "date": "2012-04-20",
+      "artist": "Thomas Godoj",
+      "city": "Köln, Germany",
+      "venue": "Bürgerhaus Stollwerck",
+      "link": ""
+    },
+    {
+      "id": "gig-2012-10-08-dead-can-dance-koeln",
+      "date": "2012-10-08",
+      "artist": "Dead Can Dance",
+      "city": "Köln, Germany",
+      "venue": "Philharmonie",
+      "link": ""
+    },
+    {
+      "id": "gig-2012-11-24-die-toten-hosen-duesseldorf",
+      "date": "2012-11-24",
+      "artist": "DIE TOTEN HOSEN",
+      "city": "Düsseldorf, Germany",
+      "venue": "ISS Dome",
+      "link": ""
+    },
+    {
+      "id": "gig-2017-12-30-die-toten-hosen-duesseldorf",
+      "date": "2017-12-30",
+      "artist": "DIE TOTEN HOSEN",
+      "city": "Düsseldorf, Germany",
+      "venue": "ISS Dome",
+      "link": ""
+    },
+    {
+      "id": "gig-2018-06-18-black-rebel-motorcycle-club-duesseldorf",
+      "date": "2018-06-18",
+      "artist": "Black Rebel Motorcycle Club",
+      "city": "Düsseldorf, Germany",
+      "venue": "zakk",
+      "link": ""
+    },
+    {
+      "id": "gig-2019-02-09-holygram-bochum",
+      "date": "2019-02-09",
+      "artist": "Holygram",
+      "city": "Bochum, Germany",
+      "venue": "Rockpalast",
+      "link": ""
+    },
+    {
+      "id": "gig-2019-04-11-camera-koeln",
+      "date": "2019-04-11",
+      "artist": "camera",
+      "city": "Köln, Germany",
+      "venue": "Bumann & SOHN",
+      "link": ""
+    },
+    {
+      "id": "gig-2019-12-13-holygram-koeln",
+      "date": "2019-12-13",
+      "artist": "Holygram",
+      "city": "Köln, Germany",
+      "venue": "Gebäude 9",
+      "link": ""
+    },
+    {
+      "id": "gig-2023-10-08-the-virginmarys-koeln",
+      "date": "2023-10-08",
+      "artist": "The Virginmarys",
+      "city": "Köln, Germany",
+      "venue": "E-Werk",
+      "link": ""
+    },
+    {
+      "id": "gig-2024-01-28-the-virginmarys-eindhoven",
+      "date": "2024-01-28",
+      "artist": "The Virginmarys",
+      "city": "Eindhoven, Nederland",
+      "venue": "Effenaar",
+      "link": ""
+    },
+    {
+      "id": "gig-2024-03-13-ist-ist-koeln",
+      "date": "2024-03-13",
+      "artist": "IST IST",
+      "city": "Köln, Germany",
+      "venue": "Blue Shell",
+      "link": ""
+    },
+    {
+      "id": "gig-2024-09-24-nick-cave-oberhausen",
+      "date": "2024-09-24",
+      "artist": "Nick Cave & The Bad Seeds",
+      "city": "Oberhausen, Germany",
+      "venue": "Rudolf Weber-ARENA",
+      "link": ""
+    },
+    {
+      "id": "gig-2026-04-21-the-virginmarys-koeln",
+      "date": "2026-04-21",
+      "artist": "The Virginmarys",
+      "city": "Köln, Germany",
+      "venue": "Blue Shell",
+      "link": ""
+    },
+    {
+      "id": "gig-2027-07-10-die-toten-hosen-duesseldorf",
+      "date": "2027-07-10",
+      "artist": "Die Toten Hosen",
+      "city": "Düsseldorf, Germany",
+      "venue": "Merkur Spiel Arena",
+      "link": ""
+    }
+  ]
+}

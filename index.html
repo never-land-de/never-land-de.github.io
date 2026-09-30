@@ -17,6 +17,7 @@
     -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/home.css?v=20260923-nav3" rel="stylesheet">
+    <link href="./css/memory-alpha.css" rel="stylesheet">
 </head>
 
 <body>
@@ -165,6 +166,48 @@
                     </div>
                 </div>
             </article>
+
+            <section
+                class="site-panel memory-alpha"
+                id="memory-alpha"
+                data-memory-src="./data/memory-alpha.json"
+                data-gigs-src="./data/gigs.json"
+                aria-labelledby="memory-alpha-title"
+                hidden
+            >
+                <div class="memory-alpha__rail" aria-hidden="true">
+                    <span class="memory-alpha__rail-segment memory-alpha__rail-segment--a"></span>
+                    <span class="memory-alpha__rail-segment memory-alpha__rail-segment--b"></span>
+                    <span class="memory-alpha__rail-segment memory-alpha__rail-segment--c"></span>
+                </div>
+
+                <div class="memory-alpha__body">
+                    <div class="memory-alpha__header">
+                        <h2 class="memory-alpha__title" id="memory-alpha-title">:: MEMORY ALPHA ::</h2>
+                        <span class="memory-alpha__counter" id="memory-alpha-counter" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="memory-alpha__entry" id="memory-alpha-entry" aria-live="polite" aria-atomic="true">
+                        <div class="memory-alpha__label" id="memory-alpha-label"></div>
+                        <div class="memory-alpha__mainline">
+                            <span id="memory-alpha-main"></span><span class="memory-alpha__cursor" aria-hidden="true">_</span>
+                        </div>
+                        <div class="memory-alpha__byline" id="memory-alpha-byline"></div>
+                        <div class="memory-alpha__meta" id="memory-alpha-meta"></div>
+                        <p class="memory-alpha__comment" id="memory-alpha-comment"></p>
+                    </div>
+
+                    <div class="memory-alpha__actions">
+                        <a class="memory-alpha__action" id="memory-alpha-open" href="#" hidden>[ OPEN ]</a>
+                        <button class="memory-alpha__action" id="memory-alpha-next" type="button">[ NEXT ]</button>
+                    </div>
+                </div>
+
+                <div class="memory-alpha__endcap" aria-hidden="true">
+                    <span>MA</span>
+                    <span>01</span>
+                </div>
+            </section>
         </main>
 
         <footer class="site-panel site-footer">
@@ -182,5 +225,6 @@
         </footer>
     </div>
     <script src="js/navigation.js" defer></script>
+    <script src="./js/memory-alpha.js" defer></script>
 </body>
 </html>

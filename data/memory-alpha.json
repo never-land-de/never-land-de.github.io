@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "example-album",
+      "type": "album",
+      "title": "ALBUM TITLE",
+      "byline": "ARTIST",
+      "meta": "1989 // LP",
+      "date": "1989-05-02",
+      "comment": "YOUR SHORT PERSONAL NOTE HERE.",
+      "link": "",
+      "random": true,
+      "on_this_day": true,
+      "enabled": false,
+      "weight": 1
+    },
+    {
+      "id": "example-track",
+      "type": "track",
+      "title": "TRACK TITLE",
+      "byline": "ARTIST // RELEASE",
+      "meta": "1991",
+      "date": "",
+      "comment": "YOUR SHORT PERSONAL NOTE HERE.",
+      "link": "",
+      "random": true,
+      "on_this_day": false,
+      "enabled": false,
+      "weight": 1
+    },
+    {
+      "id": "example-game",
+      "type": "game",
+      "title": "GAME TITLE",
+      "byline": "PLATFORM",
+      "meta": "YEAR",
+      "date": "",
+      "comment": "YOUR SHORT PERSONAL NOTE HERE.",
+      "link": "",
+      "random": true,
+      "on_this_day": false,
+      "enabled": false,
+      "weight": 1
+    },
+    {
+      "id": "example-tech",
+      "type": "tech",
+      "title": "DEVICE / MACHINE",
+      "byline": "MAKER // MODEL",
+      "meta": "YEAR",
+      "date": "",
+      "comment": "YOUR SHORT PERSONAL NOTE HERE.",
+      "link": "",
+      "random": true,
+      "on_this_day": false,
+      "enabled": false,
+      "weight": 1
+    },
+    {
+      "id": "example-quote",
+      "type": "quote",
+      "title": "QUOTE TEXT",
+      "byline": "SOURCE / AUTHOR",
+      "meta": "",
+      "date": "",
+      "comment": "",
+      "link": "",
+      "random": true,
+      "on_this_day": false,
+      "enabled": false,
+      "weight": 1
+    },
+    {
+      "id": "example-memory",
+      "type": "memory",
+      "title": "PERSONAL MEMORY",
+      "byline": "OPTIONAL CONTEXT",
+      "meta": "",
+      "date": "2001-09-30",
+      "comment": "YOUR SHORT PERSONAL NOTE HERE.",
+      "link": "",
+      "random": false,
+      "on_this_day": true,
+      "enabled": false,
+      "weight": 1
+    }
+  ]
+}

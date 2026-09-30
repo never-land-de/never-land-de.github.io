@@ -1,0 +1,268 @@
+/* ===========================================================================
+   MEMORY ALPHA — homepage-only archive strip
+   Load after home.css and only from index.html.
+   ========================================================================== */
+
+.memory-alpha {
+    --ma-bg: #090b0f;
+    --ma-text: #f6f1ec;
+    --ma-muted: #b8b5ba;
+    --ma-orange: #e9a15b;
+    --ma-gold: #f2c66d;
+    --ma-violet: #aa8bc7;
+    --ma-rose: #cf7da6;
+
+    grid-column: 1 / -1;
+    min-height: 132px;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 68px minmax(0, 1fr) 54px;
+
+    color: var(--ma-text);
+    background:
+        linear-gradient(90deg, rgb(255 255 255 / 2%), transparent 28%),
+        var(--ma-bg);
+}
+
+.memory-alpha[hidden] {
+    display: none !important;
+}
+
+.memory-alpha__rail {
+    display: grid;
+    grid-template-rows: 1fr 0.72fr 0.48fr;
+    gap: 4px;
+    padding: 10px 0 10px 10px;
+}
+
+.memory-alpha__rail-segment {
+    display: block;
+    min-height: 18px;
+    border-radius: 999px 0 0 999px;
+}
+
+.memory-alpha__rail-segment--a { background: var(--ma-orange); }
+.memory-alpha__rail-segment--b { background: var(--ma-violet); }
+.memory-alpha__rail-segment--c { background: var(--ma-gold); }
+
+.memory-alpha__body {
+    min-width: 0;
+    padding: 12px 16px 11px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto 1fr auto;
+    column-gap: 18px;
+}
+
+.memory-alpha__header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 5px;
+}
+
+.memory-alpha__title,
+.memory-alpha__label,
+.memory-alpha__action,
+.memory-alpha__endcap {
+    font-family: var(--font-pixel);
+}
+
+.memory-alpha__title {
+    margin: 0;
+    color: var(--ma-gold);
+    font-size: clamp(0.92rem, 1.4vw, 1.12rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.025em;
+}
+
+.memory-alpha__counter,
+.memory-alpha__meta {
+    font-family: var(--font-mono);
+    color: var(--ma-muted);
+}
+
+.memory-alpha__counter {
+    flex: 0 0 auto;
+    font-size: 0.62rem;
+    letter-spacing: 0.055em;
+    white-space: nowrap;
+}
+
+.memory-alpha__entry {
+    grid-column: 1;
+    min-width: 0;
+    align-self: center;
+}
+
+.memory-alpha__label {
+    margin-bottom: 2px;
+    color: var(--ma-rose);
+    font-size: 0.62rem;
+    letter-spacing: 0.045em;
+}
+
+.memory-alpha__mainline {
+    overflow-wrap: anywhere;
+    font-family: var(--font-body);
+    font-size: clamp(1.05rem, 2.05vw, 1.55rem);
+    font-weight: 620;
+    line-height: 1.08;
+    letter-spacing: -0.018em;
+}
+
+.memory-alpha__cursor {
+    display: inline-block;
+    margin-left: 0.08em;
+    color: var(--ma-orange);
+    font-family: var(--font-mono);
+    font-weight: 400;
+    animation: memory-alpha-cursor 1.05s steps(1, end) infinite;
+}
+
+@keyframes memory-alpha-cursor {
+    0%, 48% { opacity: 1; }
+    49%, 100% { opacity: 0; }
+}
+
+.memory-alpha__byline {
+    margin-top: 2px;
+    overflow-wrap: anywhere;
+    font-size: 0.76rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.memory-alpha__meta {
+    margin-top: 1px;
+    overflow-wrap: anywhere;
+    font-size: 0.65rem;
+    line-height: 1.25;
+}
+
+.memory-alpha__comment {
+    margin: 5px 0 0;
+    overflow-wrap: anywhere;
+    color: var(--ma-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    line-height: 1.3;
+}
+
+.memory-alpha__comment:empty,
+.memory-alpha__byline:empty,
+.memory-alpha__meta:empty {
+    display: none;
+}
+
+.memory-alpha__actions {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    padding-bottom: 1px;
+}
+
+.memory-alpha__action {
+    padding: 0;
+    border: 0;
+    color: var(--ma-text);
+    background: transparent;
+    font-size: 0.62rem;
+    line-height: 1.35;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+button.memory-alpha__action {
+    appearance: none;
+    cursor: pointer;
+}
+
+.memory-alpha__action:hover,
+.memory-alpha__action:focus-visible {
+    color: var(--ma-gold);
+    text-decoration: none;
+}
+
+.memory-alpha__action:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.memory-alpha__endcap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 7px 11px 5px;
+
+    color: #0a0b0e;
+    background: var(--ma-rose);
+
+    font-size: 0.68rem;
+    line-height: 1;
+}
+
+@media (max-width: 849.98px) {
+    .memory-alpha {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 620px) {
+    .memory-alpha {
+        min-height: 190px;
+        grid-template-columns: 26px minmax(0, 1fr);
+    }
+
+    .memory-alpha__rail {
+        padding: 8px 0 8px 7px;
+        gap: 3px;
+    }
+
+    .memory-alpha__body {
+        padding: 12px 13px 12px;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        row-gap: 8px;
+    }
+
+    .memory-alpha__header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 0;
+    }
+
+    .memory-alpha__entry,
+    .memory-alpha__actions {
+        grid-column: 1;
+    }
+
+    .memory-alpha__actions {
+        grid-row: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .memory-alpha__endcap {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .memory-alpha__cursor {
+        animation: none;
+        opacity: 1;
+    }
+}
