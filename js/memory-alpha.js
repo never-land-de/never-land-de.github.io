@@ -130,9 +130,9 @@
             date,
             comment: cleanText(item.comment),
             link: cleanText(item.link),
-            enabled: item.enabled === undefined ? true : parseBoolean(item.enabled, true),
-            random: item.random === undefined ? type !== "memory" : parseBoolean(item.random, false),
-            onThisDay: item.on_this_day === undefined ? Boolean(date) : parseBoolean(item.on_this_day, false)
+            enabled: item.enabled === true,
+            random: item.random === true,
+            onThisDay: item.on_this_day === true
         };
     }
 
@@ -166,7 +166,7 @@
     }
 
     function formatCounter() {
-        const total = state.randomPool.length + state.onThisDayPool.length;
+        const total = new Set([...state.randomPool, ...state.onThisDayPool]).size;
         if (!total) return "";
         const n = String(((state.displayCount - 1) % total) + 1).padStart(3, "0");
         return `RECORD ${n} / ${String(total).padStart(3, "0")}`;
@@ -203,7 +203,7 @@
     }
 
     function renderNext() {
-        const next = pickRandom(state.randomPool.length ? state.randomPool : state.onThisDayPool);
+        const next = pickRandom(state.randomPool);
         render(next, false);
     }
 
