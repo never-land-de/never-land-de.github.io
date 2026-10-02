@@ -129,6 +129,11 @@ body.editorial-page {
     backdrop-filter: blur(12px);
 }
 
+/* Clip the new review panels without creating a sticky scroll container. */
+.editorial-content--review {
+    overflow: clip;
+}
+
 .editorial-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(230px, 0.38fr);
@@ -246,6 +251,29 @@ body.editorial-page {
 .setlist .setlist__not-played {
     color: rgb(255 255 255 / 42%);
     text-decoration: line-through;
+}
+
+/* Archive gigs without a review: the setlist is the main reading panel. */
+.editorial-layout--setlist-only {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.editorial-layout--setlist-only .setlist {
+    position: static;
+    min-width: 0;
+}
+
+.editorial-layout--setlist-only .setlist ol {
+    columns: 3;
+    column-gap: 2rem;
+}
+
+.editorial-layout--setlist-only .setlist li {
+    break-inside: avoid;
+}
+
+.editorial-layout--setlist-only .setlist__break {
+    break-after: avoid-column;
 }
 
 /* Galleries and live video */
@@ -464,7 +492,8 @@ body.editorial-page {
         grid-row: 1;
     }
 
-    .setlist ol {
+    .setlist ol,
+    .editorial-layout--setlist-only .setlist ol {
         columns: 2;
         column-gap: 2rem;
     }
@@ -483,6 +512,10 @@ body.editorial-page {
         min-height: 440px;
     }
 
+    .editorial-hero--hildesheim .editorial-hero__image {
+        object-position: 38% center;
+    }
+
     .editorial-hero__copy {
         padding: 22px 18px;
     }
@@ -499,7 +532,8 @@ body.editorial-page {
         columns: auto;
     }
 
-    .setlist ol {
+    .setlist ol,
+    .editorial-layout--setlist-only .setlist ol {
         columns: 1;
     }
 
