@@ -24,9 +24,6 @@ body.cp-page {
     display: block;
     color: var(--cp-paper);
     background-color: #050707;
-    background-image:
-        linear-gradient(rgb(5 7 7 / 82%), rgb(5 7 7 / 93%)),
-        url("../essentials/clouds.gif");
     font-size: 0.91rem;
     line-height: 1.65;
 }

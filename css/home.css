@@ -95,6 +95,23 @@ body {
     line-height: 1.35;
 }
 
+body.doorpage--gaming,
+body.cp-page,
+body.rdr-page {
+    background:
+        linear-gradient(rgb(0 0 0 / 58%), rgb(0 0 0 / 72%)),
+        url("../essentials/gaming/cyberpunk2077/cp2077_pixelart/cyberpunk2077_pixelart_cynosure_core_somi.png")
+        center top / cover fixed no-repeat;
+}
+
+@media (max-width: 850px) {
+    body.doorpage--gaming,
+    body.cp-page,
+    body.rdr-page {
+        background-attachment: scroll;
+    }
+}
+
 h1, h2, h3, h4, h5, h6,
 p,
 a,
