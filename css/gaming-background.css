@@ -1,0 +1,22 @@
+/* Shared page background for the Gaming section. Load after page-specific CSS. */
+
+body.doorpage--gaming,
+body.cp-page,
+body.rdr-page {
+    background-color: #02080c;
+    background-image:
+        linear-gradient(rgb(2 8 12 / 48%), rgb(2 8 12 / 64%)),
+        url("../essentials/gaming/cyberpunk2077/cp2077_pixelart/cyberpunk2077_pixelart_cynosure_core_somi.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media (max-width: 850px) {
+    body.doorpage--gaming,
+    body.cp-page,
+    body.rdr-page {
+        background-attachment: scroll;
+    }
+}
