@@ -1,0 +1,91 @@
+/* TECH adaptations of the shared editorial and Doorpage components.
+   Load after home.css and editorial.css / doorpage.css. */
+
+/* Scale the complete 4:3 cover to the full editorial panel width. */
+.tech-article .editorial-hero {
+    min-height: 0;
+}
+
+.tech-article .editorial-hero__image {
+    position: relative;
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+.tech-article .editorial-hero__copy {
+    position: absolute;
+    inset: auto 0 0;
+}
+
+.tech-article .tech-period {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: var(--font-pixel);
+    font-size: clamp(0.58rem, 1vw, 0.72rem);
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/* The setlist supplies the frame, colour, spacing and asymmetric corners.
+   A definition list adds label/value semantics without song numbering. */
+.tech-article .tech-specs {
+    position: static;
+    width: min(100%, 720px);
+    margin-inline: auto;
+}
+
+.tech-specs dl {
+    margin: 0;
+    color: rgb(255 255 255 / 86%);
+    font-family: var(--font-mono);
+    font-size: clamp(0.67rem, 0.9vw, 0.78rem);
+    line-height: 1.35;
+}
+
+.tech-specs dl > div {
+    display: grid;
+    grid-template-columns: 5.4rem minmax(0, 1fr);
+    gap: 0.75rem;
+    padding-block: 0.34rem;
+    border-bottom: 1px solid rgb(255 255 255 / 9%);
+}
+
+.tech-specs dl > div:last-child {
+    border-bottom: 0;
+}
+
+.tech-specs dt {
+    color: rgb(255 255 255 / 58%);
+    font-weight: 400;
+}
+
+.tech-specs dd {
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+/* MUSIC's link tile, with a real, uncropped image instead of a background. */
+.doorpage--tech .tech-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    padding: 0;
+}
+
+.tech-feature > img {
+    grid-area: 1 / 1;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.tech-feature > span {
+    grid-area: 1 / 1;
+    align-self: end;
+    justify-self: end;
+    margin: 12px 14px;
+}
