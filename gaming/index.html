@@ -7,15 +7,18 @@
     <title>Gaming | www.never-land.de</title>
     <meta name="author" content="Jan Piatkowski">
     <meta name="copyright" content="© 2000 - 2003 / 2026 Jan Piatkowski - except otherwise stated">
-    <meta name="description" content="Gaming at never-land.de: Cyberpunk 2077, Red Dead Redemption 2, Pokémon GO and retro gaming.">
+    <meta name="description" content="Gaming at never-land.de: personal game archives, platform identities and memories from Steam, Xbox and Twitch.">
 
-    <!-- Bootstrap first; shared Never Land design system second; Doorpage layer last. -->
+    <!-- Existing Never Land styles first; Gaming hub layer last. -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/home.css?v=20260923-nav3" rel="stylesheet">
+    <link href="../css/home.css?v=20260922-nav2" rel="stylesheet">
     <link href="../css/doorpage.css" rel="stylesheet">
+    <link href="../css/gaming-hub.css" rel="stylesheet">
 </head>
 
-<body class="doorpage doorpage--gaming">
+<body class="doorpage doorpage--gaming gaming-hub">
+    <a class="visually-hidden-focusable" href="#main-content">Skip to content</a>
+
     <div class="site-shell">
         <header class="site-panel site-header" aria-label="Main navigation">
             <a class="site-brand" href="../index.html" aria-label="Never Land home">
@@ -24,46 +27,60 @@
             </a>
 
             <nav class="site-nav" aria-label="Portal navigation">
-                <a href="../sisters/index.html">SISTERS</a>
-                <a href="../music/index.html">MUSIC</a>
-                <a href="../gaming/index.html" aria-current="page">GAMING</a>
-                <a href="../tech/index.html">TECH</a>
+                <strong>:: navigate ::</strong>
+                <a href="../sisters/index.html">SISTERS</a>&nbsp;::
+                <a href="../music/index.html">MUSIC</a>&nbsp;::
+                <a href="../tech/index.html">TECH</a>&nbsp;::
+                <a href="../gaming/index.html" data-current-section="true">GAMING</a>&nbsp;::
             </nav>
 
-            <div class="mobile-menu">
-                <button class="mobile-menu__toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-navigation">
+            <details class="mobile-menu">
+                <summary class="mobile-menu__toggle" aria-label="Open or close navigation">
                     <span class="mobile-menu__icon" aria-hidden="true"></span>
-                </button>
-                <nav class="mobile-menu__panel" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+                </summary>
+
+                <nav class="mobile-menu__panel" aria-label="Mobile navigation">
                     <div class="mobile-menu__inner">
                         <a class="mobile-menu__home" href="../index.html">www.never-land.de</a>
                         <div class="mobile-menu__kicker">:: NAVIGATE ::</div>
+
                         <div class="mobile-menu__groups">
-                            <a class="mobile-menu__category" href="../sisters/index.html">SISTERS</a>
-                            <a class="mobile-menu__category" href="../music/index.html">MUSIC</a>
-                        <a class="mobile-menu__category" href="../gaming/index.html" aria-current="page">GAMING</a>
-                            <a class="mobile-menu__category" href="../tech/index.html">TECH</a>
-                        </div>
-                        <div class="mobile-menu__kicker mobile-menu__kicker--options">:: OPTIONS ::</div>
-                        <div class="mobile-menu__options">
-                            <a href="../options/email.html">eMail</a>
-                            <a href="../options/technik.html">Technik</a>
-                            <a href="../options/impressum.html">Impressum</a>
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../sisters/index.html">SISTERS</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../sisters/collection.html">Collection</a>
+                                    <a href="../sisters/gigs.html">Gigs I've seen</a>
+                                    <a href="../sisters/features/waiting-for-another-war.html">Book Review</a>
+                                    <a href="../sisters/about.html">About this archive</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../music/index.html">MUSIC</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../music/vinylcollection.html">Vinyl Collection</a>
+                                    <a href="../music/gigs.html">Other gigs I've seen</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../gaming/index.html" data-current-section="true">GAMING</a>
+                                <div class="mobile-menu__subpages">
+                                    <a href="../gaming/cyberpunk2077.html">Cyberpunk 2077</a>
+                                    <a href="../gaming/rdr2.html">Red Dead Redemption 2</a>
+                                </div>
+                            </section>
+
+                            <section class="mobile-menu__group">
+                                <a class="mobile-menu__category" href="../tech/index.html">TECH</a>
+                            </section>
                         </div>
                     </div>
                 </nav>
-            </div>
+            </details>
         </header>
 
-        <main class="doorpage-main">
-            <!--
-                HERO IMAGE
-                Uses the existing GAMING portal artwork as an immediate fallback.
-                Replace it later with a dedicated wide hero if desired.
-
-                Suggested final asset:
-                ../essentials/gaming/hero.jpg
-            -->
+        <main id="main-content" class="doorpage-main gaming-hub__main">
             <section class="site-panel doorpage-hero" aria-labelledby="doorpage-title">
                 <img
                     class="doorpage-hero__image"
@@ -71,6 +88,7 @@
                     alt=""
                     width="1100"
                     height="470"
+                    fetchpriority="high"
                 >
                 <div class="doorpage-hero__shade" aria-hidden="true"></div>
                 <h1 class="doorpage-hero__title" id="doorpage-title">GAMING</h1>
@@ -87,79 +105,137 @@
                 </p>
             </section>
 
-            <section class="doorpage-intro" aria-labelledby="gaming-intro-label">
-                <div class="doorpage-kicker" id="gaming-intro-label">:: click on an image to explore ::</div>
-            </section>
+            <!-- Compact game doors: deliberately closer to the Collection jump navigation than the old large visual grid. -->
+            <nav class="gaming-section gaming-game-nav" aria-labelledby="games-label">
+                <div class="doorpage-kicker" id="games-label">:: explore games ::</div>
 
-            <!--
-                VISUAL GRID
-                Desktop: one large image left, two stacked images right.
-                Mobile: all three images become a single-column sequence.
-
-                The lead slot uses the current GAMING portal artwork. Replace the two authoring
-                placeholders below with your own screenshots when the assets are ready.
-            -->
-            <section class="doorpage-gallery" aria-label="Gaming visual archive">
-                <figure class="site-panel doorpage-gallery__item doorpage-gallery__item--lead">
+                <div class="gaming-game-nav__grid">
                     <a
-                        class="doorpage-gallery__placeholder"
+                        class="gaming-game-tile gaming-game-tile--active"
                         href="./cyberpunk2077.html"
-                        aria-label="Explore my Cyberpunk 2077 archive"
-                        style="--door-image: url('../essentials/gaming/cyberpunk2077/cp2077_pixelart/cyberpunk2077_pixelart_v_musamura_pacifica_beach.png'); text-decoration: none;"
+                        style="--game-image: url('../essentials/gaming/cyberpunk2077/cp2077_pixelart/cyberpunk2077_pixelart_v_musamura_pacifica_beach.png');"
                     >
-                        <span aria-hidden="true">CYBERPUNK 2077 | ENTER NIGHT CITY</span>
+                        <span class="gaming-game-tile__status">ARCHIVE ONLINE</span>
+                        <strong>CYBERPUNK 2077</strong>
                     </a>
-                </figure>
 
-                <figure class="site-panel doorpage-gallery__item">
-                    <div
-                        class="doorpage-gallery__placeholder"
-                        role="img"
-                        aria-label="Red Dead Redemption 2 screenshot placeholder"
-                        style="--door-image: url('../essentials/gaming/reddeadredemption2.jpg');"
+                    <a
+                        class="gaming-game-tile gaming-game-tile--active"
+                        href="./rdr2.html"
+                        style="--game-image: url('../essentials/gaming/rdr2/rdr2_arthur_riding.png');"
+                        aria-label="Explore my Red Dead Redemption 2 journal"
                     >
-                        <span aria-hidden="true">RED DEAD REDEMPTION 2 // COMING SOON</span>
-                    </div>
-                </figure>
+                        <span class="gaming-game-tile__status">JOURNAL ONLINE</span>
+                        <strong>RED DEAD REDEMPTION 2</strong>
+                    </a>
 
-                <figure class="site-panel doorpage-gallery__item">
                     <div
-                        class="doorpage-gallery__placeholder"
-                        role="img"
-                        aria-label="Retro gaming image placeholder"
-                        style="--door-image: url('../essentials/gaming/retrogaming.jpg');"
+                        class="gaming-game-tile gaming-game-tile--future"
+                        aria-label="Pokémon GO page planned"
                     >
-                        <span aria-hidden="true">RETRO GAMING // COMING SOON</span>
+                        <span class="gaming-game-tile__status">FUTURE PAGE</span>
+                        <strong>POKÉMON GO</strong>
                     </div>
-                </figure>
+
+                    <div
+                        class="gaming-game-tile gaming-game-tile--future"
+                        style="--game-image: url('../essentials/gaming/retrogaming.jpg');"
+                        aria-label="Retro Gaming page planned"
+                    >
+                        <span class="gaming-game-tile__status">FUTURE PAGE</span>
+                        <strong>RETRO GAMING</strong>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Platform identities: PoC only, no API calls. -->
+            <section class="gaming-section gaming-avatars" aria-labelledby="avatars-title" data-gaming-profiles hidden>
+                <div class="doorpage-kicker" id="avatars-title">:: gaming avatars ::</div>
+
+                <div class="gaming-avatars__grid">
+                    <article class="gaming-avatar gaming-avatar--steam" data-profile="steam">
+                        <div class="gaming-avatar__scan" aria-hidden="true"></div>
+                        <header class="gaming-avatar__header">
+                            <span class="gaming-avatar__platform">STEAM</span>
+                            <span class="gaming-avatar__node">01</span>
+                        </header>
+                        <div class="gaming-avatar__identity" data-profile-identity></div>
+                        <dl class="gaming-avatar__facts" data-profile-facts></dl>
+                        <div class="gaming-avatar__actions" data-profile-actions></div>
+                    </article>
+
+                    <article class="gaming-avatar gaming-avatar--xbox" data-profile="xbox">
+                        <div class="gaming-avatar__scan" aria-hidden="true"></div>
+                        <header class="gaming-avatar__header">
+                            <span class="gaming-avatar__platform">XBOX</span>
+                            <span class="gaming-avatar__node">02</span>
+                        </header>
+                        <div class="gaming-avatar__identity" data-profile-identity></div>
+                        <dl class="gaming-avatar__facts" data-profile-facts></dl>
+                        <div class="gaming-avatar__actions" data-profile-actions></div>
+                    </article>
+
+                    <article class="gaming-avatar gaming-avatar--twitch" data-profile="twitch">
+                        <div class="gaming-avatar__scan" aria-hidden="true"></div>
+                        <header class="gaming-avatar__header">
+                            <span class="gaming-avatar__platform">TWITCH</span>
+                            <span class="gaming-avatar__node">03</span>
+                        </header>
+                        <div class="gaming-avatar__identity" data-profile-identity></div>
+                        <dl class="gaming-avatar__facts" data-profile-facts></dl>
+                        <div class="gaming-avatar__actions" data-profile-actions></div>
+                    </article>
+                </div>
             </section>
 
-            <nav class="doorpage-explore" aria-label="Explore Gaming pages">
-                <div class="doorpage-kicker">:: more coming soon / updated cyberpunk 2077::</div>
-            </nav>
-
-            <nav class="doorpage-explore" aria-label="Explore Gaming pages">
-                <div class="doorpage-kicker">Unofficial fan content. This site is not affiliated with or endorsed by CD PROJEKT RED, Rockstar Games or Take-Two Interactive. Game names, characters, artwork and other game content remain property of their respective rights holders.</div>
-            </nav>
-
-            <!-- <nav class="doorpage-explore" aria-label="Explore Gaming pages">
-                <div class="doorpage-kicker">:: explore ::</div>
-
-                <div class="doorpage-links">
-                    <a class="site-link-tile" href="./cyberpunk2077.html">
-                        <span>CYBERPUNK 2077</span>
-                    </a>
-                    <a class="site-link-tile" href="./rdr2.html">
-                        <span>RED DEAD REDEMPTION 2</span>
-                    </a>
-                    <a class="site-link-tile" href="./pokemongo.html">
-                        <span>POKÉMON GO</span>
-                    </a>
-                    <a class="site-link-tile" href="./retrogaming.html">
-                        <span>RETRO GAMING</span>
-                    </a>
+            <!-- Gaming-specific Memory Alpha. JS hydrates one random entry per card on every page load. -->
+            <section class="gaming-section gaming-memory" aria-labelledby="gaming-memory-title" data-gaming-memory hidden>
+                <div class="gaming-memory__heading">
+                    <div class="doorpage-kicker" id="gaming-memory-title">:: gaming memory alpha ::</div>
+                    <span class="gaming-memory__status" aria-hidden="true">LOCAL ARCHIVE // RANDOM LOAD</span>
                 </div>
-            </nav> -->
+
+                <div class="gaming-memory__grid" aria-live="polite">
+                    <article class="gaming-memory-card" data-memory-card="recent">
+                        <div class="gaming-memory-card__label">:: RECENTLY PLAYED ::</div>
+                        <strong class="gaming-memory-card__title" data-memory-title>LOADING</strong>
+                        <div class="gaming-memory-card__meta" data-memory-meta></div>
+                        <p class="gaming-memory-card__copy" data-memory-copy></p>
+                    </article>
+
+                    <article class="gaming-memory-card" data-memory-card="library">
+                        <div class="gaming-memory-card__label">:: FROM THE LIBRARY ::</div>
+                        <strong class="gaming-memory-card__title" data-memory-title>LOADING</strong>
+                        <div class="gaming-memory-card__meta" data-memory-meta></div>
+                        <p class="gaming-memory-card__copy" data-memory-copy></p>
+                    </article>
+
+                    <article class="gaming-memory-card" data-memory-card="recognition">
+                        <div class="gaming-memory-card__label">:: RECOGNITION ::</div>
+                        <strong class="gaming-memory-card__title" data-memory-title>LOADING</strong>
+                        <div class="gaming-memory-card__meta" data-memory-meta></div>
+                        <p class="gaming-memory-card__copy" data-memory-copy></p>
+                    </article>
+
+                    <article class="gaming-memory-card" data-memory-card="old-account">
+                        <div class="gaming-memory-card__label">:: OLD ACCOUNT ENERGY ::</div>
+                        <strong class="gaming-memory-card__title" data-memory-title>LOADING</strong>
+                        <div class="gaming-memory-card__meta" data-memory-meta></div>
+                        <p class="gaming-memory-card__copy" data-memory-copy></p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="gaming-legal" aria-labelledby="gaming-legal-title">
+                <div class="doorpage-kicker" id="gaming-legal-title">:: legal / platform note ::</div>
+                <p>
+                    Unofficial personal fan and archive content. This site is not affiliated with or endorsed by
+                    CD PROJEKT RED, Rockstar Games, Take-Two Interactive, Valve / Steam, Microsoft / Xbox or Twitch.
+                    Steam, Xbox and Twitch names and trademarks, and all game names, characters, artwork and other
+                    game content, remain the property of their respective rights holders. Platform statistics shown
+                    here are manually maintained snapshots and may not reflect the current state of the linked accounts.
+                </p>
+            </section>
         </main>
 
         <footer class="site-panel site-footer">
@@ -176,6 +252,7 @@
             </div>
         </footer>
     </div>
-    <script src="../js/navigation.js" defer></script>
+
+    <script src="../js/gaming-hub.js" defer></script>
 </body>
 </html>

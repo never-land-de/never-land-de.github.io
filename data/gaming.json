@@ -1,0 +1,96 @@
+{
+    "version": 1,
+    "profiles": {
+        "steam": {
+            "handle": "janpiatkowski",
+            "member_since": 2004,
+            "level": 11,
+            "games": 37,
+            "badges": 3,
+            "years_of_service": 21,
+            "recent": "Cyberpunk 2077",
+            "recent_playtime_hours": 80,
+            "snapshot_date": "2026-10-02",
+            "profile_url": "https://steamcommunity.com/id/janpiatkowski/",
+            "library_url": "https://steamcommunity.com/id/janpiatkowski/games/?tab=all"
+        },
+        "xbox": {
+            "gamertag": "ShivaRising",
+            "gamerscore": 6885,
+            "game_pass": "Ultimate",
+            "friends": 6,
+            "following": 4,
+            "followers": 12,
+            "recent": "Red Dead Redemption 2",
+            "snapshot_date": "2026-10-02",
+            "profile_url": "",
+            "achievements_url": ""
+        },
+        "twitch": {
+            "handle": "16jan",
+            "status": "Archive / occasional streams",
+            "snapshot_date": "2026-10-02",
+            "channel_url": "https://www.twitch.tv/16jan"
+        }
+    },
+    "memory": {
+        "recently_played": [
+            {
+                "title": "Cyberpunk 2077",
+                "meta": "STEAM // 80 HOURS",
+                "text": "Back in Night City — exactly the kind of game this archive was built for."
+            },
+            {
+                "title": "Red Dead Redemption 2",
+                "meta": "XBOX // RECENT SNAPSHOT",
+                "text": "The frontier remains one of those places worth returning to rather than simply finishing."
+            }
+        ],
+        "library": [
+            {
+                "title": "Half-Life 2",
+                "meta": "PC // STEAM // 2004",
+                "text": "One of the reasons the Steam account exists in the first place."
+            },
+            {
+                "title": "Cyberpunk 2077",
+                "meta": "PC // PERSONAL ARCHIVE",
+                "text": "Screenshots, savegames and Night City as a place rather than a checklist."
+            },
+            {
+                "title": "Red Dead Redemption 2",
+                "meta": "XBOX // PERSONAL ARCHIVE",
+                "text": "A slow-burn world with enough texture to make wandering the point."
+            },
+            {
+                "title": "Pokémon GO",
+                "meta": "MOBILE // LONG-RUNNING SAVE",
+                "text": "Less a session and more a game that has quietly stayed around for years."
+            }
+        ],
+        "recognition": [
+            {
+                "title": "21 years of service",
+                "meta": "STEAM // MEMBER SINCE 2004",
+                "text": "The service badge is almost a timeline by itself: this account goes back to 2004."
+            },
+            {
+                "title": "Steam Level 11",
+                "meta": "STEAM // 3 BADGES",
+                "text": "Member since 2004."
+            },
+            {
+                "title": "6,885 Gamerscore",
+                "meta": "XBOX // SHIVARISING",
+                "text": "A snapshot of the Xbox trail so far — the score matters less than the games attached to it."
+            }
+        ],
+        "old_account_energy": [
+            {
+                "title": "Old account energy",
+                "meta": "STEAM MEMBER SINCE 2004 // 37 GAMES",
+                "text": "Joined in the Half-Life 2 era. Still here. Still accumulating a backlog."
+            }
+        ]
+    }
+}
