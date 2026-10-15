@@ -15,6 +15,17 @@ body.editorial-page {
     background-size: cover;
 }
 
+.editorial-page--brussels .site-footer__url {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Consent text and controls need room in the two-column tablet layout. */
+.editorial-page--brussels .youtube-consent {
+    min-height: 300px;
+    aspect-ratio: auto;
+}
+
 .editorial-main {
     display: grid;
     gap: var(--portal-gap);
@@ -312,6 +323,18 @@ body.editorial-page {
     column-gap: var(--portal-gap);
 }
 
+/* Row order follows the supplied photo inventory, with uncropped photographs. */
+.editorial-gallery--rows {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--portal-gap);
+    align-items: start;
+}
+
+.editorial-gallery--rows .editorial-gallery__item {
+    margin-bottom: 0;
+}
+
 .editorial-gallery__item {
     width: 100%;
     margin: 0 0 var(--portal-gap);
@@ -505,6 +528,10 @@ body.editorial-page {
     .editorial-gallery {
         column-count: 2;
     }
+
+    .editorial-gallery--rows {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 599.98px) {
@@ -539,6 +566,10 @@ body.editorial-page {
 
     .editorial-gallery {
         column-count: 1;
+    }
+
+    .editorial-gallery--rows {
+        grid-template-columns: 1fr;
     }
 
     .editorial-videos {
