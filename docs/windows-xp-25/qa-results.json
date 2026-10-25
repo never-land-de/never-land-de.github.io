@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-25",
+  "page": "/tech/windows-xp-at-25-when-the-pc-learnt-to-smile.html",
+  "viewports": [
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "hero": {
+        "x": 171,
+        "y": 114.21875,
+        "width": 1098,
+        "height": 680,
+        "top": 114.21875,
+        "right": 1269,
+        "bottom": 794.21875,
+        "left": 171
+      },
+      "frame": {
+        "x": 170,
+        "y": 113.21875,
+        "width": 1100,
+        "height": 682,
+        "top": 113.21875,
+        "right": 1270,
+        "bottom": 795.21875,
+        "left": 170
+      },
+      "copy": {
+        "x": 171,
+        "y": 114.21875,
+        "width": 900,
+        "height": 680,
+        "top": 114.21875,
+        "right": 1071,
+        "bottom": 794.21875,
+        "left": 171
+      },
+      "panel": "rgba(0, 0, 0, 0.85)",
+      "blur": "none",
+      "source": "http://127.0.0.1:8000/essentials/tech/windows-xp-25/windows-xp-bliss-pixel-art.webp",
+      "headings": [
+        "From functionality to experience",
+        "2001: The year operating systems discovered their personality",
+        "The operating system of a changing internet",
+        "More than just a pretty desktop",
+        "We were pioneers",
+        "The internet grew up. Perhaps a little too much.",
+        "A strange new kind of digital frontier",
+        "Still exploring"
+      ]
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "hero": {
+        "x": 16.359375,
+        "y": 129.578125,
+        "width": 735.28125,
+        "height": 560,
+        "top": 129.578125,
+        "right": 751.640625,
+        "bottom": 689.578125,
+        "left": 16.359375
+      },
+      "frame": {
+        "x": 15.359375,
+        "y": 128.578125,
+        "width": 737.28125,
+        "height": 562,
+        "top": 128.578125,
+        "right": 752.640625,
+        "bottom": 690.578125,
+        "left": 15.359375
+      },
+      "copy": {
+        "x": 16.359375,
+        "y": 129.578125,
+        "width": 735.28125,
+        "height": 560,
+        "top": 129.578125,
+        "right": 751.640625,
+        "bottom": 689.578125,
+        "left": 16.359375
+      },
+      "panel": "rgba(0, 0, 0, 0.85)",
+      "blur": "none",
+      "source": "http://127.0.0.1:8000/essentials/tech/windows-xp-25/windows-xp-bliss-pixel-art.webp",
+      "headings": [
+        "From functionality to experience",
+        "2001: The year operating systems discovered their personality",
+        "The operating system of a changing internet",
+        "More than just a pretty desktop",
+        "We were pioneers",
+        "The internet grew up. Perhaps a little too much.",
+        "A strange new kind of digital frontier",
+        "Still exploring"
+      ]
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "hero": {
+        "x": 13,
+        "y": 126.21875,
+        "width": 364,
+        "height": 580,
+        "top": 126.21875,
+        "right": 377,
+        "bottom": 706.21875,
+        "left": 13
+      },
+      "frame": {
+        "x": 12,
+        "y": 125.21875,
+        "width": 366,
+        "height": 582,
+        "top": 125.21875,
+        "right": 378,
+        "bottom": 707.21875,
+        "left": 12
+      },
+      "copy": {
+        "x": 13,
+        "y": 126.21875,
+        "width": 364,
+        "height": 580,
+        "top": 126.21875,
+        "right": 377,
+        "bottom": 706.21875,
+        "left": 13
+      },
+      "panel": "rgba(0, 0, 0, 0.85)",
+      "blur": "none",
+      "source": "http://127.0.0.1:8000/essentials/tech/windows-xp-25/windows-xp-bliss-pixel-art.webp",
+      "headings": [
+        "From functionality to experience",
+        "2001: The year operating systems discovered their personality",
+        "The operating system of a changing internet",
+        "More than just a pretty desktop",
+        "We were pioneers",
+        "The internet grew up. Perhaps a little too much.",
+        "A strange new kind of digital frontier",
+        "Still exploring"
+      ]
+    },
+    {
+      "width": 320,
+      "scroll": 320,
+      "hero": {
+        "x": 13,
+        "y": 126.21875,
+        "width": 294,
+        "height": 580,
+        "top": 126.21875,
+        "right": 307,
+        "bottom": 706.21875,
+        "left": 13
+      },
+      "frame": {
+        "x": 12,
+        "y": 125.21875,
+        "width": 296,
+        "height": 582,
+        "top": 125.21875,
+        "right": 308,
+        "bottom": 707.21875,
+        "left": 12
+      },
+      "copy": {
+        "x": 13,
+        "y": 126.21875,
+        "width": 294,
+        "height": 580,
+        "top": 126.21875,
+        "right": 307,
+        "bottom": 706.21875,
+        "left": 13
+      },
+      "panel": "rgba(0, 0, 0, 0.85)",
+      "blur": "none",
+      "source": "http://127.0.0.1:8000/essentials/tech/windows-xp-25/windows-xp-bliss-pixel-art.webp",
+      "headings": [
+        "From functionality to experience",
+        "2001: The year operating systems discovered their personality",
+        "The operating system of a changing internet",
+        "More than just a pretty desktop",
+        "We were pioneers",
+        "The internet grew up. Perhaps a little too much.",
+        "A strange new kind of digital frontier",
+        "Still exploring"
+      ]
+    }
+  ],
+  "browser_errors": [],
+  "external_requests": [],
+  "media_count": {
+    "hero": 1,
+    "supplied_editorial_photos": 5,
+    "historical_website_image": 1
+  },
+  "historical_asset": "options/never-land-2003.jpg",
+  "panel_background": "rgba(0, 0, 0, 0.85)",
+  "panel_backdrop_filter": "none",
+  "hero": "Full-width layered image/shade/copy, matching Gig Reviews visual logic; responsive cover crop centred at 45%.",
+  "static_checks": {
+    "authoritative_article_words": 1786,
+    "full_text_matches": true,
+    "local_references_checked": 63,
+    "balanced_html": true,
+    "unique_ids": true,
+    "original_sha256_matches": 6,
+    "historical_asset_unchanged": true,
+    "function_tests_passed": 13,
+    "link_tests_passed": 3,
+    "diff_whitespace_errors": 0
+  },
+  "open_issues": []
+}

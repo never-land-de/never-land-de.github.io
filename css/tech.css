@@ -89,3 +89,116 @@
     justify-self: end;
     margin: 12px 14px;
 }
+
+/* Windows XP uses the shared Gig Reviews image/shade/copy composition.
+   Keep these overrides local so the iMac's uncropped cover is unchanged. */
+.tech-article--xp .editorial-hero {
+    min-height: clamp(560px, 58vw, 680px);
+}
+
+.tech-article--xp .editorial-hero > picture {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    display: block;
+}
+
+.tech-article--xp .editorial-hero__image {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+}
+
+.tech-article--xp .editorial-hero__shade {
+    background:
+        linear-gradient(180deg, rgb(0 0 0 / 8%), rgb(0 0 0 / 18%) 30%, rgb(0 0 0 / 72%) 65%, rgb(0 0 0 / 92%)),
+        linear-gradient(90deg, rgb(0 0 0 / 25%), transparent 85%);
+}
+
+.tech-article--xp .editorial-hero__copy {
+    position: relative;
+    inset: auto;
+    width: min(100%, 900px);
+}
+
+.tech-article--xp .editorial-hero h1 {
+    max-width: 19ch;
+    font-size: clamp(2rem, 5.8vw, 4.25rem);
+    line-height: 1.04;
+}
+
+.tech-article--xp .editorial-hero__copy > p {
+    margin-top: 0.8rem;
+}
+
+.tech-article--xp .editorial-hero__copy .xp-byline {
+    color: rgb(255 255 255 / 80%);
+    font-size: 0.68rem;
+}
+
+.tech-article--xp .editorial-content {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: none;
+}
+
+.tech-article--xp .xp-photo {
+    max-width: 720px;
+}
+
+.tech-article--xp .xp-photo--box {
+    max-width: 360px;
+    margin-block: 2rem;
+}
+
+.tech-article--xp .xp-packaging {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--portal-gap);
+    width: min(100%, 720px);
+    margin: 0 auto 2rem;
+    column-count: auto;
+}
+
+.tech-article--xp .xp-packaging .editorial-gallery__item {
+    margin: 0;
+}
+
+.tech-article--xp .xp-thesis,
+.tech-article--xp .xp-closing {
+    color: var(--white);
+    font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+    line-height: 1.45;
+    letter-spacing: -0.02em;
+}
+
+.tech-article--xp .xp-thesis {
+    padding-block: 1.4rem;
+    border-block: 1px solid rgb(255 255 255 / 28%);
+}
+
+.tech-article--xp .site-footer__url {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Place the new teaser before the existing iMac tile using the same component. */
+.doorpage--tech .tech-feature + .tech-feature {
+    margin-top: var(--portal-gap);
+}
+
+@media (max-width: 699.98px) {
+    .tech-article--xp .editorial-hero {
+        min-height: 580px;
+    }
+
+    .tech-article--xp .editorial-hero h1 {
+        font-size: clamp(2rem, 7.5vw, 3rem);
+    }
+}
+
+@media (max-width: 359.98px) {
+    .tech-article--xp .xp-packaging {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
