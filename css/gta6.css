@@ -1,0 +1,330 @@
+/* NEVER LAND / LEONIDA — load after home.css and gaming-background.css.
+   All component rules belong to the GTA VI page. Shared navigation is inherited. */
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../assets/fonts/SpaceGrotesk-Variable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+.gta6-page {
+    --gta6-midnight: #091a25;
+    --gta6-teal: #142a35;
+    --gta6-plum: #351c40;
+    --gta6-pink: #ff8cad;
+    --gta6-orange: #ffbe83;
+    --gta6-aqua: #71e0db;
+    --gta6-cream: #fff3ea;
+    --gta6-muted: #b9c8cc;
+    --gta6-rule: rgb(255 243 234 / 20%);
+    --gta6-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+    /* Activate only after the local files and their attribution are added.
+       See essentials/gaming/gta6/README.md. No requests for missing assets. */
+    --gta6-hero-desktop: none; /* url("../essentials/gaming/gta6/gta6_hero_desktop.webp") */
+    --gta6-hero-mobile: none; /* url("../essentials/gaming/gta6/gta6_hero_mobile.webp") */
+    --gta6-background: none; /* url("../essentials/gaming/gta6/gta6_background.webp") */
+    color: var(--gta6-cream);
+    background-color: var(--gta6-midnight);
+    background-image:
+        linear-gradient(rgb(9 26 37 / 88%), rgb(9 26 37 / 96%)),
+        var(--gta6-background),
+        radial-gradient(ellipse at 90% 0, var(--gta6-plum), var(--gta6-midnight) 65%);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    font-family: var(--font-body, "Inter", system-ui, sans-serif);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.gta6-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    margin-block: var(--portal-gap);
+}
+
+.gta6-main :where(h1, h2, h3, p, figure) { margin: 0; }
+.gta6-main :where(h1, h2, h3) {
+    color: inherit;
+    font-family: var(--gta6-display);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 1.08;
+    text-wrap: balance;
+}
+.gta6-main h2 { font-size: clamp(2rem, 4.1vw, 3rem); }
+.gta6-main h3 { font-size: 1.4rem; }
+.gta6-main :where(a, section, aside) { scroll-margin-top: 100px; }
+.gta6-main a:focus-visible { outline: 3px solid var(--gta6-aqua); outline-offset: 5px; }
+.gta6-skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 3100;
+    padding: 12px 18px;
+    color: var(--gta6-midnight);
+    background: var(--gta6-cream);
+}
+
+.gta6-eyebrow,
+.gta6-hero__edition,
+.gta6-hero__folio,
+.gta6-subnav,
+.gta6-section__aside,
+.gta6-passport :where(dt, dd, .gta6-passport__issuer, .gta6-passport__stamps),
+.gta6-ticket__facts,
+.gta6-awaiting,
+.gta6-postcard figcaption p,
+.gta6-journal__label,
+.gta6-journal__byline,
+.gta6-status,
+.gta6-broadcast__source,
+.gta6-broadcast__caption > span {
+    font-family: var(--font-mono, "Geist Mono", ui-monospace, monospace);
+    font-size: 0.6875rem;
+    line-height: 1.6;
+    letter-spacing: 0.045em;
+}
+.gta6-eyebrow { margin-bottom: 18px !important; color: var(--gta6-aqua); }
+
+/* Cinematic colour field; custom artwork will sit beneath the legibility shade. */
+.gta6-hero {
+    position: relative;
+    isolation: isolate;
+    padding: 22px;
+    overflow: hidden;
+    border: 1px solid var(--gta6-rule);
+    border-radius: 0 24px 0 24px;
+    background-color: var(--gta6-plum);
+    background-image:
+        linear-gradient(90deg, rgb(9 26 37 / 94%), rgb(9 26 37 / 40%)),
+        var(--gta6-hero-mobile),
+        radial-gradient(ellipse at 95% 25%, var(--gta6-orange), var(--gta6-pink) 25%, var(--gta6-plum) 65%);
+    background-position: center;
+    background-size: cover;
+}
+.gta6-hero__edition, .gta6-hero__folio {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    color: var(--gta6-cream);
+    font-size: 0.625rem;
+}
+.gta6-hero__edition { padding-bottom: 18px; border-bottom: 1px solid var(--gta6-rule); }
+.gta6-hero__content { position: relative; padding-block: 52px 48px; }
+.gta6-hero h1 {
+    font-size: clamp(2.85rem, 11.8vw, 8.125rem);
+    color: var(--gta6-pink);
+    font-weight: 600;
+    letter-spacing: -0.065em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.gta6-hero h1 > span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--gta6-cream);
+    font-size: 0.3em;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+.gta6-hero .gta6-eyebrow { max-width: 30ch; color: var(--gta6-orange); }
+.gta6-hero__tagline {
+    max-width: 26ch;
+    margin-top: 24px !important;
+    font-family: var(--gta6-display);
+    font-size: clamp(1.35rem, 2.8vw, 2rem);
+    line-height: 1.25;
+    letter-spacing: -0.035em;
+}
+.gta6-hero__intro { max-width: 48ch; margin-top: 20px !important; font-size: 0.9375rem; }
+.gta6-button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    min-height: 48px;
+    margin-top: 28px;
+    padding: 11px 18px;
+    border: 1px solid var(--gta6-orange);
+    border-radius: 3px;
+    color: var(--gta6-midnight);
+    background: var(--gta6-orange);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 160ms ease;
+}
+.gta6-button:hover { color: var(--gta6-midnight); background: var(--gta6-cream); }
+.gta6-hero__folio { padding-top: 16px; border-top: 1px solid var(--gta6-rule); align-items: center; }
+.gta6-status { display: inline-flex; align-items: baseline; gap: 8px; color: var(--gta6-orange); }
+.gta6-status::before {
+    content: "";
+    flex: 0 0 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+.gta6-subnav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid var(--gta6-rule); }
+.gta6-subnav a { display: flex; align-items: center; gap: 10px; padding: 16px 10px; text-decoration: none; }
+.gta6-subnav span { color: var(--gta6-aqua); }
+.gta6-subnav a:hover { color: var(--gta6-pink); text-decoration: underline; text-underline-offset: 5px; }
+
+/* Section rhythm and the tourist document. */
+.gta6-section { padding-block: clamp(48px, 7vw, 80px); border-bottom: 1px solid var(--gta6-rule); }
+.gta6-section__heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.gta6-section__aside { max-width: 22ch; color: var(--gta6-muted); }
+.gta6-section__intro { max-width: 61ch; margin-bottom: 30px !important; color: var(--gta6-muted); }
+.gta6-arrival { display: grid; gap: 32px; }
+.gta6-arrival__intro > p:not(.gta6-eyebrow) { max-width: 40ch; margin-top: 24px; color: var(--gta6-muted); }
+.gta6-arrival__intro .gta6-arrival__note { font-size: 0.8125rem; color: var(--gta6-orange); }
+.gta6-passport {
+    min-width: 0;
+    padding: clamp(20px, 3vw, 30px);
+    border: 1px solid var(--gta6-orange);
+    border-radius: 14px;
+    color: var(--gta6-midnight);
+    background:
+        repeating-radial-gradient(ellipse at 100% 0, transparent 0 13px, rgb(20 42 53 / 5%) 14px 15px, transparent 16px 23px),
+        var(--gta6-cream);
+    box-shadow: 0 16px 40px rgb(0 0 0 / 18%);
+}
+.gta6-passport__header { display: flex; gap: 12px; align-items: center; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid rgb(20 42 53 / 25%); }
+.gta6-passport .gta6-passport__issuer { margin-bottom: 10px; font-size: 0.5625rem; letter-spacing: 0.05em; }
+.gta6-passport h3 { font-size: clamp(1.25rem, 2.5vw, 1.65rem); }
+.gta6-passport__seal { flex: 0 0 42px; height: 42px; display: grid; place-items: center; border: 1px solid; border-radius: 50%; font-family: var(--font-pixel); font-size: 1rem; }
+.gta6-passport__body { display: grid; gap: 24px; padding-block: 24px; }
+.gta6-passport__illustration {
+    position: relative;
+    isolation: isolate;
+    min-height: 150px;
+    overflow: hidden;
+    border-radius: 80px 80px 4px 4px;
+    color: var(--gta6-cream);
+    background: linear-gradient(165deg, var(--gta6-plum), var(--gta6-teal) 65%);
+}
+.gta6-passport__sun { position: absolute; top: 20px; left: calc(50% - 40px); width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(var(--gta6-orange), var(--gta6-pink)); }
+.gta6-passport__illustration::after { content: ""; position: absolute; inset: 65% 0 0; z-index: -1; background: repeating-linear-gradient(0deg, transparent 0 9px, rgb(113 224 219 / 25%) 10px 11px); }
+.gta6-passport__monogram { position: absolute; top: 52px; left: 0; right: 0; text-align: center; font: 600 4rem/1 var(--gta6-display); letter-spacing: -0.08em; }
+.gta6-passport__souvenir { position: absolute; bottom: 12px; left: 0; right: 0; text-align: center; font: 0.5rem/1.4 var(--font-mono); letter-spacing: 0.14em; }
+.gta6-passport__facts { display: grid; gap: 16px; margin: 0; }
+.gta6-passport dt { margin-bottom: 3px; font-size: 0.625rem; font-weight: 400; text-transform: uppercase; }
+.gta6-passport dd { margin: 0; font-size: 0.875rem; font-weight: 600; line-height: 1.45; }
+.gta6-passport__stamps { display: flex; flex-wrap: wrap; gap: 16px; margin: 0; padding: 4px 0 18px; list-style: none; }
+.gta6-passport__stamp { padding: 8px 14px; border: 2px solid var(--gta6-plum); border-radius: 5px; color: var(--gta6-plum); text-align: center; transform: rotate(-3deg); }
+.gta6-passport__stamp > span { display: block; font-size: 0.5rem; letter-spacing: 0.1em; }
+.gta6-passport__fineprint { padding-top: 14px; border-top: 1px solid rgb(20 42 53 / 25%); font-size: 0.6875rem; line-height: 1.5; }
+
+/* Purchase record: the original screenshot is always shown in full. */
+.gta6-ticket { display: grid; gap: 32px; align-items: start; }
+.gta6-ticket__copy > p:not(.gta6-eyebrow) { max-width: 44ch; margin-top: 24px; color: var(--gta6-muted); }
+.gta6-ticket__facts { display: grid; gap: 14px; margin: 28px 0 0; }
+.gta6-ticket__facts > div { padding-top: 12px; border-top: 1px solid var(--gta6-rule); }
+.gta6-ticket__facts dt { margin-bottom: 4px; color: var(--gta6-muted); font-size: 0.625rem; font-weight: 400; text-transform: uppercase; }
+.gta6-ticket__facts dd { margin: 0; color: var(--gta6-cream); font-size: 0.8125rem; }
+.gta6-ticket__receipt { min-width: 0; padding: 12px; border: 1px solid var(--gta6-rule); border-radius: 6px; background: var(--gta6-teal); }
+.gta6-ticket__receipt > a { display: block; border-radius: 2px; }
+.gta6-ticket__receipt img { display: block; width: 100%; height: auto; object-fit: contain; border-radius: 2px; }
+.gta6-ticket__receipt figcaption { padding: 18px 6px 0; }
+.gta6-ticket__receipt figcaption p { font-family: var(--gta6-display); font-size: 1.125rem; }
+.gta6-ticket__receipt .gta6-text-link { margin-top: 8px; }
+.gta6-awaiting { padding-left: 16px; border-left: 2px solid var(--gta6-pink); color: var(--gta6-orange); }
+
+/* Prepared gallery styles. Add figures only when actual photographs exist. */
+.gta6-gallery { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.gta6-postcard { min-width: 0; align-self: start; }
+.gta6-postcard > a { display: block; }
+.gta6-postcard img { display: block; width: 100%; height: auto; border-radius: 5px; }
+.gta6-postcard figcaption { padding-top: 14px; }
+.gta6-postcard figcaption h3 { font-size: 1.25rem; letter-spacing: -0.025em; }
+.gta6-postcard figcaption p { margin-top: 6px; color: var(--gta6-muted); font-size: 0.625rem; }
+
+.gta6-journal { display: grid; gap: 16px; }
+.gta6-journal__card { display: flex; flex-direction: column; align-items: start; min-width: 0; padding: 26px; border: 1px solid var(--gta6-rule); border-radius: 5px; background: var(--gta6-teal); }
+.gta6-journal__card--note { background: linear-gradient(155deg, var(--gta6-plum), var(--gta6-teal)); }
+.gta6-journal__label { margin-bottom: 30px !important; color: var(--gta6-aqua); font-size: 0.625rem; }
+.gta6-journal__card h3 { margin-bottom: 18px; font-size: clamp(1.6rem, 3vw, 2rem); }
+.gta6-journal__card > p:not(.gta6-journal__label) { margin-bottom: 16px; color: var(--gta6-muted); font-size: 0.875rem; }
+.gta6-journal__byline { width: 100%; margin-top: auto; padding-top: 24px; border-top: 1px solid var(--gta6-rule); color: var(--gta6-orange); font-size: 0.625rem; }
+
+.gta6-broadcast { display: grid; gap: 30px; }
+.gta6-broadcast__copy > p:not(.gta6-eyebrow) { margin-top: 22px; color: var(--gta6-muted); font-size: 0.9375rem; }
+.gta6-broadcast__copy .gta6-status--offline { color: var(--gta6-orange); font-size: 0.6875rem; }
+.gta6-broadcast__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 32px;
+    min-width: 0;
+    min-height: 310px;
+    padding: 24px;
+    border: 1px solid var(--gta6-rule);
+    border-radius: 5px;
+    color: var(--gta6-cream);
+    background: radial-gradient(ellipse at 100% 20%, rgb(255 140 173 / 25%), transparent 70%), linear-gradient(135deg, var(--gta6-teal), var(--gta6-plum));
+    text-decoration: none;
+    transition: border-color 160ms ease;
+}
+.gta6-broadcast__feature:hover { color: var(--gta6-cream); border-color: var(--gta6-pink); }
+.gta6-broadcast__source { display: flex; justify-content: space-between; gap: 16px; width: 100%; font-size: 0.5625rem; }
+.gta6-broadcast__play { display: grid; place-items: center; width: 64px; height: 64px; border: 1px solid var(--gta6-pink); border-radius: 50%; }
+.gta6-broadcast__play::after { content: ""; margin-left: 4px; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid var(--gta6-pink); }
+.gta6-broadcast__caption { display: grid; gap: 10px; }
+.gta6-broadcast__caption strong { font: 500 1.5rem/1.15 var(--gta6-display); letter-spacing: -0.025em; }
+.gta6-broadcast__caption > span { color: var(--gta6-pink); text-decoration: underline; text-underline-offset: 4px; }
+.gta6-colophon { padding-block: 36px; color: var(--gta6-muted); }
+.gta6-colophon h2 { margin-bottom: 16px; color: var(--gta6-cream); font-size: 1.2rem; letter-spacing: -0.025em; }
+.gta6-colophon p { max-width: 100ch; margin-bottom: 12px; font-size: 0.75rem; }
+.gta6-text-link { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; color: var(--gta6-aqua); font-size: 0.8125rem; text-underline-offset: 4px; }
+.gta6-text-link:hover { color: var(--gta6-cream); }
+
+@media (min-width: 390px) {
+    .gta6-passport__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 600px) {
+    .gta6-hero { padding: 30px 40px; }
+    .gta6-hero__content { padding-block: 70px 60px; }
+    .gta6-hero .gta6-eyebrow { max-width: none; }
+    .gta6-subnav { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .gta6-subnav a { padding-block: 22px; justify-content: center; }
+    .gta6-passport__body { grid-template-columns: minmax(0, 1fr) minmax(0, 2.3fr); }
+    .gta6-passport__illustration { min-height: 200px; }
+    .gta6-passport__sun { top: 35px; }
+    .gta6-passport__monogram { top: 70px; }
+    .gta6-passport__souvenir { bottom: 22px; }
+    .gta6-gallery { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px; }
+    .gta6-postcard--lead { grid-row: span 2; }
+    .gta6-ticket__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; }
+    .gta6-journal__card > p { max-width: 70ch; }
+}
+
+@media (min-width: 900px) {
+    .gta6-hero {
+        padding: 28px 48px;
+        background-image:
+            linear-gradient(90deg, rgb(9 26 37 / 94%), rgb(9 26 37 / 40%)),
+            var(--gta6-hero-desktop),
+            radial-gradient(ellipse at 95% 25%, var(--gta6-orange), var(--gta6-pink) 25%, var(--gta6-plum) 65%);
+    }
+    .gta6-hero__content { padding-block: 68px; }
+    .gta6-hero h1 { font-size: 8.125rem; }
+    .gta6-hero__edition { font-size: 0.625rem; }
+    .gta6-arrival { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 44px; align-items: center; }
+    .gta6-arrival h2 { font-size: 2.75rem; }
+    .gta6-arrival__intro > p:not(.gta6-eyebrow) { font-size: 0.9375rem; }
+    .gta6-arrival__intro .gta6-arrival__note { font-size: 0.8125rem; }
+    .gta6-ticket { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); gap: 44px; }
+    .gta6-ticket__facts { grid-template-columns: minmax(0, 1fr); }
+    .gta6-journal__card { padding: 28px; }
+    .gta6-broadcast { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 44px; align-items: center; }
+    .gta6-broadcast__feature { min-height: 355px; padding: 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gta6-main *, .gta6-main *::before, .gta6-main *::after { animation: none; transition: none; scroll-behavior: auto; }
+}

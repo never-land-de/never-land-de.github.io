@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-08",
+  "browser": "Google Chrome (local headless CDP)",
+  "widths": [
+    320,
+    390,
+    430,
+    768,
+    1440,
+    1920
+  ],
+  "passed_checks": [
+    "RDR2 header and footer preserved",
+    "GTA VI layout and navigation at 320px",
+    "GTA VI layout and navigation at 390px",
+    "GTA VI layout and navigation at 430px",
+    "GTA VI layout and navigation at 768px",
+    "GTA VI layout and navigation at 1440px",
+    "GTA VI layout and navigation at 1920px",
+    "Local fonts decode and page resources load without errors",
+    "Keyboard skip link and passport jump",
+    "Mobile menu opens, traps focus, closes with Escape and resets on desktop",
+    "Passport wraps additional stamps at 320px",
+    "Prepared gallery supports future portrait and landscape photographs",
+    "Passport and ticket facts stay pending after the expected date",
+    "Reduced motion removes page and menu transitions",
+    "Gaming hub entry and local navigation targets resolve",
+    "Existing game smoke test: /gaming/rdr2.html",
+    "Existing game smoke test: /gaming/cyberpunk2077.html",
+    "Game pages have no broken images or browser exceptions"
+  ],
+  "browser_errors": [],
+  "html_validation": {
+    "gaming/gta6.html": {
+      "validator": "W3C Nu",
+      "errors": 0,
+      "advisory_warnings": 0
+    },
+    "gaming/index.html": {
+      "validator": "W3C Nu",
+      "errors": 0,
+      "advisory_warnings": 15
+    }
+  },
+  "original_preorder_sha256": "e7107bea4d307bc72f56fd71b9ef85e37826904f964a276b65ef7b5db0015124",
+  "preview_status": {
+    "http://127.0.0.1:8000/gaming/gta6.html": 200,
+    "http://127.0.0.1:8000/gaming/index.html": 200
+  },
+  "official_media_status": {
+    "https://www.rockstargames.com/VI": 200
+  }
+}
