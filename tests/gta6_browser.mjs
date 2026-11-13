@@ -114,6 +114,15 @@ try {
     for (const width of widths) await check(`GTA VI layout and navigation at ${width}px`, async () => {
         await viewport(width); await navigate('/gaming/gta6.html');
         await noOverflow();
+        assert.equal(await evaluate(`(() => {
+            const passport = document.querySelector('.gta6-passport').getBoundingClientRect();
+            return [...document.querySelectorAll('.gta6-passport__facts')].every(list => {
+                const cells = [...list.children].map(cell => cell.getBoundingClientRect());
+                return cells.every((cell, i) => cell.left >= passport.left && cell.right <= passport.right &&
+                    cells.every((other, j) => i === j || cell.right <= other.left || cell.left >= other.right || cell.bottom <= other.top || cell.top >= other.bottom)) &&
+                    [...list.children].every(cell => cell.querySelector('dd').getBoundingClientRect().top >= cell.querySelector('dt').getBoundingClientRect().bottom);
+            });
+        })()`), true, 'Passport metadata fits without overlapping');
         assert.equal(await evaluate("document.querySelector('.mobile-menu__toggle').getBoundingClientRect().width > 0"), width < 850);
         assert.equal(await evaluate("getComputedStyle(document.querySelector('.site-nav')).display !== 'none'"), width >= 850);
         assert.equal(await evaluate("getComputedStyle(document.body).backgroundImage.includes('cyberpunk')"), false);
@@ -200,15 +209,20 @@ try {
                 const r = img.getBoundingClientRect(); return Math.abs(r.width/r.height - img.naturalWidth/img.naturalHeight) < 0.02 && getComputedStyle(img).filter === 'none'; })`), true);
         }
     });
-    await check('Passport and ticket facts stay pending after the expected date', async () => {
-        for (const date of ['2026-11-18T12:00:00Z', '2026-11-19T00:00:00Z', '2026-11-20T12:00:00Z', '2027-01-01T12:00:00Z']) {
+    await check('Installation milestone stays dated and personal arrival stays pending after release', async () => {
+        for (const date of ['2026-11-13T12:00:00Z', '2026-11-18T12:00:00Z', '2026-11-19T00:00:00Z', '2026-11-20T12:00:00Z', '2027-01-01T12:00:00Z']) {
             const { identifier } = await command('Page.addScriptToEvaluateOnNewDocument', { source: `{
                 const OriginalDate = Date, expected = OriginalDate.parse(${JSON.stringify(date)});
                 window.Date = class extends OriginalDate { constructor(...args) { super(...(args.length ? args : [expected])); } static now() { return expected; } };
             }` });
             await navigate('/gaming/gta6.html');
             const facts = await evaluate(`Object.fromEntries([...document.querySelectorAll('.gta6-passport__facts > div')].map(e => [e.querySelector('dt').textContent, e.querySelector('dd').textContent]))`);
-            assert.deepEqual(facts, { 'Passport ID': 'NL-VC-0001', Destination: 'Vice City, Leonida', Platform: 'Xbox Series X', Edition: 'Ultimate Edition', Status: 'ARRIVAL PENDING', 'Expected arrival': '19 November 2026', 'First arrival': 'NOT YET RECORDED' });
+            assert.deepEqual(facts, { 'Passport ID': 'NL-VC-0001', Destination: 'Vice City, Leonida', Platform: 'Xbox Series X', Edition: 'Ultimate Edition', 'Personal travel status': 'ARRIVAL PENDING', 'Expected arrival': '19 November 2026', 'First arrival': 'NOT YET RECORDED', 'Install size (base game)': '209.9 GB', 'Game build': '1.0.1.3' });
+            assert.match(await evaluate("document.querySelector('.gta6-passport__milestone').textContent"), /13 NOV 2026 \/ GAME INSTALLED\s+READY FOR DEPARTURE/);
+            assert.deepEqual(await evaluate("[...document.querySelectorAll('[datetime=\"2026-11-13\"]')].map(t => t.textContent)"), ['13 NOV 2026', '13 NOV 2026']);
+            assert.equal(await evaluate("document.querySelector('.gta6-passport__stamps').children.length"), 1, 'Installation adds no travel stamp');
+            assert.equal(await evaluate("document.querySelector('.gta6-passport__stamp').firstChild.textContent"), 'ARRIVAL PENDING');
+            assert.equal(await evaluate("document.querySelector('.gta6-hero__folio .gta6-status').textContent"), 'Arrival pending');
             assert.match(await evaluate("document.querySelector('.gta6-ticket__facts').textContent"), /Pre-ordered \/ In possession/);
             assert.equal(await evaluate("document.querySelectorAll('[data-countdown], .countdown').length"), 0);
             await command('Page.removeScriptToEvaluateOnNewDocument', { identifier });

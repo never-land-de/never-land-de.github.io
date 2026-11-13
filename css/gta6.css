@@ -213,6 +213,10 @@
 .gta6-passport__facts { display: grid; gap: 16px; margin: 0; }
 .gta6-passport dt { margin-bottom: 3px; font-size: 0.625rem; font-weight: 400; text-transform: uppercase; }
 .gta6-passport dd { margin: 0; font-size: 0.875rem; font-weight: 600; line-height: 1.45; }
+.gta6-passport__milestone { padding-block: 20px; border-top: 1px solid rgb(20 42 53 / 25%); }
+.gta6-passport__ready { font-family: var(--font-mono); font-size: 0.875rem; color: var(--gta6-plum); }
+.gta6-passport__milestone .gta6-passport__facts { margin-block: 16px; }
+.gta6-passport__milestone > p:not([class]) { margin-top: 12px; font-size: 0.75rem; }
 .gta6-passport__stamps { display: flex; flex-wrap: wrap; gap: 16px; margin: 0; padding: 4px 0 18px; list-style: none; }
 .gta6-passport__stamp { padding: 8px 14px; border: 2px solid var(--gta6-plum); border-radius: 5px; color: var(--gta6-plum); text-align: center; transform: rotate(-3deg); }
 .gta6-passport__stamp > span { display: block; font-size: 0.5rem; letter-spacing: 0.1em; }
