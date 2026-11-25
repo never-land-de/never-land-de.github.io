@@ -1,0 +1,308 @@
+{
+  "inventory": [
+    {
+      "file": ".DS_Store",
+      "bytes": 6148
+    },
+    {
+      "file": "battlestation_lights.HEIC",
+      "bytes": 847137
+    },
+    {
+      "file": "compaq_mini_311.HEIC",
+      "bytes": 1477508
+    },
+    {
+      "file": "ibook_g4.heic",
+      "bytes": 1596448
+    },
+    {
+      "file": "ibook_g4_2.DNG",
+      "bytes": 27325827
+    },
+    {
+      "file": "ibook_g4_hdd_install.HEIC",
+      "bytes": 2201590
+    },
+    {
+      "file": "imac_g3_2000.HEIC",
+      "bytes": 1748107
+    },
+    {
+      "file": "imacg3_2000.HEIC",
+      "bytes": 2654492
+    },
+    {
+      "file": "internet_explorer_4_cd.HEIC",
+      "bytes": 1898347
+    },
+    {
+      "file": "macbook_pro_2015_windows11.jpg",
+      "bytes": 520972
+    },
+    {
+      "file": "machine_archives_cover.png",
+      "bytes": 2994324
+    }
+  ],
+  "conversions": [
+    {
+      "source": "machine_archives_cover.png",
+      "source_format": "PNG",
+      "source_bytes": 2994324,
+      "source_sha256": "2cfdd1175c8b7f5f55d7db4a9d82105f05cc8c90730a69b8d59ccf56e16a2281",
+      "oriented_dimensions": [
+        1448,
+        1086
+      ],
+      "output_dimensions": [
+        1448,
+        1086
+      ],
+      "source_height": 1086,
+      "source_orientation": 1,
+      "source_width": 1448,
+      "output": "cover.png",
+      "output_bytes": 2875974,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.9605,
+      "variants": [
+        {
+          "output": "cover-480.png",
+          "output_dimensions": [
+            480,
+            360
+          ],
+          "output_bytes": 371010
+        },
+        {
+          "output": "cover-960.png",
+          "output_dimensions": [
+            960,
+            720
+          ],
+          "output_bytes": 1341422
+        }
+      ]
+    },
+    {
+      "source": "imacg3_2000.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 2654492,
+      "source_sha256": "0981ff49f0b757e3e31caa46effcd68f35e57af9480692d6330a34305fbf01a3",
+      "oriented_dimensions": [
+        4032,
+        3024
+      ],
+      "output_dimensions": [
+        1200,
+        900
+      ],
+      "source_height": 3024,
+      "source_orientation": 1,
+      "source_width": 4032,
+      "output": "imac-g3-01.png",
+      "output_bytes": 1755595,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.6614
+    },
+    {
+      "source": "imac_g3_2000.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 1748107,
+      "source_sha256": "c008ca45b1e51111fe76ef87f4fff7ace27682e8d87d8d2fb56feb9adfb12d88",
+      "oriented_dimensions": [
+        4032,
+        3024
+      ],
+      "output_dimensions": [
+        900,
+        675
+      ],
+      "source_height": 3024,
+      "source_orientation": 1,
+      "source_width": 4032,
+      "output": "imac-g3-02.png",
+      "output_bytes": 904085,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.5172
+    },
+    {
+      "source": "internet_explorer_4_cd.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 1898347,
+      "source_sha256": "9787017d28236830505064e4ffb9eff6dfe5164444ee0df0109453e3c9d391de",
+      "oriented_dimensions": [
+        4032,
+        3024
+      ],
+      "output_dimensions": [
+        1000,
+        750
+      ],
+      "source_height": 3024,
+      "source_orientation": 1,
+      "source_width": 4032,
+      "output": "internet-explorer-4-cd.png",
+      "output_bytes": 1342151,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.707
+    },
+    {
+      "source": "ibook_g4.heic",
+      "source_format": "HEIC",
+      "source_bytes": 1596448,
+      "source_sha256": "4e78dbc96f61b49489fe416b6114a87bd4e633f8843cfee61b8859e0b179fded",
+      "oriented_dimensions": [
+        3814,
+        2860
+      ],
+      "output_dimensions": [
+        1200,
+        900
+      ],
+      "source_height": 2860,
+      "source_orientation": 1,
+      "source_width": 3814,
+      "output": "ibook-g4.png",
+      "output_bytes": 1570827,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.984
+    },
+    {
+      "source": "ibook_g4_2.DNG",
+      "source_format": "DNG",
+      "source_bytes": 27325827,
+      "source_sha256": "25db9cf40da09ebd8815711d8e49e0abc4516d50a66ec8b210450969622a40b5",
+      "oriented_dimensions": [
+        4032,
+        3024
+      ],
+      "output_dimensions": [
+        1000,
+        750
+      ],
+      "raw_decoder": "8.dng",
+      "raw_developed": [
+        4032,
+        3024
+      ],
+      "raw_native": [
+        4032,
+        3024
+      ],
+      "source_height": 3024,
+      "source_orientation": 3,
+      "source_width": 4032,
+      "output": "ibook-g4-02.png",
+      "output_bytes": 1023898,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.0375
+    },
+    {
+      "source": "ibook_g4_hdd_install.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 2201590,
+      "source_sha256": "b332158853ea2b305228cd84ce9126adaaefe0eb00d39b3140dd86ea22ab72c4",
+      "oriented_dimensions": [
+        4032,
+        3024
+      ],
+      "output_dimensions": [
+        1000,
+        750
+      ],
+      "source_height": 3024,
+      "source_orientation": 1,
+      "source_width": 4032,
+      "output": "ibook-g4-hdd-install.png",
+      "output_bytes": 1277066,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.5801
+    },
+    {
+      "source": "macbook_pro_2015_windows11.jpg",
+      "source_format": "JPG",
+      "source_bytes": 520972,
+      "source_sha256": "f516e7bdfff1f254acf784a752112f6809440d332e0c0751b70dcd935ac387e8",
+      "oriented_dimensions": [
+        1433,
+        806
+      ],
+      "output_dimensions": [
+        1200,
+        675
+      ],
+      "source_height": 806,
+      "source_orientation": 1,
+      "source_width": 1433,
+      "output": "macbook-pro-2015-windows11.png",
+      "output_bytes": 1586787,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 3.0458
+    },
+    {
+      "source": "battlestation_lights.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 847137,
+      "source_sha256": "03d0ca041a1ac259ec73de3e08819aeac4cad186e9a0ee7fa1874ef032c53b96",
+      "oriented_dimensions": [
+        3024,
+        4032
+      ],
+      "output_dimensions": [
+        800,
+        1067
+      ],
+      "source_height": 3024,
+      "source_orientation": 6,
+      "source_width": 4032,
+      "output": "battlestation.png",
+      "output_bytes": 901076,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 1.0637
+    },
+    {
+      "source": "compaq_mini_311.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 1477508,
+      "source_sha256": "9840a12cd2ba405bddb7524cea7adeb97591af18b9d4d48731ac8b36d9fcfd12",
+      "oriented_dimensions": [
+        4032,
+        3024
+      ],
+      "output_dimensions": [
+        900,
+        675
+      ],
+      "source_height": 3024,
+      "source_orientation": 3,
+      "source_width": 4032,
+      "output": "compaq-mini-311.png",
+      "output_bytes": 995775,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.674
+    },
+    {
+      "source": "IMG_5361.HEIC",
+      "status": "missing"
+    },
+    {
+      "source": "IMG_0433.HEIC",
+      "status": "missing"
+    }
+  ],
+  "skipped_extra_files": [
+    ".DS_Store"
+  ]
+}

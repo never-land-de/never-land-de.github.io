@@ -1,0 +1,7 @@
+.station-entry { margin-top: 14px; text-align: right; }
+.station-entry a { display: inline-block; padding: 8px 12px; border: 1px solid #406348; background: #07100a; color: #9ccb9f; font: 12px/1.5 var(--font-mono, monospace); text-decoration: none; }
+.station-entry a:hover { border-color: #b4e1b6; color: #d6f4d7; }
+.station-entry a:focus-visible { outline: 2px solid #d6f4d7; outline-offset: 4px; }
+.station-entry span { animation: station-cursor 2s step-end infinite; }
+@keyframes station-cursor { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .station-entry span { animation: none; } }

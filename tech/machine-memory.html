@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Machine Memory | www.never-land.de</title>
+    <meta name="author" content="Jan Piatkowski">
+    <meta name="description" content="From the Amiga 500 to the Battlestation. A personal computing timeline, circa 1990–2026.">
+    <link rel="canonical" href="https://www.never-land.de/tech/machine-memory.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/home.css?v=20260923-nav3" rel="stylesheet">
+    <link href="../css/editorial.css" rel="stylesheet">
+    <link href="../css/machine-memory.css" rel="stylesheet">
+</head>
+<body class="machine-memory">
+    <a class="visually-hidden-focusable mm-skip" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+        <header class="site-panel site-header" aria-label="Main navigation">
+            <a class="site-brand" href="../index.html" aria-label="Never Land home">
+                <span class="site-brand__desktop">www.never-land.de</span>
+                <span class="site-brand__mobile" aria-hidden="true">NVR::<br>::LND</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Portal navigation">
+                <a href="../sisters/index.html">SISTERS</a>
+                <a href="../music/index.html">MUSIC</a>
+                <a href="../gaming/index.html">GAMING</a>
+                <a href="./index.html" aria-current="true">TECH</a>
+            </nav>
+
+            <div class="mobile-menu">
+                <button class="mobile-menu__toggle" type="button" aria-labelledby="mm-menu-label" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
+                    <span class="mobile-menu__icon" aria-hidden="true"></span>
+                    <span class="visually-hidden" id="mm-menu-label">Navigation menu</span>
+                </button>
+                <nav class="mobile-menu__panel" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+                    <div class="mobile-menu__inner">
+                        <a class="mobile-menu__home" href="../index.html">www.never-land.de</a>
+                        <div class="mobile-menu__kicker">:: NAVIGATE ::</div>
+                        <div class="mobile-menu__groups">
+                            <a class="mobile-menu__category" href="../sisters/index.html">SISTERS</a>
+                            <a class="mobile-menu__category" href="../music/index.html">MUSIC</a>
+                            <a class="mobile-menu__category" href="../gaming/index.html">GAMING</a>
+                            <a class="mobile-menu__category" href="./index.html" aria-current="true">TECH</a>
+                        </div>
+                        <div class="mobile-menu__kicker mobile-menu__kicker--options">:: OPTIONS ::</div>
+                        <div class="mobile-menu__options">
+                            <a href="../options/email.html">eMail</a>
+                            <a href="../options/technik.html">Technik</a>
+                            <a href="../options/impressum.html">Impressum</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="editorial-main mm-main" id="main-content">
+            <nav class="editorial-breadcrumb" aria-label="Breadcrumb">
+                <a href="./index.html">TECH</a><span aria-hidden="true">/</span><span aria-current="page">MACHINE MEMORY</span>
+            </nav>
+            <article aria-labelledby="machine-memory-title">
+                <header class="mm-hero">
+                    <div class="site-panel mm-cover">
+                        <!-- COVER ART: replace cover.png and its responsive variants by rerunning
+                             tools/convert-machine-memory.py after updating the source artwork.
+                             Keep the real width/height below; the complete artwork stays uncropped.
+                        -->
+                        <img class="mm-cover__image" src="../essentials/tech/machine-memory/cover.png" srcset="../essentials/tech/machine-memory/cover-480.png 480w, ../essentials/tech/machine-memory/cover-960.png 960w, ../essentials/tech/machine-memory/cover.png 1448w" sizes="(max-width: 1148px) calc(100vw - 26px), 1098px" alt="Pixel-art view inside a desktop PC, with a motherboard, graphics card fans and purple, blue and amber lighting." width="1448" height="1086" fetchpriority="high" decoding="async">
+                    </div>
+                    <div class="mm-hero__copy">
+                        <div class="mm-label">:: TECH / A PERSONAL HISTORY ::</div>
+                        <h1 id="machine-memory-title">MACHINE MEMORY</h1>
+                        <p class="mm-subtitle">A personal computing timeline, circa 1990–2026.</p>
+                        <p class="mm-deck">From the Amiga 500 to the Battlestation. Four decades of computers, operating systems, upgrades, experiments, and machines that came and went.</p>
+                    </div>
+                </header>
+                <div class="mm-intro mm-prose">
+                    <p>Some computers were carefully chosen. Others were built from scratch, bought second-hand, rescued from retirement, or simply passed down. A few became daily companions for years. Others had a surprisingly short life.</p>
+                    <p>What follows is not a complete inventory of every machine I've ever touched. It's a personal history of computing — and of how the technology around me changed along the way.</p>
+                    <p>The dates aren't always exact. The memories, however, have a way of sticking around.</p>
+                </div>
+                <nav class="mm-contents" aria-label="Computing eras">
+                    <a href="#early-years"><span>01</span> THE EARLY YEARS</a>
+                    <a href="#diy-pc-years"><span>02</span> THE DIY PC YEARS</a>
+                    <a href="#apple-transition"><span>03</span> THE APPLE TRANSITION</a>
+                    <a href="#multi-system-years"><span>04</span> THE MULTI-SYSTEM YEARS</a>
+                    <a href="#parallel-lives"><span>05</span> PARALLEL LIVES</a>
+                    <a href="#lost-devices"><span>06</span> LOST DEVICES</a>
+                    <a href="#still-running"><span>07</span> STILL RUNNING</a>
+                </nav>
+                <!-- Continuous rail: section and entry anchors have a sticky-header offset. -->
+                <div class="mm-timeline">
+                    <!-- REUSABLE TIMELINE ENTRY: copy any article.mm-entry within an era.
+                         Give the article and its h3 unique matching id / aria-labelledby values.
+                         Edit the date, title, optional .mm-specs and .mm-status directly in HTML.
+                         Keep narrative paragraphs inside .mm-entry__body.
+                         Optional image: insert a figure.mm-machine-image inside the body:
+                         <figure class="mm-machine-image">
+                             <img src="../essentials/tech/machine-memory/YOUR-FILE.png"
+                                  alt="Describe the machine" width="1200" height="900"
+                                  loading="lazy" decoding="async">
+                             <figcaption>Your caption</figcaption>
+                         </figure>
+                         Use the actual image dimensions. Images scale to the reading column.
+                    -->
+                    <section class="mm-era mm-era--early" id="early-years" aria-labelledby="early-years-title">
+                        <h2 class="mm-era__title" id="early-years-title"><span>01</span> — THE EARLY YEARS</h2>
+                        <article class="mm-entry" id="amiga-500" aria-labelledby="amiga-500-title">
+                            <p class="mm-date">EARLY 1990s</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="amiga-500-title">Commodore Amiga 500</h3>
+                                <p class="mm-specs">1 MB RAM · AmigaOS</p>
+                                <p>Where it all began.</p>
+                                <p>The Amiga 500 was my entry into home computing: a machine from a time when computers still felt like something entirely different from ordinary household electronics.</p>
+                                <p>One megabyte of memory. A floppy drive. And an entire world waiting to be explored.</p>
+                                <p>Looking back, it was the beginning of a relationship with computers that would eventually go far beyond any particular machine or operating system.</p>
+                                <p>Games I remember from that time: Kick Off 2, The Secret Of Monkey Island, Monkey Island 2: LeChuck's Revenge, Leisure Suit Larry III.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="the-386" aria-labelledby="the-386-title">
+                            <p class="mm-date">c. 1993</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="the-386-title">The 386</h3>
+                                <p class="mm-specs">33 MHz · MS-DOS 5.0 / 6.22 · Windows 3.1</p>
+                                <p>The transition from the Amiga to the IBM-compatible PC.</p>
+                                <p>My 386 arrived with MS-DOS 5.0, was later upgraded to DOS 6.22, and introduced me to Windows 3.1.</p>
+                                <p>Computing was still wonderfully hands-on. DOS commands, configuration files, and an operating system that didn't try particularly hard to hide what was happening underneath. Fighting for free RAM to run certain games was a recurring theme, so I wrote a branching AUTOEXEC.BAT.</p>
+                                <p>But more importantly, I got confident about the interior of such machines. When the first CD-ROM drives came out,
+                                it was me to put it in. As well as the first CD writer: Fabulous 4x writing speed connected over an SCSI card.</p>
+                                <p>Windows 95 followed not long afterwards, marking the beginning of a very different era of personal computing.</p>
+                                <p>Games I remember from that time: Day Of The Tentacle, Anstoss 1, and so many adventures.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="vobis-pentium-ii" aria-labelledby="vobis-pentium-ii-title">
+                            <p class="mm-date">1998</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="vobis-pentium-ii-title">The Vobis Pentium II</h3>
+                                <p class="mm-specs">Intel Pentium II · Windows 98 · ISDN</p>
+                                <p>The computer that took me properly online.</p>
+                                <p>Unlike my later desktop PCs, this one was a complete system from Vobis. It ran Windows 98 and accompanied me into what felt like a genuinely digital age.</p>
+                                <p>MP3 files changed the way I discovered and collected music. Over the following years came Napster, eDonkey, mailing lists, discussion forums, and the early communities that made the internet feel like a place rather than a service.</p>
+                                <p>My connection was ISDN, with access through a phone and internet provider calles "isis" (which did dissolve into Vodafone eventually) and the University of Düsseldorf.</p>
+                                <p>There were no social media feeds in the modern sense. Instead, there were websites to discover, conversations to join, files to find, and entire evenings disappearing into the network.</p>
+                                <p>In many ways, this was the machine that connected my interest in computers with my interest in digital culture. I remember using this machine to write with the <a href="../sisters/index.html">SISTERS community</a> to trade live recordings, and eventually writing first HTML for my first webpage at <i>germany.net.</i> I registered <b>www.never-land.de</b> shortly after with 1&1.</p>
+                                <p>Games I remember from that time: several early FIFA editions, Anstoß 2 and 3, several adventures by Sierra and LucasArts, and most likely many more.</p>
+                                <div class="mm-image-pair" role="group" aria-label="Windows 98 and early web artifacts">
+                                <figure class="mm-machine-image">
+                                    <img src="../essentials/tech/machine-memory/windows-98.png" alt="A Microsoft Windows 98 CD in an open jewel case, with German disc text and a security-update CD sleeve behind it." width="1000" height="1333" loading="lazy" decoding="async">
+                                    <figcaption>Windows 98 — the operating system of my first proper internet years.</figcaption>
+                                </figure>
+                                <figure class="mm-machine-image mm-machine-image--secondary">
+                                    <img src="../essentials/tech/machine-memory/internet-explorer-4-cd.png" alt="A hand holding a Microsoft Internet Explorer 4.0 CD case, with a German promotional cover mentioning Windows 98." width="1000" height="750" loading="lazy" decoding="async">
+                                    <figcaption>An Internet Explorer 4.0 disc from the early web era.</figcaption>
+                                </figure>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="mm-era mm-era--diy" id="diy-pc-years" aria-labelledby="diy-pc-years-title">
+                        <h2 class="mm-era__title" id="diy-pc-years-title"><span>02</span> — THE DIY PC YEARS</h2>
+                        <article class="mm-entry" id="athlon-xp" aria-labelledby="athlon-xp-title">
+                            <p class="mm-date">c. 2002–2004</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="athlon-xp-title">AMD Athlon XP 2400+</h3>
+                                <p class="mm-specs">AMD Athlon XP · Windows XP · Custom-built PC</p>
+                                <p>My first clearly remembered self-built PC.</p>
+                                <p>After the Vobis machine, I moved away from buying complete systems and towards assembling my own hardware.</p>
+                                <p>The Athlon XP 2400+ ran Windows XP, which represented an enormous step forward in the everyday PC experience.</p>
+                                <p>Building a computer was different from owning one. Components could be replaced individually. The machine could evolve without everything having to be thrown away.</p>
+                                <p>That philosophy would stay with me for years.</p>
+                                <p>Games I remember from that time: Half-Life 2, Unreal Tournament, Gabriel Knight 2, and most likely many more.</p>
+                                <div class="mm-image-pair" role="group" aria-label="Windows XP packaging and installation media">
+                                <figure class="mm-machine-image">
+                                    <img src="../essentials/tech/machine-memory/windows-xp-01.png" alt="The blue cover of a Microsoft Windows XP Professional Version 2002 package, lying beside a mouse and a laptop keyboard." width="1200" height="900" loading="lazy" decoding="async">
+                                    <figcaption>Windows XP — the operating system of my first self-built PC.</figcaption>
+                                </figure>
+                                <figure class="mm-machine-image">
+                                    <img src="../essentials/tech/machine-memory/windows-xp-02.png" alt="An open Windows XP Professional package with an orange interior, German feature descriptions and a holographic installation CD." width="1000" height="750" loading="lazy" decoding="async">
+                                    <figcaption>Inside the Windows XP Professional package.</figcaption>
+                                </figure>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="radeon-9600-xt" aria-labelledby="radeon-9600-xt-title">
+                            <p class="mm-date">c. 2003–2004</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="radeon-9600-xt-title">ATI Radeon 9600 XT</h3>
+                                <p class="mm-specs">AGP 8x · 128 MB · The Half-Life 2 coupon</p>
+                                <p>Not a computer, but a component that deserves its own place in the timeline.</p>
+                                <p>I'm fairly certain that my Athlon system eventually housed an ATI Radeon 9600 XT.</p>
+                                <p>And I remember exactly why the card mattered: it came with a coupon for <em>Half-Life 2</em>.</p>
+                                <p>A graphics card purchase that also promised access to one of the most anticipated PC games of its generation. The game itself wouldn't arrive until November 2004.</p>
+                                <p>Somewhere in those years, I also remember owning an older ATI Rage 128 Pro. Which machine it belonged to, and when exactly it was replaced, is less clear.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="core-2-duo" aria-labelledby="core-2-duo-title">
+                            <p class="mm-date">c. 2007</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="core-2-duo-title">Intel Core 2 Duo</h3>
+                                <p class="mm-specs">ASRock 4CoreDual-VSTA · Windows Vista · Chieftec Dragon CS-601</p>
+                                <p>A new processor, a new motherboard, and another generation of Windows.</p>
+                                <p>The heart of this machine was an ASRock 4CoreDual-VSTA — a wonderfully peculiar transitional motherboard that supported both older and newer technologies, including AGP and PCI Express graphics cards.</p>
+                                <p>The system lived inside a Chieftec Dragon CS-601, a dark-grey steel tower with a curved front door and distinctive horizontal ventilation grilles. It was exactly the kind of case that defined the self-built PC era for me: solid, practical, slightly imposing, and built to last.</p>
+                                <p>Years later, I came across photographs of the very same case design on Reddit and recognised it immediately.</p>
+                                <p>Exactly which graphics card I used with it has escaped my memory.</p>
+                                <p>Unfortunately, the machine itself didn't survive. I either disposed of it myself or it disappeared during a family clear-out.</p>
+                                <p><em>I rather wish I'd kept it.</em></p>
+                                <figure class="mm-machine-image mm-machine-image--secondary">
+                                    <img src="../essentials/tech/machine-memory/windows-vista-upgrade.png" alt="An open Windows Vista Home Premium upgrade package with a green cover and a holographic DVD visible inside." width="1000" height="750" loading="lazy" decoding="async">
+                                    <figcaption>Windows Vista Home Premium upgrade packaging. The PC’s installed edition is not recorded.</figcaption>
+                                </figure>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="mm-era mm-era--apple" id="apple-transition" aria-labelledby="apple-transition-title">
+                        <h2 class="mm-era__title" id="apple-transition-title"><span>03</span> — THE APPLE TRANSITION</h2>
+                        <article class="mm-entry" id="imac-g3" aria-labelledby="imac-g3-title">
+                            <p class="mm-date">c. 2005</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="imac-g3-title">Apple iMac G3</h3>
+                                <p class="mm-specs">PowerPC G3 · The first Mac in my collection</p>
+                                <p>My relationship with Apple computers began before I actually switched platforms.</p>
+                                <p>Around 2005, I received an iMac G3 from a university internship.</p>
+                                <p>It wasn't a replacement for my Windows PC. It was another computer to explore — a completely different hardware and software ecosystem, with its own ideas about how personal computing should work.</p>
+                                <p>The iMac introduced another strand into my computing history, one that would become increasingly important over the following years.</p>
+                                <figure class="mm-machine-image">
+                                    <img src="../essentials/tech/machine-memory/imac-g3-01.png" alt="An iMac G3 displaying Jan’s revived homepage in Safari, with a black keyboard in the foreground." width="1200" height="900" loading="lazy" decoding="async">
+                                    <figcaption>The iMac G3, revisiting the early web.</figcaption>
+                                </figure>
+                                <figure class="mm-machine-image mm-machine-image--secondary">
+                                    <img src="../essentials/tech/machine-memory/imac-g3-02.png" alt="An iMac G3 on a desk beside a window, showing a blue Mac OS X desktop and Dock." width="900" height="675" loading="lazy" decoding="async">
+                                    <figcaption>Another view of the iMac G3 desktop.</figcaption>
+                                </figure>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="mac-mini-2009" aria-labelledby="mac-mini-2009-title">
+                            <p class="mm-date">LATE 2009</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="mac-mini-2009-title">Apple Mac mini</h3>
+                                <p class="mm-specs">Late 2009 · Intel Mac · The platform switch</p>
+                                <p>The turning point.</p>
+                                <p>In late 2009, I made the move to the Mac as my primary computing platform.</p>
+                                <p>The Mac mini was compact, quiet, and a surprisingly capable desktop. More importantly, it marked a change in how I approached computing.</p>
+                                <p>After years of building and upgrading PCs, the Mac became my main everyday environment.</p>
+                                <p>I eventually sold this particular machine.</p>
+                                <p>Interestingly, I now own a different Mac mini from early 2009, running Mac OS X Snow Leopard. Computing history has a habit of coming full circle.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="macbook-pro-retina" aria-labelledby="macbook-pro-retina-title">
+                            <p class="mm-date">c. 2013</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="macbook-pro-retina-title">MacBook Pro Retina 15-inch</h3>
+                                <p class="mm-specs">Mid 2012 model · Intel Core i7 · Retina display</p>
+                                <p>My first Retina MacBook Pro.</p>
+                                <p>I bought it second-hand from a freelancer, probably around 2013. With its 15-inch Retina display, quad-core Intel processor, and SSD, it represented a substantial leap from earlier notebook generations.</p>
+                                <p>The machine is still around, somewhere in the basement.</p>
+                                <p>It's one of those devices I never quite managed to part with — and perhaps that's just as well.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="macbook-pro-touch-bar" aria-labelledby="macbook-pro-touch-bar-title">
+                            <p class="mm-date">c. 2018</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="macbook-pro-touch-bar-title">MacBook Pro 13-inch</h3>
+                                <p class="mm-specs">Touch Bar · Intel Mac</p>
+                                <p>The Touch Bar years.</p>
+                                <p>By this point, MacBooks had become established parts of my everyday computing life.</p>
+                                <p>The 13-inch MacBook Pro with Touch Bar represented Apple's vision of a more streamlined, integrated notebook experience — very different from the expandable desktop PCs I'd built years earlier.</p>
+                                <p>I eventually sold it on eBay in 2025.</p>
+                                <p>Some machines leave without much ceremony.</p>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="mm-era mm-era--multi" id="multi-system-years" aria-labelledby="multi-system-years-title">
+                        <h2 class="mm-era__title" id="multi-system-years-title"><span>04</span> — THE MULTI-SYSTEM YEARS</h2>
+                        <article class="mm-entry" id="macbook-pro-2015" aria-labelledby="macbook-pro-2015-title">
+                            <p class="mm-date">2022–2025</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="macbook-pro-2015-title">MacBook Pro 15-inch, 2015</h3>
+                                <p class="mm-specs">Intel Mac · Today: Windows 11</p>
+                                <p>An Apple notebook with an unexpected second life.</p>
+                                <p>My 2015 MacBook Pro is still in use, but no longer as a Mac.</p>
+                                <p>These days, it runs Windows 11.</p>
+                                <p>There's something rather satisfying about taking a well-built computer, ignoring its original platform boundaries, and finding another use for it years later.</p>
+                                <figure class="mm-machine-image">
+                                    <img src="../essentials/tech/machine-memory/macbook-pro-2015-windows11.png" alt="A MacBook Pro showing the Windows 11 About Windows dialog over a bamboo forest wallpaper." width="1200" height="675" loading="lazy" decoding="async">
+                                    <figcaption>The 2015 MacBook Pro, running Windows 11.</figcaption>
+                                </figure>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="macbook-pro-2019" aria-labelledby="macbook-pro-2019-title">
+                            <p class="mm-date">2022–2025</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="macbook-pro-2019-title">MacBook Pro 15-inch, 2019</h3>
+                                <p class="mm-specs">Intel Mac · macOS Sequoia</p>
+                                <p>The other side of my current notebook setup.</p>
+                                <p>Unlike its older sibling, the 2019 MacBook Pro remains firmly in the Apple ecosystem, running macOS Sequoia.</p>
+                                <p>Together, these two MacBooks illustrate how my approach to computing has changed: the operating system is no longer necessarily determined by the logo on the lid.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="battlestation" aria-labelledby="battlestation-title">
+                            <p class="mm-date">2022–PRESENT</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="battlestation-title">The Battlestation</h3>
+                                <p class="mm-specs">Intel Core i7-9700 · NVIDIA RTX 3070 · Windows 11</p>
+                                <p>Back to a proper Windows desktop.</p>
+                                <p>I bought this system from my friend Martin, bringing a powerful gaming PC back into my setup after many years of primarily using Macs.</p>
+                                <p>With its Core i7-9700 and GeForce RTX 3070, the Battlestation handles modern games and everything else I throw at it.</p>
+                                <p>It's also a return to something familiar: a Windows PC that can be maintained, modified, and upgraded as needed.</p>
+                                <p>Some things never really change.</p>
+                                <p>Head over to the <a href="../gaming/index.html">GAMING</a> section to see current digital explorations.</p>
+                                <figure class="mm-machine-image mm-machine-image--portrait">
+                                    <img src="../essentials/tech/machine-memory/battlestation.png" alt="The Battlestation tower seen through its side panel, with blue lighting around the CPU cooler and graphics card." width="800" height="1067" loading="lazy" decoding="async">
+                                    <figcaption>The Battlestation, under blue light.</figcaption>
+                                </figure>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="acer-desktop" aria-labelledby="acer-desktop-title">
+                            <p class="mm-date">2022–2025</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="acer-desktop-title">The Acer Desktop</h3>
+                                <p class="mm-specs">Windows 11 · Upgraded RAM and graphics</p>
+                                <p>Another family computer with a history.</p>
+                                <p>Originally belonging to my brother, this older Acer eventually found its way into my hands.</p>
+                                <p>Rather than replacing it, I upgraded the memory and graphics card, installed Windows 11, and passed it on to my wife.</p>
+                                <p>Not particularly glamorous, perhaps, but a good example of what I appreciate about older hardware: usefulness doesn't necessarily end when the original owner moves on.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="next-generation" aria-labelledby="next-generation-title">
+                            <p class="mm-date">2026</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="next-generation-title">The Next Generation</h3>
+                                <p class="mm-specs">MacBook Neo · HP Pavilion 570</p>
+                                <p>By 2026, the computing story was no longer just about my own machines.</p>
+                                <p>My daughter received a MacBook Neo, while my son got the HP Pavilion 570 — another existing desktop given a new purpose.</p>
+                                <p>Different generations of hardware, different users, different needs.</p>
+                                <p>And another reminder that computers often have more than one life.</p>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="mm-era mm-era--parallel" id="parallel-lives" aria-labelledby="parallel-lives-title">
+                        <h2 class="mm-era__title" id="parallel-lives-title"><span>05</span> — PARALLEL LIVES</h2>
+                        <article class="mm-entry" id="macintosh-performa" aria-labelledby="macintosh-performa-title">
+                            <p class="mm-date">MID-2000s</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="macintosh-performa-title">Macintosh Performa</h3>
+                                <p class="mm-specs">System 7 · QuarkXPress 3.22 · Photoshop 4 · Suitcase</p>
+                                <p>One of the more extraordinary entries in this timeline.</p>
+                                <p>In the mid-2000s, I worked on desktop publishing for a weekly newspaper in Wülfrath.</p>
+                                <p>The workstation was an ageing Macintosh Performa, still running classic Mac OS System 7.</p>
+                                <p>The production environment included QuarkXPress 3.22, Adobe Photoshop 4, and Suitcase for font management.</p>
+                                <p>Finished production data was transferred over ISDN.</p>
+                                <p>By contemporary standards, the whole setup was already thoroughly outdated. But it was a working publishing environment, doing real production work.</p>
+                                <p>A wonderful reminder that professional technology doesn't always follow the upgrade cycles of the consumer market.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="machines-in-orbit" aria-labelledby="machines-in-orbit-title">
+                            <p class="mm-date mm-date--long">THE 2010s–2020s</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="machines-in-orbit-title">Machines in Orbit</h3>
+                                <p>Some computers stayed with me because they were useful. Others because they were interesting.</p>
+                                <p>iBook G4, 1.42 GHz. A surviving PowerPC notebook, running Mac OS X Tiger with the Classic environment. A small window into the years when Apple was transitioning away from its original Mac OS architecture.</p>
+                                <figure class="mm-machine-image">
+                                    <img src="../essentials/tech/machine-memory/ibook-g4.png" alt="A white iBook G4 on a wooden desk beside a plant, displaying Jan’s homepage and a QuickTime video window." width="1200" height="900" loading="lazy" decoding="async">
+                                    <figcaption>The iBook G4, with a familiar homepage and QuickTime.</figcaption>
+                                </figure>
+                                <figure class="mm-machine-image mm-machine-image--secondary">
+                                    <img src="../essentials/tech/machine-memory/ibook-g4-hdd-install.png" alt="An open iBook G4 with the keyboard and upper case removed, exposing the drive, memory and ribbon cables while a screwdriver is in use." width="1000" height="750" loading="lazy" decoding="async">
+                                    <figcaption>Inside the iBook G4 during drive installation.</figcaption>
+                                </figure>
+                                <p>Mac mini, Early 2009. A different machine from my original Late 2009 Mac mini, now running Mac OS X 10.6.8 Snow Leopard.</p>
+                                <p>Compaq Mini 311. An old netbook from my father-in-law, now running Windows 7 and enjoying another life as a retro gaming machine.</p>
+                                <figure class="mm-machine-image mm-machine-image--secondary">
+                                    <img src="../essentials/tech/machine-memory/compaq-mini-311.png" alt="Close-up of a Compaq Mini palm rest with Intel Atom, NVIDIA ION and Windows 7 stickers." width="900" height="675" loading="lazy" decoding="async">
+                                    <figcaption>A close-up of the Compaq Mini 311.</figcaption>
+                                </figure>
+                                <p>MacBook Pro 13-inch, 2016. Another Intel Mac repurposed to run Windows 11.</p>
+                                <p>Lenovo touchscreen notebook, circa 2012. A machine suited to revisiting the Windows 8 era, when Microsoft was rethinking the PC interface around touch.</p>
+                                <p>Lenovo ThinkPad T540p. A former business laptop running Windows 11 as a host for Home Assistant OS. Once a portable workstation, now part of the household infrastructure.</p>
+                                <p>None of these machines needs to be particularly fast or modern to be interesting.</p>
+                                <p>Their value lies in what they can still do — and in the different periods of computing history they preserve.</p>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="mm-era mm-era--lost" id="lost-devices" aria-labelledby="lost-devices-title">
+                        <h2 class="mm-era__title" id="lost-devices-title"><span>06</span> — LOST DEVICES</h2>
+                        <article class="mm-entry" id="lost-acer-notebook" aria-labelledby="lost-acer-notebook-title">
+                            <p class="mm-date">c. 2004</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="lost-acer-notebook-title">The Acer Notebook</h3>
+                                <p>An Acer notebook from the mid-2000s.</p>
+                                <p>The precise model and configuration have disappeared from memory, but the machine belongs to a period when portable PCs were becoming increasingly important to my everyday computing life.</p>
+                                <p>Another piece of hardware history waiting for a photograph, a receipt, or a forgotten specification to turn up.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="trafema-notebook" aria-labelledby="trafema-notebook-title">
+                            <p class="mm-date mm-date--long">THE VISTA YEARS</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="trafema-notebook-title">The trafema.de Notebook</h3>
+                                <p>A notebook associated with my trafema.de days, running Windows Vista.</p>
+                                <p>I no longer remember the exact model, but the machine deserves its place in the story.</p>
+                                <p>Sometimes the project or website associated with a computer remains more memorable than the hardware itself.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="denkwerk-pc" aria-labelledby="denkwerk-pc-title">
+                            <p class="mm-date">c. 2012</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="denkwerk-pc-title">The denkwerk PC</h3>
+                                <p>A former denkwerk computer that had been retired from professional use.</p>
+                                <p>Around 2012, I repurposed it for my parents, still running Windows Vista.</p>
+                                <p>Another machine that found a second home instead of immediately becoming electronic waste.</p>
+                                <p>Its precise specifications, and ultimately its whereabouts, are now lost to time.</p>
+                            </div>
+                        </article>
+                        <article class="mm-entry" id="lost-core-2-duo" aria-labelledby="lost-core-2-duo-title">
+                            <p class="mm-date mm-date--long">THE ONE I WISH I'D KEPT</p>
+                            <div class="mm-entry__body mm-prose">
+                                <h3 id="lost-core-2-duo-title">The Chieftec Dragon</h3>
+                                <p class="mm-status">SYSTEM NOT FOUND</p>
+                                <p>Of all the missing computers, my Core 2 Duo system inside the Chieftec Dragon CS-601 might be the one I regret losing most.</p>
+                                <p>Not because it was especially rare or valuable, but because it represented a very specific moment in my personal PC history.</p>
+                                <p>The combination of an ASRock 4CoreDual-VSTA, Windows Vista, and that distinctive Chieftec tower captured an era of transitional hardware, changing interfaces, and the pleasure of building a computer yourself.</p>
+                                <p>Today, it would make a rather wonderful period-correct retro PC.</p>
+                                <p>Unfortunately, mine is gone.</p>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="mm-era mm-era--closing" id="still-running" aria-labelledby="still-running-title">
+                        <h2 class="mm-era__title" id="still-running-title"><span>07</span> — STILL RUNNING</h2>
+                        <div class="mm-closing mm-prose">
+                            <p>Looking back over more than three decades, the most interesting part isn't how much faster computers have become.</p>
+                            <p>It's how their roles have changed.</p>
+                            <p>The Amiga was an introduction to an entirely new world. The 386 taught me the PC. The Pentium II brought me onto the internet. The Athlon introduced me to building computers. The Mac mini marked a major platform change.</p>
+                            <p>And today?</p>
+                            <p>A 2015 MacBook Pro runs Windows 11. A business ThinkPad runs my home automation setup. A Windows gaming PC shares the desk with Macs. Old hardware gets rescued, repaired, and reused.</p>
+                            <p><strong>The machines have changed. The curiosity hasn't.</strong></p>
+                            <p>Some machines are still running. Some are gathering dust. And a few I wish I'd never thrown away.</p>
+                            <p>To be continued.</p>
+                            <p class="mm-continued">TO BE CONTINUED<span class="mm-cursor">_</span></p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+            <nav class="editorial-back mm-back" aria-label="Back to Tech">
+                <a href="./index.html">← TECH</a>
+                <a href="#machine-memory-title">BACK TO TOP ↑</a>
+            </nav>
+        </main>
+        <footer class="site-panel site-footer">
+            <div class="site-footer__url"><u>URL:</u> https://www.never-land.de/tech/machine-memory.html</div>
+            <div class="site-footer__options">
+                <strong>:: options ::</strong>
+                <a href="../options/email.html">eMail</a>&nbsp;::
+                <a href="../options/technik.html">Technik</a>&nbsp;::
+                <a href="../options/impressum.html">Impressum</a>&nbsp;::<br>
+                ::&nbsp;&copy; 2000-2003 / 2026&nbsp;::
+            </div>
+        </footer>
+    </div>
+    <script src="../js/navigation.js" defer></script>
+</body>
+</html>

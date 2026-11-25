@@ -1,0 +1,493 @@
+{
+  "checks": [
+    "Approved structure and all existing media remain present",
+    "Correct mappings, distinct XP views, retained IE artifact and Vista edition distinction",
+    "Four viewport sizes: full images, readable dates, captions and rail, no overflow",
+    "All image resources load; native lazy loading and PNG references",
+    "JavaScript-disabled reading, reduced motion and navigation",
+    "No failed resources, JavaScript errors or external requests"
+  ],
+  "layouts": [
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "target": 0,
+      "width": 1440,
+      "scroll": 1440,
+      "columns": "342.781px 342.781px",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-98.png",
+          "w": 342.78125,
+          "h": 456.921875,
+          "nw": 1000,
+          "nh": 1333,
+          "left": 507.4375,
+          "right": 850.21875,
+          "captionTop": 576.015625,
+          "bottom": 566.421875,
+          "captionRight": 850.21875
+        },
+        {
+          "src": "../essentials/tech/machine-memory/internet-explorer-4-cd.png",
+          "w": 342.78125,
+          "h": 257.078125,
+          "nw": 1000,
+          "nh": 750,
+          "left": 866.21875,
+          "right": 1209,
+          "captionTop": 376.171875,
+          "bottom": 366.578125,
+          "captionRight": 1209
+        }
+      ],
+      "body": {
+        "left": 507.4375,
+        "right": 1209
+      },
+      "dateRight": 455.4375,
+      "dateClip": false,
+      "groupTop": 109.5,
+      "headerBottom": 36
+    },
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "target": 1,
+      "width": 1440,
+      "scroll": 1440,
+      "columns": "342.781px 342.781px",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-xp-01.png",
+          "w": 342.78125,
+          "h": 257.078125,
+          "nw": 1200,
+          "nh": 900,
+          "left": 507.4375,
+          "right": 850.21875,
+          "captionTop": 376.328125,
+          "bottom": 366.734375,
+          "captionRight": 850.21875
+        },
+        {
+          "src": "../essentials/tech/machine-memory/windows-xp-02.png",
+          "w": 342.78125,
+          "h": 257.078125,
+          "nw": 1000,
+          "nh": 750,
+          "left": 866.21875,
+          "right": 1209,
+          "captionTop": 376.328125,
+          "bottom": 366.734375,
+          "captionRight": 1209
+        }
+      ],
+      "body": {
+        "left": 507.4375,
+        "right": 1209
+      },
+      "dateRight": 455.4375,
+      "dateClip": false,
+      "groupTop": 109.65625,
+      "headerBottom": 36
+    },
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "target": 2,
+      "width": 1440,
+      "scroll": 1440,
+      "columns": "none",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-vista-upgrade.png",
+          "w": 480,
+          "h": 360,
+          "nw": 1000,
+          "nh": 750,
+          "left": 507.4375,
+          "right": 987.4375,
+          "captionTop": 479.75,
+          "bottom": 470.15625,
+          "captionRight": 987.4375
+        }
+      ],
+      "body": {
+        "left": 507.4375,
+        "right": 1209
+      },
+      "dateRight": 455.4375,
+      "dateClip": false,
+      "groupTop": 110.15625,
+      "headerBottom": 36
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "target": 0,
+      "width": 768,
+      "scroll": 768,
+      "columns": "216.25px 216.25px",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-98.png",
+          "w": 216.25,
+          "h": 288.25,
+          "nw": 1000,
+          "nh": 1333,
+          "left": 262.109375,
+          "right": 478.359375,
+          "captionTop": 408.140625,
+          "bottom": 398.546875,
+          "captionRight": 478.359375
+        },
+        {
+          "src": "../essentials/tech/machine-memory/internet-explorer-4-cd.png",
+          "w": 216.25,
+          "h": 162.1875,
+          "nw": 1000,
+          "nh": 750,
+          "left": 488.359375,
+          "right": 704.609375,
+          "captionTop": 282.078125,
+          "bottom": 272.484375,
+          "captionRight": 704.609375
+        }
+      ],
+      "body": {
+        "left": 262.109375,
+        "right": 704.609375
+      },
+      "dateRight": 231.390625,
+      "dateClip": false,
+      "groupTop": 110.296875,
+      "headerBottom": 72
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "target": 1,
+      "width": 768,
+      "scroll": 768,
+      "columns": "216.25px 216.25px",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-xp-01.png",
+          "w": 216.25,
+          "h": 162.1875,
+          "nw": 1200,
+          "nh": 900,
+          "left": 262.109375,
+          "right": 478.359375,
+          "captionTop": 281.734375,
+          "bottom": 272.140625,
+          "captionRight": 478.359375
+        },
+        {
+          "src": "../essentials/tech/machine-memory/windows-xp-02.png",
+          "w": 216.25,
+          "h": 162.1875,
+          "nw": 1000,
+          "nh": 750,
+          "left": 488.359375,
+          "right": 704.609375,
+          "captionTop": 281.734375,
+          "bottom": 272.140625,
+          "captionRight": 704.609375
+        }
+      ],
+      "body": {
+        "left": 262.109375,
+        "right": 704.609375
+      },
+      "dateRight": 231.390625,
+      "dateClip": false,
+      "groupTop": 109.953125,
+      "headerBottom": 72
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "target": 2,
+      "width": 768,
+      "scroll": 768,
+      "columns": "none",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-vista-upgrade.png",
+          "w": 442.5,
+          "h": 331.875,
+          "nw": 1000,
+          "nh": 750,
+          "left": 262.109375,
+          "right": 704.609375,
+          "captionTop": 451.671875,
+          "bottom": 442.078125,
+          "captionRight": 704.609375
+        }
+      ],
+      "body": {
+        "left": 262.109375,
+        "right": 704.609375
+      },
+      "dateRight": 231.390625,
+      "dateClip": false,
+      "groupTop": 110.203125,
+      "headerBottom": 72
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "target": 0,
+      "width": 390,
+      "scroll": 390,
+      "columns": "298px",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-98.png",
+          "w": 298,
+          "h": 397.21875,
+          "nw": 1000,
+          "nh": 1333,
+          "left": 59,
+          "right": 357,
+          "captionTop": 516.9375,
+          "bottom": 507.34375,
+          "captionRight": 357
+        },
+        {
+          "src": "../essentials/tech/machine-memory/internet-explorer-4-cd.png",
+          "w": 298,
+          "h": 223.5,
+          "nw": 1000,
+          "nh": 750,
+          "left": 59,
+          "right": 357,
+          "captionTop": 813.625,
+          "bottom": 804.03125,
+          "captionRight": 357
+        }
+      ],
+      "body": {
+        "left": 59,
+        "right": 357
+      },
+      "dateRight": 357,
+      "dateClip": false,
+      "groupTop": 110.125,
+      "headerBottom": 72
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "target": 1,
+      "width": 390,
+      "scroll": 390,
+      "columns": "298px",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-xp-01.png",
+          "w": 298,
+          "h": 223.5,
+          "nw": 1200,
+          "nh": 900,
+          "left": 59,
+          "right": 357,
+          "captionTop": 343.078125,
+          "bottom": 333.484375,
+          "captionRight": 357
+        },
+        {
+          "src": "../essentials/tech/machine-memory/windows-xp-02.png",
+          "w": 298,
+          "h": 223.5,
+          "nw": 1000,
+          "nh": 750,
+          "left": 59,
+          "right": 357,
+          "captionTop": 639.765625,
+          "bottom": 630.171875,
+          "captionRight": 357
+        }
+      ],
+      "body": {
+        "left": 59,
+        "right": 357
+      },
+      "dateRight": 357,
+      "dateClip": false,
+      "groupTop": 109.984375,
+      "headerBottom": 72
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "target": 2,
+      "width": 390,
+      "scroll": 390,
+      "columns": "none",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-vista-upgrade.png",
+          "w": 298,
+          "h": 223.5,
+          "nw": 1000,
+          "nh": 750,
+          "left": 59,
+          "right": 357,
+          "captionTop": 342.671875,
+          "bottom": 333.078125,
+          "captionRight": 357
+        }
+      ],
+      "body": {
+        "left": 59,
+        "right": 357
+      },
+      "dateRight": 357,
+      "dateClip": false,
+      "groupTop": 109.578125,
+      "headerBottom": 72
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "target": 0,
+      "width": 320,
+      "scroll": 320,
+      "columns": "228px",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-98.png",
+          "w": 228,
+          "h": 303.921875,
+          "nw": 1000,
+          "nh": 1333,
+          "left": 59,
+          "right": 287,
+          "captionTop": 423.640625,
+          "bottom": 414.046875,
+          "captionRight": 287
+        },
+        {
+          "src": "../essentials/tech/machine-memory/internet-explorer-4-cd.png",
+          "w": 228,
+          "h": 171,
+          "nw": 1000,
+          "nh": 750,
+          "left": 59,
+          "right": 287,
+          "captionTop": 687.625,
+          "bottom": 678.03125,
+          "captionRight": 287
+        }
+      ],
+      "body": {
+        "left": 59,
+        "right": 287
+      },
+      "dateRight": 287,
+      "dateClip": false,
+      "groupTop": 110.125,
+      "headerBottom": 72
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "target": 1,
+      "width": 320,
+      "scroll": 320,
+      "columns": "228px",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-xp-01.png",
+          "w": 228,
+          "h": 171,
+          "nw": 1200,
+          "nh": 900,
+          "left": 59,
+          "right": 287,
+          "captionTop": 290.609375,
+          "bottom": 281.015625,
+          "captionRight": 287
+        },
+        {
+          "src": "../essentials/tech/machine-memory/windows-xp-02.png",
+          "w": 228,
+          "h": 171,
+          "nw": 1000,
+          "nh": 750,
+          "left": 59,
+          "right": 287,
+          "captionTop": 554.59375,
+          "bottom": 545,
+          "captionRight": 287
+        }
+      ],
+      "body": {
+        "left": 59,
+        "right": 287
+      },
+      "dateRight": 287,
+      "dateClip": false,
+      "groupTop": 110.015625,
+      "headerBottom": 72
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "target": 2,
+      "width": 320,
+      "scroll": 320,
+      "columns": "none",
+      "images": [
+        {
+          "src": "../essentials/tech/machine-memory/windows-vista-upgrade.png",
+          "w": 228,
+          "h": 171,
+          "nw": 1000,
+          "nh": 750,
+          "left": 59,
+          "right": 287,
+          "captionTop": 290.265625,
+          "bottom": 280.671875,
+          "captionRight": 287
+        }
+      ],
+      "body": {
+        "left": 59,
+        "right": 287
+      },
+      "dateRight": 287,
+      "dateClip": false,
+      "groupTop": 109.671875,
+      "headerBottom": 72
+    }
+  ],
+  "errors": []
+}

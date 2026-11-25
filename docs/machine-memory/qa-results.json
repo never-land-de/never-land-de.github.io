@@ -1,0 +1,34 @@
+{
+  "browser": "Installed Google Chrome, headless via Chrome DevTools Protocol",
+  "viewport_sizes": [
+    [
+      1440,
+      1000
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      568
+    ]
+  ],
+  "checks": [
+    "All 21 entries, seven sections, approved copy, metadata, dates and final line",
+    "Local paths and anchors resolve; no missing cover request or external requests",
+    "1440, 768, 390 and 320px: no overflow, hidden copy, date clipping or overlaps",
+    "Native era link honors sticky header offset",
+    "Archival and conclusion panels at desktop and mobile; motion preference",
+    "Visible keyboard focus and shared mobile menu behavior",
+    "TECH teaser is prominent and links to the actual page",
+    "All editorial content readable with JavaScript disabled",
+    "Future cover activates with one uncommented image and zero layout shift",
+    "No browser errors or failed resources"
+  ],
+  "errors": []
+}

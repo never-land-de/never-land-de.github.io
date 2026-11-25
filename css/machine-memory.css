@@ -1,0 +1,433 @@
+/* Machine Memory — scoped editorial layer, after Bootstrap + home.css.
+   The final block is the TECH landing-page teaser; no shared tokens change. */
+
+html:has(> body.machine-memory) {
+    scroll-behavior: auto;
+}
+
+body.machine-memory {
+    background-image: linear-gradient(rgb(0 0 0 / 76%), rgb(0 0 0 / 90%)), url("../essentials/clouds.gif");
+}
+
+.machine-memory {
+    --mm-paper: #eeeae0;
+    --mm-muted: #b1b5ae;
+    --mm-rule: #353b37;
+    color: var(--mm-paper);
+}
+
+.machine-memory :is([id], .mm-entry) {
+    scroll-margin-top: 100px;
+}
+
+.machine-memory .site-footer__url {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.machine-memory .mm-skip:focus {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 2300;
+    padding: 12px;
+    color: #000;
+    background: #eeeae0;
+}
+
+.mm-main > article {
+    min-width: 0;
+    background: #0b0e0d;
+    border: 1px solid var(--mm-rule);
+    border-radius: 0 var(--panel-radius) 0 var(--panel-radius);
+}
+
+.mm-cover {
+    position: relative;
+    border: 0;
+    border-bottom: 1px solid var(--mm-rule);
+    background: #111713;
+}
+
+.mm-label {
+    font-family: var(--font-pixel);
+    font-size: clamp(0.54rem, 1.1vw, 0.72rem);
+    line-height: 1.6;
+    color: #bbc5a9;
+}
+
+.mm-cover__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mm-hero__copy,
+.mm-intro,
+.mm-contents {
+    padding-inline: clamp(20px, 5vw, 64px);
+}
+
+.mm-hero__copy {
+    padding-top: clamp(30px, 5vw, 58px);
+}
+
+.mm-hero h1 {
+    margin: 0.7rem 0 0.8rem;
+    color: var(--mm-paper);
+    font-size: clamp(2rem, 6.2vw, 4.8rem);
+    font-weight: 720;
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+}
+
+.mm-subtitle {
+    color: #c8cebf;
+    font-family: var(--font-mono);
+    font-size: clamp(0.75rem, 1.35vw, 0.95rem);
+    line-height: 1.65;
+}
+
+.mm-deck {
+    max-width: 47ch;
+    margin: 1.8rem 0 0;
+    font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+}
+
+.mm-prose {
+    color: #d4d6d0;
+    font-size: clamp(0.95rem, 1.2vw, 1.06rem);
+    line-height: 1.8;
+}
+
+.mm-prose p {
+    margin: 0 0 1.25rem;
+}
+
+.mm-prose p:last-child {
+    margin-bottom: 0;
+}
+
+.mm-intro {
+    max-width: 84ch;
+    margin-block: 2.5rem;
+}
+
+.mm-intro p:last-child {
+    color: var(--mm-muted);
+}
+
+.mm-contents {
+    display: grid;
+    gap: 0;
+    padding-block: 1.2rem;
+    border-block: 1px solid var(--mm-rule);
+    background: #101512;
+}
+
+.mm-contents a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding-block: 0.65rem;
+    color: #d1d6c8;
+    font-family: var(--font-pixel);
+    font-size: 0.64rem;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+.mm-contents a span {
+    color: #a1af92;
+}
+
+.mm-contents a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.mm-timeline {
+    /* A single rail continues through every section, including the conclusion. */
+    --mm-rail: 16px;
+    position: relative;
+    margin: 0 clamp(12px, 3vw, 36px);
+}
+
+.mm-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 3rem;
+    left: var(--mm-rail);
+    width: 1px;
+    background: var(--mm-rule);
+}
+
+.mm-era {
+    --mm-accent: #bfc7b0;
+    position: relative;
+    padding: 3rem 8px 0 40px;
+}
+
+.mm-era--diy { --mm-accent: #a6c2dc; }
+.mm-era--apple { --mm-accent: #c9cbd0; }
+.mm-era--multi { --mm-accent: #dcb284; }
+.mm-era--parallel { --mm-accent: #a9bcb3; }
+.mm-era--lost { --mm-accent: #a9aaa2; }
+
+.mm-era__title {
+    margin: 0 0 2.8rem;
+    color: var(--mm-accent);
+    font-family: var(--font-pixel);
+    font-size: clamp(0.67rem, 1.2vw, 0.88rem);
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.mm-entry {
+    position: relative;
+    min-width: 0;
+    padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.mm-entry::before {
+    content: "";
+    position: absolute;
+    top: 0.65rem;
+    left: -28px;
+    width: 9px;
+    height: 9px;
+    border: 1px solid var(--mm-accent);
+    background: #0b0e0d;
+    box-shadow: 0 0 0 5px #0b0e0d;
+}
+
+.mm-date {
+    margin: 0 0 1rem;
+    color: var(--mm-accent);
+    font-family: var(--font-pixel);
+    font-size: clamp(1rem, 2.4vw, 1.5rem);
+    line-height: 1.35;
+    text-wrap: balance;
+}
+
+.mm-date--long {
+    font-size: clamp(0.8rem, 1.6vw, 1.05rem);
+    line-height: 1.6;
+}
+
+.mm-entry__body {
+    min-width: 0;
+    max-width: 66ch;
+}
+
+.mm-entry h3 {
+    margin: 0 0 0.8rem;
+    color: var(--mm-paper);
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 620;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+}
+
+.mm-entry .mm-specs,
+.mm-entry .mm-status {
+    margin-bottom: 1.7rem;
+    color: var(--mm-accent);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.mm-entry__body > p:not(.mm-specs, .mm-status):first-of-type,
+.mm-specs + p,
+.mm-status + p {
+    color: #eeeae0;
+}
+
+.mm-era--parallel,
+.mm-era--lost,
+.mm-era--closing {
+    border-top: 1px solid #2c322e;
+}
+
+.mm-era--parallel .mm-entry::before {
+    border-radius: 50%;
+}
+
+.mm-era--lost .mm-entry__body {
+    padding: clamp(16px, 3vw, 28px);
+    border: 1px dashed #3a3c37;
+    border-radius: 0 var(--panel-radius) 0 var(--panel-radius);
+    color: #b9bcb4;
+    background: #101210;
+}
+
+.mm-era--lost h3 {
+    color: #d2d3cb;
+    font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+}
+
+.mm-era--lost .mm-date {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.mm-era--lost .mm-status {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #4b4e45;
+    color: #c1c2b4;
+    font-size: 0.65rem;
+}
+
+.mm-machine-image {
+    margin-block: 2rem;
+}
+
+.mm-machine-image--secondary {
+    max-width: 480px;
+}
+
+.mm-machine-image--portrait {
+    max-width: 420px;
+}
+
+/* Software artifacts: a compact pair, with the same uncropped figure treatment. */
+.mm-image-pair {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem var(--portal-gap);
+    align-items: start;
+    margin-block: 2rem;
+}
+
+.mm-image-pair > .mm-machine-image {
+    min-width: 0;
+    margin: 0;
+}
+
+.mm-machine-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0 var(--panel-radius) 0 var(--panel-radius);
+}
+
+.mm-machine-image figcaption {
+    margin-top: 0.6rem;
+    color: var(--mm-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.65;
+}
+
+.mm-closing {
+    max-width: 64ch;
+    padding-bottom: 3rem;
+}
+
+.mm-closing > p:first-child {
+    color: var(--mm-paper);
+    font-size: clamp(1.2rem, 2.6vw, 1.8rem);
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+}
+
+.mm-closing .mm-continued {
+    margin-top: 3rem;
+    color: #d8dfca;
+    font-family: var(--font-pixel);
+    font-size: clamp(0.8rem, 2vw, 1.25rem);
+    line-height: 1.5;
+}
+
+.mm-back {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 4px;
+    font-family: var(--font-pixel);
+    font-size: 0.6rem;
+}
+
+@media (min-width: 700px) {
+    .mm-image-pair {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mm-contents {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 2rem;
+    }
+
+    .mm-timeline { --mm-rail: 20px; }
+    .mm-era { padding: 4rem 24px 0 52px; }
+    .mm-entry {
+        display: grid;
+        grid-template-columns: minmax(140px, 0.28fr) minmax(0, 1fr);
+        column-gap: clamp(24px, 4vw, 52px);
+    }
+    .mm-entry::before { left: -36px; }
+    .mm-date { padding-top: 0.1rem; }
+    .mm-closing { margin-left: calc(21.875% + clamp(24px, 4vw, 52px) * 0.78125); }
+}
+
+@media (max-width: 399.98px) {
+    .mm-hero h1 { max-width: 8ch; }
+    .mm-era { padding-left: 34px; }
+    .mm-entry::before { left: -22px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .mm-cursor { animation: mm-cursor 1.5s step-end infinite; }
+    @keyframes mm-cursor { 50% { opacity: 0; } }
+}
+
+/* The prominent feature teaser reuses the landing page's asymmetric frame. */
+.doorpage--tech .mm-teaser {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 250px;
+    padding: clamp(24px, 4vw, 42px);
+    margin-bottom: var(--portal-gap);
+    border: 1px solid #bfc7b0;
+    border-radius: 0 var(--panel-radius) 0 var(--panel-radius);
+    color: #eeeae0;
+    background: linear-gradient(120deg, #1c261e, #0b0e0d 80%);
+    text-decoration: none;
+}
+
+.mm-teaser__label,
+.mm-teaser__action {
+    font-family: var(--font-pixel);
+    font-size: 0.65rem;
+    line-height: 1.6;
+    color: #c3cfb0;
+}
+
+.mm-teaser strong {
+    max-width: 10ch;
+    font-size: clamp(2.1rem, 6vw, 3.5rem);
+    font-weight: 650;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.mm-teaser__subtitle {
+    max-width: 34ch;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.mm-teaser__action { margin-top: 0.5rem; }
+.mm-teaser:hover .mm-teaser__action { text-decoration: underline; }

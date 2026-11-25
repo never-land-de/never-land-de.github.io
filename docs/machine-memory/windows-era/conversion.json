@@ -1,0 +1,93 @@
+{
+  "scope": "Media Integration v1.2: four new Windows-era photographs only",
+  "conversions": [
+    {
+      "source": "windows98.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 1575074,
+      "source_sha256": "4bc5843e91690d17430a18b6acb546a6a9e62014658892cbf6418ad3a1681019",
+      "oriented_dimensions": [
+        3024,
+        4032
+      ],
+      "output_dimensions": [
+        1000,
+        1333
+      ],
+      "source_height": 3024,
+      "source_orientation": 6,
+      "source_width": 4032,
+      "output": "windows-98.png",
+      "output_bytes": 2279493,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 1.4472
+    },
+    {
+      "source": "windowsvista_home_premium_upgrade.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 2823910,
+      "source_sha256": "5bcd6d829c82b190c67609de869f7d4c6ae29012556a1cf44ca45b074317c656",
+      "oriented_dimensions": [
+        5712,
+        4284
+      ],
+      "output_dimensions": [
+        1000,
+        750
+      ],
+      "source_height": 4284,
+      "source_orientation": 1,
+      "source_width": 5712,
+      "output": "windows-vista-upgrade.png",
+      "output_bytes": 1059094,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.375
+    },
+    {
+      "source": "windowsxp_ssl_de.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 3068680,
+      "source_sha256": "a2cc9e747883220046ee2d592b4f45c58e6b884e78273528a10bc153ca211484",
+      "oriented_dimensions": [
+        5712,
+        4284
+      ],
+      "output_dimensions": [
+        1200,
+        900
+      ],
+      "source_height": 4284,
+      "source_orientation": 1,
+      "source_width": 5712,
+      "output": "windows-xp-01.png",
+      "output_bytes": 1726546,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.5626
+    },
+    {
+      "source": "windowsxp_ssl_de_2.HEIC",
+      "source_format": "HEIC",
+      "source_bytes": 3538927,
+      "source_sha256": "fe6c4fbace82e1f95d3dc64a5cc44322a7abdbcacda5ebebb4c3c731f067e7b6",
+      "oriented_dimensions": [
+        5712,
+        4284
+      ],
+      "output_dimensions": [
+        1000,
+        750
+      ],
+      "source_height": 4284,
+      "source_orientation": 1,
+      "source_width": 5712,
+      "output": "windows-xp-02.png",
+      "output_bytes": 1205927,
+      "compression": "lossless zlib level 9 / best retained IDAT; sRGB, no metadata",
+      "status": "converted",
+      "output_to_original_ratio": 0.3408
+    }
+  ]
+}

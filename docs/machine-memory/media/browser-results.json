@@ -1,0 +1,48 @@
+{
+  "checks": [
+    "All images are local PNGs with alt text and correct loading priorities",
+    "Responsive media, dates, rail and captions at all requested widths",
+    "All existing anchors and the shared navigation still work",
+    "JavaScript disabled, reduced motion and keyboard focus",
+    "No browser errors, failed resources or external requests"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "cover": {
+        "width": 1098,
+        "height": 823.5,
+        "source": "http://127.0.0.1:8765/essentials/tech/machine-memory/cover.png"
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "cover": {
+        "width": 735.28125,
+        "height": 551.453125,
+        "source": "http://127.0.0.1:8765/essentials/tech/machine-memory/cover.png"
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "cover": {
+        "width": 364,
+        "height": 273,
+        "source": "http://127.0.0.1:8765/essentials/tech/machine-memory/cover.png"
+      }
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "cover": {
+        "width": 294,
+        "height": 220.5,
+        "source": "http://127.0.0.1:8765/essentials/tech/machine-memory/cover.png"
+      }
+    }
+  ],
+  "errors": []
+}

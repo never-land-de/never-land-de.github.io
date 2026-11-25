@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="PROJECT TOMORROW — THE STATION. N.E.V.E.R.-77 experimental terminal.">
+    <title>N.E.V.E.R.-77 | PROJECT TOMORROW — THE STATION</title>
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="station.css">
+    <script type="module" src="terminal.mjs"></script>
+</head>
+<body>
+    <div class="station">
+        <header class="station-header">
+            <span class="programme-mark" aria-hidden="true">T<span>77</span></span>
+            <div class="programme"><p class="programme-name">PROJECT TOMORROW</p><p class="eyebrow">EXPERIMENTAL COMPUTING DIVISION</p></div>
+            <h1 id="system-title">N.E.V.E.R.-77</h1>
+            <span class="machine-label"><span class="lamp" aria-hidden="true"></span> TERMINAL 07</span>
+        </header>
+
+        <main class="machine" aria-labelledby="system-title">
+            <div class="crt">
+                <div class="screen-toolbar"><span>OPERATOR CONSOLE</span><span id="mode-label">COMMAND MODE</span></div>
+                <section id="transcript" class="transcript" aria-label="Terminal output" tabindex="0" aria-describedby="command-hint">
+                    <div id="output"></div>
+                </section>
+                <nav id="output-pages" class="page-controls" aria-label="Terminal output pages" hidden>
+                    <button id="previous-page" type="button" aria-label="Previous output page">← PREVIOUS</button>
+                    <span id="page-number" role="status" aria-live="polite"></span>
+                    <button id="next-page" type="button" aria-label="Next output page">NEXT →</button>
+                </nav>
+                <form id="command-form" class="command-form" autocomplete="off">
+                    <label id="prompt-label" for="command"><span aria-hidden="true">&gt;</span><span class="visually-hidden">Terminal command</span></label>
+                    <input id="command" name="command" type="text" maxlength="1000" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="send" aria-describedby="command-hint" disabled>
+                    <button id="run-command" type="submit" disabled>RUN <span aria-hidden="true">↵</span></button>
+                </form>
+                <p id="command-hint" class="command-hint">help / ↑ ↓ HISTORY <span>PgUp PgDn PAGES / ESC RETURN</span></p>
+            </div>
+
+        </main>
+
+        <footer class="station-footer">
+            <div class="footer-notes"><span>THINK — PUNCH — COMPILE — REPEAT.<br>A BRIGHTER TOMORROW (MAYBE).</span><span class="punch-card" aria-hidden="true"></span></div>
+            <div class="footer-return"><span>RESEARCH USE ONLY / <span class="fiction-note">FICTIONAL SYSTEM</span></span><a class="return-link" href="../tech/index.html">CLOSE / RETURN TO SITE <span aria-hidden="true">↗</span></a></div>
+        </footer>
+        <p id="announcement" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p class="no-script">This terminal requires JavaScript. <a href="../tech/index.html">Return to the website</a>.</p></noscript>
+    </div>
+
+    <dialog id="message-dialog" aria-labelledby="message-title" aria-describedby="local-notice">
+        <div class="dialog-heading"><p class="eyebrow">S.E.T.I. / LOCAL COMPOSER</p><button type="button" data-close="message-dialog">CLOSE / BACK</button></div>
+        <h2 id="message-title">TRANSMISSION COMPOSER</h2>
+        <p id="local-notice" class="warning">LOCAL ECHO — NOT TRANSMITTED</p>
+        <p>This demonstration stays in this page. Nothing is sent, saved or published. Use a fictional call sign; do not enter sensitive information.</p>
+        <form id="message-form" autocomplete="off">
+            <label for="call-sign">CALL SIGN / PSEUDONYM</label>
+            <input id="call-sign" name="call-sign" type="text" maxlength="40" required autocomplete="off">
+            <label for="message-text">MESSAGE</label>
+            <textarea id="message-text" name="message-text" rows="5" maxlength="2000" required></textarea>
+            <button type="submit">PREVIEW LOCAL ECHO</button>
+        </form>
+        <div id="message-preview" hidden><h3>LOCAL ECHO — NOT TRANSMITTED</h3><p id="preview-sign"></p><p id="preview-text"></p></div>
+        <p><a href="../options/email.html">OPEN WEBSITE CONTACT PAGE ↗</a></p>
+    </dialog>
+</body>
+</html>
